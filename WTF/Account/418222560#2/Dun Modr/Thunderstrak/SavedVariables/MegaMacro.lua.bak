@@ -1,0 +1,75 @@
+
+MegaMacroCharacterData = {
+	["Macros"] = {
+		{
+			["Scope"] = "ch",
+			["ScopedIndex"] = 6,
+			["Class"] = "Druida",
+			["Code"] = "/cancelform [@mouseover,help,nostance:0]\n/cast [@mouseover,exists] Carga salvaje; Carga salvaje",
+			["Id"] = 126,
+			["IsStaticTextureFallback"] = true,
+			["StaticTexture"] = 538771,
+			["DisplayName"] = "Carga",
+		}, -- [1]
+		{
+			["Id"] = 123,
+			["StaticTexture"] = 136022,
+			["IsStaticTextureFallback"] = true,
+			["Code"] = "/cast [@mouseover,harm,exists] Ciclón; [@focus,harm,exists] Ciclón; Ciclón",
+			["Scope"] = "ch",
+			["Class"] = "Druida",
+			["ScopedIndex"] = 3,
+			["DisplayName"] = "Ciclon",
+		}, -- [2]
+		{
+			["Scope"] = "ch",
+			["ScopedIndex"] = 5,
+			["Class"] = "Druida",
+			["Code"] = "/cast [@mouseover,exists] Raíces enredadoras; [@focus,exists] Raíces enredadoras;Raíces enredadoras",
+			["Id"] = 125,
+			["IsStaticTextureFallback"] = true,
+			["StaticTexture"] = 136100,
+			["DisplayName"] = "Raices",
+		}, -- [3]
+		{
+			["Id"] = 124,
+			["StaticTexture"] = 134400,
+			["IsStaticTextureFallback"] = true,
+			["Code"] = "/use [@mouseover] Mechón de plumaje humeante",
+			["Scope"] = "ch",
+			["Class"] = "Druida",
+			["ScopedIndex"] = 6,
+			["DisplayName"] = "adadasdadasda",
+		}, -- [4]
+	},
+	["Specializations"] = {
+		["Feral"] = {
+			["Macros"] = {
+			},
+		},
+		["Guardián"] = {
+			["Macros"] = {
+			},
+		},
+		["Restauración"] = {
+			["Macros"] = {
+				{
+					["Code"] = "/cast [@mouseovertarget] Rejuvenecimiento",
+					["Scope"] = "cs",
+					["Class"] = "Druida",
+					["DisplayName"] = "ifbbdgujaibadoup",
+					["Specialization"] = "Restauración",
+					["ScopedIndex"] = 1,
+					["IsStaticTextureFallback"] = true,
+					["StaticTexture"] = 3566560,
+					["Id"] = 129,
+				}, -- [1]
+			},
+		},
+		["Equilibrio"] = {
+			["Macros"] = {
+			},
+		},
+	},
+	["Activated"] = true,
+}

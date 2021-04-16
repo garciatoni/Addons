@@ -1,0 +1,58 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <MinimumVisualStudioVersion>$(VisualStudioVersion)</MinimumVisualStudioVersion>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '14.0'">v140</PlatformToolset>
+    <TargetFrameworkVersion Condition="'$(VisualStudioVersion)' == '14.0'">v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AddonPath>$(OutputPath)\$(Name)</AddonPath>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(OutputPath)\$(Name)</StartProgram>
+  </PropertyGroup>
+
+  <Target Name="BeforeClean" />
+  <Target Name="AfterClean" />
+  <Target Name="BeforeRebuild" />
+  <Target Name="AfterRebuild" />
+  <Target Name="BeforeDeploy" />
+  <Target Name="AfterDeploy" />
+  <Target Name="AllProjectOutputGroups" />
+  <Target Name="GetFrameworkPaths" />
+
+  <Target Name="_CheckProperties">
+    <Error Text="OutputPath must be defined. Use the Project Properties window to set it to the output location."
+           Condition="('$(OutputPath)' == '') Or ('$(OutputPath)' == '$outputpath$')" />
+  </Target>
+
+  <Target Name="Clean" DependsOnTargets="_CheckProperties">
+    <CallTarget Targets="BeforeClean" />
+    <CreateItem Include="@(Content)" AdditionalMetadata="TargetPath=$(AddonPath)\%(Content.Identity)">
+      <Output TaskParameter="Include" ItemName="_FilesToDelete"/>
+    </CreateItem>
+    <Delete Files="%(_FilesToDelete.TargetPath)" />
+    <CallTarget Targets="AfterClean" />
+  </Target>
+
+  <Target Name="Rebuild" DependsOnTargets="_CheckProperties">
+    <CallTarget Targets="BeforeRebuild" />
+    <CallTarget Targets="Clean" />
+    <CallTarget Targets="Deploy" />
+    <CallTarget Targets="AfterRebuild" />
+  </Target>
+
+  <Target Name="Deploy" DependsOnTargets="_CheckProperties">
+    <Message Importance="High" Text="Deploying addon..." />
+    <CallTarget Targets="BeforeDeploy" />
+    <CreateItem Include="@(Content)" AdditionalMetadata="TargetPath=$(AddonPath)\%(Content.Identity);TargetDir=$(AddonPath)\%(Content.RelativeDir)">
+      <Output TaskParameter="Include" ItemName="_AddonFiles"/>
+    </CreateItem>
+    <Message Importance="High" Text="Creating target folder structure..." />
+    <MakeDir Directories="$(AddonPath)" />
+    <MakeDir Directories="%(_AddonFiles.TargetDir)"/>
+    <Message Importance="High" Text="Copying files..." />
+    <Copy SourceFiles="@(_AddonFiles)" SkipUnchangedFiles="true" DestinationFiles="%(_AddonFiles.TargetPath)"/>
+    <Message Importance="High" Text="Addon deployed." />
+    <CallTarget Targets="AfterDeploy" />
+  </Target>
+</Project>

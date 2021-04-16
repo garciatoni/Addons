@@ -1,0 +1,21 @@
+## Interface: 90002
+## Title: |cffffffffZygor Guide Viewer|r |cfffe61008|r
+## Notes: Free multi-purpose leveling guide viewer.
+## Author: Zygor Guides
+## DefaultState: enabled
+## LoadOnDemand: 0
+## SavedVariables: ZygorGuidesViewerSettings
+## - SavedVariablesPerCharacter: ZygorGuidesViewerSettingsChar
+## OptionalDeps: Cartographer, Cartographer3, TomTom, WorldQuestTracker
+## X-Category: 
+## X-Credits: 
+## X-eMail: 
+## X-Website:
+## X-License: GPL
+## Version: 8.0
+
+Libs\Libs.xml
+
+Localization\Localization.xml
+
+files.xml

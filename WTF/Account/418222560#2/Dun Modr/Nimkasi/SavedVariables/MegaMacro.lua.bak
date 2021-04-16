@@ -1,0 +1,25 @@
+
+MegaMacroCharacterData = {
+	["Macros"] = {
+		{
+			["Scope"] = "ch",
+			["ScopedIndex"] = 1,
+			["Code"] = "/use 13\n/d HENTAI SABO SABO SABO!!!!!!!!!!!!!!\n",
+			["Id"] = 121,
+			["Class"] = "Monje",
+			["StaticTexture"] = 134400,
+			["DisplayName"] = "ada",
+		}, -- [1]
+	},
+	["Specializations"] = {
+		["Viajero del viento"] = {
+			["Macros"] = {
+			},
+		},
+		["Maestro cervecero"] = {
+			["Macros"] = {
+			},
+		},
+	},
+	["Activated"] = true,
+}

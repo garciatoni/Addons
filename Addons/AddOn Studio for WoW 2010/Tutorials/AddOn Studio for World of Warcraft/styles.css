@@ -1,0 +1,76 @@
+body {
+    font-family: 'Lucida Grande', 'Verdana', 'Arial', sans-serif;
+    font-size:10pt; line-height: 1.5em;
+    max-width: 72em;
+}
+
+h1 { font-family: Arial,sans-serif; font-size:19pt; }
+h2 { font-family: Arial,sans-serif; margin-top:1em; }
+h3 { font-family: Arial,sans-serif; }
+h4 { font-family: Arial,sans-serif; }
+
+ol, p {
+	font-size: 12pt;
+	font-family: Arial, sans-serif;
+	background-color: Transparent;
+	margin-left: 0.25in;
+	margin-top: 5px;
+	margin-bottom: 7px;
+	text-decoration: none;
+}
+
+p img { margin: .22em 0; }
+
+p.Title {
+	font-size: 22pt;
+	text-align: Center;
+	font-family: "Arial Black", sans-serif;
+	letter-spacing: -0.3pt;
+	font-weight: normal;
+	font-style: normal;
+    line-height:1em;
+}
+
+ul.list2, ul.list2 ul { list-style: none; margin-left:auto !important; }
+ul.list2 li { }
+ul.list2 li ul * {  }
+ul.list2 p { margin-left: 1.4em; }
+
+ol, ul { margin-left: 0.5in; }
+
+ol.list1, ul.list1 { }
+ol.list1 p, ul.list1 p { list-style: decimal; margin-left: 0.25in; }
+ol.list1 li, ul.list1 li { list-style: decimal; }
+
+ul.toc, ul.toc ul { list-style: none; margin-left:auto !important; }
+ul.toc li { font-size: 12pt; margin:4px 0;}
+ul.toc li ul * { font-size: 10pt; }
+
+p.pi {
+	font-weight: bold;
+	font-style: normal;
+	font-family: "Microsoft Sans Serif", sans-serif;
+	margin-top: 9px;
+	margin-left: 0.385in;
+}
+p.pe {
+	font-weight: normal;
+	font-style: normal;
+	font-family: "Microsoft Sans Serif", sans-serif;
+	margin-top: 9px;
+	margin-left: 0.6in;
+}
+
+p.foot { margin-top: 12px !important; font-size: 10pt; }
+
+a.dropspot { font-family: Arial, sans-serif; }
+div.droptext { font-family: Arial, sans-serif; }
+a.expandspot { font-family: Arial, sans-serif; }
+
+span.expandtext { font-family: Arial, sans-serif; }
+span.glosstext { font-family: Arial, sans-serif; }
+span.code { font-family:'Courier New', monospace; font-size:12pt; }
+code { font-family:'Courier New', monospace; font-size:12pt; }
+
+img.illus { border:none; float:none; border-style:none; }
+img.illusb { border:solid; float:none; border-width:1px; border-color:#cccccc; }

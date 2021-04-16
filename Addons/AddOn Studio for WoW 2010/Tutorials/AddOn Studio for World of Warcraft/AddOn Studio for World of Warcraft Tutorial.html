@@ -1,0 +1,519 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+	<title>AddOn Studio for World of Warcraft Tutorial</title>
+	<link rel="StyleSheet" href="styles.css" type="text/css" />
+</head>
+<body>
+
+<p class="Title">AddOn Studio for World of Warcraft Tutorial</p>
+
+<h1>Overview</h1>
+
+<p>AddOn Studio for World of Warcraft is an implementation of Visual Studio that provides World of Warcraft add-on developers
+ a tool to easily build and maintain WoW add-ons.</p>
+
+<h2>Tutorial Topics</h2>
+<ul class="toc">
+	<li>1. <a href="#Introduction">Introduction</a></li>
+	<li>2. <a href="#AddonInternals">Internals of a World of Warcraft Add-On</a></li>
+	<li>3. <a href="#TheAddonStudio">AddOn Studio</a></li>
+	<li>4. <a href="#CreatingAddon">Creating a World of Warcraft Add-On</a></li>
+	<li>5. <a href="#DeployingAddon">Deploying a World of Warcraft Add-On</a></li>
+	<li>6. <a href="#TestingAddon">Testing a World of Warcraft Add-On</a></li>
+	<li>7. <a href="#CreatingAce2Addon">Creating an Ace2 World of Warcraft Add-On</a></li>
+	<li>8. <a href="#AdditionalDocumentation">Additional Documentation</a></li>
+</ul>
+
+<h1>1. <a name="Introduction">Introduction</a></h1>
+
+<p>AddOn Studio for World of Warcraft enables hobbyist, gamers, and seasoned
+	developers to develop add-ons
+ for World of Warcraft series of games, produced by Blizzard Entertainment. The add-ons
+ created with AddOn Studio allow the developer to implement a graphical
+ user interface as well as write code using the Lua programming language,
+ a lightweight scripting language similar to JavaScript.</p>
+
+<h1>2. <a name="AddonInternals">Internals of a World of Warcraft Add-On</a></h1>
+<p>Every World of Warcraft add-on consists of a single Table of Contents
+ (TOC) file, as well as Frame XML and Lua files. Frame XML files are ordinary
+ XML files that express the user interface of your add-on, whereas Lua
+ files contain arbitrary code that runs when your add-on is loaded in World of Warcraft.
+ The TOC file contains the list of files that World of Warcraft
+ should load when loading your add-on and additional information, such
+ as the name of the author and the description of the add-on. For more
+ detailed information, please refer to the <a href="#AdditionalDocumentation">Additional
+ Documentation</a> section.</p>
+
+<h1>3. <a name="TheAddonStudio">AddOn Studio for World of Warcraft</a></h1>
+<p>AddOn Studio for WoW is where you
+develop the code and the user interface (UI) to implement the functionality of your add-on.
+ In the following illustration, click on the different parts of the development environment
+ to read a brief introduction of them.</p>
+
+<map name="MAP95390579">
+	<area shape="rect" coords="1,1,912,69" href="#MenusToolbars">
+	<area shape="rect" coords="720,71,914,403" href="#Solution">
+	<area shape="rect" coords="149,72,717,640" href="#XmlDesigner">
+	<area shape="rect" coords="-3,72,147,652" href="#Toolbox">
+	<area shape="rect" coords="720,404,912,654" href="#Properties">
+</map>
+
+<p><img class="illus" src="full_shell_for_describing_parts.jpg"
+	usemap="#MAP95390579" width="913" height="685"></p>
+
+<ul class="list2">
+
+<li>
+	<h2>1. <a name="DesignerDocument">FrameXML Visual Designer</a></h2>
+
+<p>This is the visual representation of the user interface of your add-on
+ as it would appear in the game, and also where you place the visual elements
+ of your add-on. Select the visual controls from the <a href="#Toolbox">Toolbox</a>.
+ To change the properties of a control in the designer, select it and change
+ its properties in the <a href="#Properties">Property Grid</a>.</p></li>
+
+<li>
+	<h2>2. <a name="Toolbox">Toolbox</a></h2>
+
+<p>Here you find the visual controls you can use to compose the graphical
+ interface of your add-on. Using the mouse, select a control from the toolbox
+ and drag-and-drop it onto the <a href="#XmlDesigner">Visual Designer</a> surface.</p></li>
+
+<li>
+	<h2>3. <a name="Solution">Solution Explorer</a></h2>
+
+<p>Your add-ons are shown here in a list as 'projects', along with all of their associated
+ files, and are contained in the currently loaded project-set called a 'solution'. You
+ will most often use this pane for opening the files you want to work with. This pane is
+ also useful for deploying add-ons you've created to the game to test and run, for changing
+ project properties, and for manipulating SCM and publishing your add-on. For more
+ information, please refer to the <a href="#CreatingAddon">Creating a World of Warcraft AddOn</a>
+ and <a href="#DeployingAddon">Deploying a World of Warcraft AddOn</a>
+ sections.</p></li>
+
+<li>
+	<h2>4. <a name="Properties">Property Grid</a></h2>
+
+<p>Here you can change the properties of the control that is currently
+ selected in the <a href="#XmlDesigner">FrameXML Designer</a>. You will also use
+ it to view the existing event handler functions of the selected control,
+ and to create new event handler functions. For more information, please
+ refer to the <a href="#CreatingAddon">Creating a World of Warcraft AddOn</a>
+ section.</p></li>
+
+<li>
+	<h2>5. <a name="CodeEditor">Code Editor</a></h2>
+
+<p>The code editor is used to edit Lua, XML, and other add-on text files
+ to actually implement the add-on's functionality and logic.
+ For Lua language reference resources, please refer to the <a
+ href="#AdditionalDocumentation">Additional Documentation</a> section.</p>
+
+<p>This code editor supports IntelliSense, which is a form of automated
+ auto-completion used in Microsoft Visual Studio that makes programming
+ language references easy to access while coding. You do not need to leave
+ the Code Editor pane to search on language elements (members, parameters,
+ operators, brace matching, etc.). You can find the information you need,
+ insert language elements into your code, and have IntelliSense complete
+ the typing for you.</p></li>
+
+<li>
+	<h2>6. <a name="MenusToolbars">Menus and Toolbars</a></h2>
+
+<p>Many of the  menus and toolbars in AddOn Studio for WoW are especially suited for
+ software development in general, with many others specifically designed for WoW
+ add-on development. Some of the WoW add-on specific menus and tool bars will be
+ explained later on in this tutorial. To get started, the more general <strong>New</strong>,
+ <strong>Open</strong> and <strong>Save</strong> menus will be explained
+ below, to help provide context before beginning the actual tutorial steps
+ in the next section.</p>
+
+<p>Among the more general Windows menus you will find are the familiar Windows'
+ <strong>File &gt; New</strong>, <strong>File &gt; Open</strong>, and
+ <strong>File &gt; Save</strong> menus. These can be used to create, open, and save the
+ necessary files for your WoW add-on projects. In AddOn Studio for WoW these menus
+ can also be used to create or open &quot;<strong>Solutions</strong>&quot; and
+ the add-on &quot;<strong>Projects</strong>&quot; themselves. Only one
+ solution that can be open at a time, but a <strong>Solution</strong> can
+ contain many <strong>Projects</strong>. A solution can also have
+ <strong>Solution Folders</strong>, which can be used to organize projects
+ under the solution. The <strong>File &gt; New</strong> menu can be used to
+ create new solution or to create a new project. If a solution is not
+ already loaded, creating a new <strong>Project</strong> will automatically
+ create a new <strong>Solution</strong> with the same name for you.</p></li>
+</ul>
+
+<h1>4. <a name="CreatingAddon">Creating a World of Warcraft AddOn</a></h1>
+
+<p>The following instructions walk you through the steps of creating a
+ simple yet functional World of Warcraft add-on. After completing these
+ steps, go to the next section for instructions on <a href="#DeployingAddon">deploying</a>
+ your add-on.</p>
+
+<p class="pi">Follow these steps to create an add-on using
+ AddOn Studio for World of Warcraft:</p>
+
+<ol class="list1">
+
+<li><p><strong>Locate</strong> your <strong>AddOn Studio for World of Warcraft</strong>
+ install, or find any shortcut or Pinned shortcut you may have created,
+ and then <strong>launch</strong> AddOn Studio for WoW by launching the WowAddonStudio.exe file.</p></li>
+
+<li><p>In the <strong>File</strong>, menu select <strong>New</strong>,
+ and then <strong>Project</strong> to create a new World of Warcraft AddOn project.</p></li>
+
+<li><p>In the <strong>New Project</strong> window that appears, select
+ the &quot;<strong>Basic Warcraft Addon</strong>&quot; template, enter the name of the new
+ project, such as &quot;MyFirstAddOn&quot;, and select the location
+ where you want to store all the files associated with this project and
+ the solution created for it. The new project location is by default a WowAddOnStudio
+ folder in your normal user Documents folder.<br>
+	<img class="illus" src="new_project_dialog.png" width="612" height="422">
+	</p></li>
+
+<li><p>Click <strong>OK</strong>. The new project shows the visual
+ designer and the user interface of your add-on, where you can add various
+ controls selected from the <a href="#Toolbox">Toolbox</a>. By default,
+ a single frame named Frame1 is shown, which you may resize and move using
+ the mouse, or change any of its properties using the <a href="#Properties">Property
+ Grid</a>.</p></li>
+
+<li><p>By default, Frame1's position is stationary on the gamer's screen, so to make the
+ add-on movable, click the
+	<img class="illus" src="button-make_frame_movable.png" width="10" height="10"> icon and then click on the <strong>Make frame movable</strong> option.<br>
+	<img class="illus" src="make_frame_movable.png" width="479" height="168"></p></li>
+
+<li><p>Using the mouse,
+ select the FontString control from the <a href="#Toolbox">Toolbox</a>
+ and drag it to Frame1 to create a label.<br>
+	<img class="illus" src="click_and_drag_fontstring_to_frame1.jpg" width="603" height="359"></p></li>
+
+<li><p>To change the
+ text it displays and its other properties, select the FontString1 object
+ and use the <a href="#Properties">Property Grid</a>. For example, change
+ the &quot;text&quot; property to show &quot;Hello world!&quot;.<img class="illus" src="changing_text_of_fontstring1.png" width="693" height="285"></p></li>
+
+<li><p>Now let's add
+ a button below FontString1. First, using the mouse (or the <a href="#Properties">Property
+ Grid</a>), resize Frame1 to allow space for the button.<br>
+	<img class="illus" src="resize_frame1.png" width="357" height="167"></p></li>
+
+<li><p>Select the
+ Button control from the <a href="#Toolbox">Toolbox</a> and drag it to
+ place it anywhere on Frame1. Using the mouse and/or the <a href="#Properties">Property
+ Grid</a>, resize it, move it, change its background and foreground colors,
+ change its label, or any other properties, as you like.<br>
+	<img class="illus" src="click_and_drag_button_to_frame1.jpg" width="866" height="433"></p></li>
+
+<li><p>Now that the
+ user interface of this simple add-on is ready, let's add some code to
+ the project. Double-click on an empty area of Frame1 to create the OnLoad
+ event handler function for this frame. The <a href="#CodeEditor">Code
+ Editor</a> appears where the Frame.lua source code file is loaded and
+ is ready to use for adding code for this add-on.<br>
+	<img class="illus" src="code_pane-default_code_for_frame1_onload.png" width=693 height=277></p></li>
+
+<li><p>In the body
+ of this function, enter the following line of code, which will register
+ for the <code>PLAYER_TARGET_CHANGED</code>
+ event that we are interested in. <span class="code"><br>
+ this.RegisterEvent(&quot;PLAYER_TARGET_CHANGED&quot;);</span></p></li>
+
+<li><p>To handle the <code>PLAYER_TARGET_CHANGED</code>
+ event, you will need to define a handler function for the OnEvent event.
+ To do this, return to the visual designer by clicking on the <strong>Frame.xml [Design]</strong>
+ tab and select the Frame1 object using the mouse.<br>
+ <img class="illus" src="code_pane-click_tab_to_return_to_design_view.png" width=693 height=277 border="0"></p></li>
+
+<li><p>In the <strong>Property Grid</strong>, now click the <strong>Events</strong> category button.
+ <br/><img class="illusb" src="frame_properties-events_category.png" width="326" height="104"><br/>
+ Under the <strong>Events</strong> category,
+ you can now see which events have handler functions defined.<br/>
+<img class="illusb" src="frame_properties-events_create_existing.png" width="263" height="54"><br/>
+ Here you can also create a new event handler function. To
+ write some code to handle the <code>PLAYER_TARGET_CHANGED</code>
+ event, that we registered for in an earlier step, create a new handler function for the
+ <code>OnEvent</code> event by selecting the event drop-down<br/>
+<img class="illusb" src="frame_properties-events_create_drop.png" width="307" height="37"><br/>
+ and clicking on the
+<strong>Create</strong> button in the drop-down list.<br>
+	<img class="illus" src="frame_properties-events_create_action.png"
+	width="293" height="277">
+	</p></li>
+
+<li><p>The <a href="#CodeEditor">Code
+ Editor</a> pane now reappears, showing the new <code>OnEvent</code> handler function where you can enter the code that will be executed
+ when an event is triggered.<br>
+	<img class="illus" src="code_pane-default_code_for_frame1_onevent.png" width="693" height="277"></p></li>
+
+<li><p>In the body
+ of the <code>Frame1_OnEvent</code>
+ function, enter the following code, which will change the text property
+ of the FontString1 control to a message that includes the name of the
+ current target in World of Warcraft whenever the player changes its target:
+ <br>
+ <code>
+	if (event == "PLAYER_TARGET_CHANGED") then<br>
+		FontString1:SetText("Hello " .. UnitName("target") .. "!")<br>
+	end</code></p></li>
+
+<li><p>Now, for the Button1 control (i.e. the <strong>Close</strong>
+ button), let's create an event handler function that hides this add-on. Return to the
+ game environment by clicking on the <strong>Frame.xml [Design]</strong> tab and select
+ the Button1 control using the mouse. In the <a href="#Properties">Property Grid</a>,
+ under the <strong>Events</strong> category, select the OnClick event, and in the
+ drop-down list click on the <strong>Create</strong> button. You can also create this
+ event by double-clicking on the button in the visual designer.<br>
+	<img class="illus" src="properties_pane_button-create_onclick_action.png"
+		width="245" height="314">
+	</p></li>
+
+<li><p>The <a href="#CodeEditor">Code
+ Editor</a> appears where, in the body of the <code>Button1_OnClick</code>
+ function, enter the following code, which will hide the add-on (i.e. the
+ Frame1 frame) whenever the <strong>Close</strong> button is clicked:<br>
+ <code>Frame1:Hide();</code><span><br>
+	<br>
+	<img class="illus" src="code_pane-tutorial_code_for_button1_onclick.png" width="693" height="343"></span></p></li>
+
+<li><p>This add-on is now ready to perform some simple functionality
+ in World of Warcraft, but before deploying it, let's change the project's properties to something
+ meaningful. In the <a href="#Solution">Solution Explorer</a>, right-click on the name of
+ the project (i.e. <strong>MyFirstAddOn</strong><span>) and then click on the
+ </span><strong>Properties</strong><span> item in the context menu that appears.</span><br>
+	<img class="illus" src="solution_explorer_pane-properties_item_in_context_menu.png" width="269" height="462"></p></li>
+
+<li><p>The <strong>General</strong>
+ properties pane appears, where you should enter the details of this add-on. The details you
+ enter here are used to generate the table of contents file (A.K.A. the TOC file) so you do not
+ need to modify it directly. Of course, you only need to provide personal details if want to.<br>
+	<img class="illus" src="project_properties_pane.png" width="772" height="261"></p></li>
+
+<li><p>Save the project and all its files by clicking the
+<img class="illus" src="button-save_all.png" width="14" height="14">
+ icon on the main toolbar.</p></li>
+</ol>
+
+<h1>5. <a name="DeployingAddon"></a>Deploying a World of Warcraft AddOn</h1>
+
+<p>To deploy an add-on using AddOn Studio for WoW, open the add-on's solution in Visual Studio,
+if it is not already open. (If you are continuing from the last tutorial above, your
+solution will already be open.)</p>
+
+<p class="pi">Follow these steps to deploy an add-on using
+ AddOn Studio for World of Warcraft:</p>
+
+<ol class="list1">
+
+<li><p>In the <a href="#Solution">Solution Explorer</a>, right-click on
+ the project you want to deploy (in this case <strong>MyFirstAddOn</strong>), and then click
+ on the <strong>Build</strong> item in the context-menu that appears.
+ <br/><img class="illusb" src="solution_explorer_pane-project_context_build.png" width="230" height="140"></p>
+
+<p>AddOn Studio for WoW will then go ahead and <strong>build</strong> and <strong>deploy</strong>
+ your add-on, coping the .toc  file (table of contents) and all of the other necessary files and
+ folders to the "Interface\AddOns" directory of your World of Warcraft installation. This is where add-ons
+ normally live inside the WoW installation.</p>
+
+<li><p>The output pane will show the build and deployment progress as
+ it runs, which should go very quickly.
+<br/><img class="illusb" src="output_pane-build.png" width="615" height="136"></p>
+
+<p>At this point your add-on is installed and up to date in WoW, and is available like any
+ other add-on for running WoW.</p></li>
+</ol>
+
+<p class="pe">For detailed information on &quot;creating an add-on&quot;, please refer to
+the <a href="#CreatingAddon">Creating a World of Warcraft AddOn</a> section.</p>
+
+<p class="pi">Other helpful deployment options and tips:</p>
+
+<ol class="list1">
+
+<li><p>You can use <strong>Clean</strong> to also un-deploy, or
+ remove, an add-on from WoW.
+<br/><img class="illusb" src="solution_explorer_pane-project_context_clean.png" width="204" height="91">
+
+<p>AddOn Studio for WoW will then remove your add-on from WoW,
+ including all of it's  files and folders.<br/>
+<img class="illusb" src="output_pane-clean.png" width="585" height="77"></p>
+
+<p>You will also need to restart WoW to see it removed form
+ the <strong>AddOn List</strong> on the log in screen.</p></li>
+
+</ol>
+
+<h1>6. <a name="TestingAddon"></a>Testing a World of Warcraft AddOn</h1>
+
+<p>To test an add-on, you must first <a href="#DeployingAddon">deploy</a> it using AddOn
+ Studio, as explained in the previous section. There are two things we can check: one is
+ to see if WoW recognizes our add-on and the second is to check our functionality in the
+ WoW game UI.</p>
+
+<p class="pi">To test the installation of the add-on created in this tutorial:</p>
+
+<ol class="list1">
+
+<li><p>Launch World of Warcraft and log on.</p></li>
+
+<li><p>After log on, access the <strong>AddOn List</strong> of available
+ add-ons using the <strong>AddOns</strong> button in the lower left corner.</p></li>
+
+<li><p>Now make sure the new add-on is enabled. Normally,
+ a new add-on will already be enabled after <strong>build</strong> and <strong>deploy</strong>
+ in AddOn Studio. You can enable or disable your add-on by changing the check-box next to it.
+ Alternatively, you can use the <strong>Enable All</strong> button to enable all add-ons,
+ including yours.<br/>
+<img class="illus" src="wow_addon_list-myfirstaddon.jpg" width="707" height="318"></p></li>
+
+<li><p>Next enter the world, by clicking <strong>Okay</strong>, which will close the <strong>AddOn List</strong>, then click <strong>Enter World</strong> which will start the regular game UI. The add-on should now automatically
+ show in the game's interface.</p></li>
+</ol>
+
+<p class="pi">To test add-on features  in the game UI created in this tutorial:</p>
+
+<ol class="list1">
+
+<li><p>Click on a new
+			<strong>target</strong>. The add-on should display the message &quot;Hello &lt;name of
+ target&gt;!&quot;</p></li>
+
+<li><p>Click the <strong>Close</strong> button. The add-on should disappear
+ from the game interface.
+ <br/><img class="illus" src="wow_world-myfirstaddon.jpg"
+		width="490" height="364"></p></li>
+
+</ol>
+
+<h1>7. <a name="CreatingAce2Addon"></a>Creating an Ace2 World of Warcraft AddOn</h1>
+
+<p>The following instructions walk you through the steps of creating a
+ simple yet functional World of Warcraft add-on based on the popular
+ <a href="http://fallenworlds.org/addonstudio/wow/wowace_ace">Ace2 framework</a>.  More tutorials
+ can be found
+ <a href="http://fallenworlds.org/addonstudio/wow/wowace_acetutorial">here</a>. <em>(note: this
+ tutorial is for Ace2 and needs to be updated for Ace3. The links provided actually point to the current tutorials on WowAce, which refer to Ace3.)</em></p>
+
+<p class="pi">Follow these steps to create an add-on using
+ AddOn Studio:</p>
+
+<ol class="list1">
+
+<li><p><strong>Locate</strong> your <strong>AddOn Studio for World of Warcraft</strong>
+ install, or find any shortcut or Pinned shortcut you may have created, and then
+ <strong>launch</strong> AddOn Studio for WoW.</p></li>
+
+<li><p>In the <strong>File</strong>, menu select <strong>New</strong>, and
+ then <strong>Project</strong> to create a new Ace2 based World of Warcraft AddOn project.</p></li>
+
+<li><p>In the <strong>New Project</strong> window that appears, select the
+ &quot;WowAce Warcraft Add-on&quot; template, enter the name of the new project (e.g. name
+ it &quot;HelloAce&quot;), and select the location where you want to store all the files
+ associated with this project and the solution created for it.
+ <br><img src="ace_1.png" /></p></li>
+
+<li><p>Click <strong>OK</strong>. The new project shows the code editor with the skeleton of
+ an Ace2 add-on.</p>
+	<p><img src="ace_2.png" /></p></li>
+
+<li>
+<p>We can use the OnInitialize method of
+the class to initialize our add-on, subscribe to events, etc. The OnEnabled and the OnDisabled
+methods are called by the Ace framework when the add-on gets enabled/disabled. This sample add-on will
+display the name of the current Zone the player is in, so we need to respond to the zone changing
+events in order to update our UI. There are two events we are interested in:
+	<a href="http://www.wowwiki.com/Events/Z">ZONE_CHANGED</a> and
+	<a href="http://www.wowwiki.com/Events/Z">ZONE_CHANGED_NEW_AREA</a>.
+
+<p>Event handling is very straightforward. We need to call the RegisterEvent method to indicate
+we want to be notified when the event fires and we need to declare a method in our add-on with the
+same name as the event.</p>
+<p><img src="ace_events.png" /></p>
+<p>Everything else is handled by Ace.</p></li>
+
+<li><p>We need a Frame to display the current
+ zone name, so let's add a Frame to our project. Bring up the context menu in the Solution Explorer
+ and choose Add/New Item...</p>
+	<p><img src="ace_additem.png" /></p>
+<p>Select the Frame in the Add New Item dialog box.</p>
+<p><img src="ace_newframe.png" /></p></li>
+
+<li><p>Drop two FontString instances to the Frame
+ from the Toolbox and arrange them. The first one will display a static text ("Welcome to"), while
+ the second one will show the zone name. Change the Name property of the second FontString to
+ "$parentLocationLabel". $parent is substituted by WoW and it is always the name of the parent object.
+ In our case the real name of the FontString will be MainFrameLocationLabel.</p>
+	<p><img src="ace_frame_layout.png" /></p></li>
+
+<li><p>Change to the Code View of the MainFrame.
+ (Open MainFrame.lua in the Solution Explorer.) Add the following code to the Lua file.
+ This will be a simple helper function which lets us to change the LocationLabel's text from the
+ AddOn.</p>
+	<p><img src="ace_mainframelua.png" /></p></li>
+
+<li> <p>Deploy the add-on into World of Warcraft then launch the game. You'll
+ see a new Frame which always displays your current location:
+	<br/><img src="ace_ingame.jpg" /></p></li>
+
+</ol>
+
+
+<h1>8. <a name="AdditionalDocumentation"></a>Additional Documentation</h1>
+
+<p>The following are additional resources that can be used to learn more about creating add-ons
+ for WoW, using AddOn Studio for World of Warcraft, and going farther in WoW add-on
+ development.</p>
+
+<p class="pi">Going farther:</p>
+
+<ol class="list1">
+
+<li><p><a href="http://fallenworlds.org/addonstudio/wow/wiki_ui">WowWiki: Interface Customization</a><br/>
+ WowWiki is one of the original and most complete WoW information sites. It hosts a very large
+ collection of information about WoW add-on development, including a variety of well categorized
+ documentation and help for WoW UI development including references for the WoW API for Lua,
+ FrameXML, the WoW UI Widget library, and others.
+	</p></li>
+
+<li><p><a href="http://fallenworlds.org/addonstudio/wow/runtime_ui">Blizzard WoW Forums: UI and Macro</a><br/>
+ This is where you can get information from &quot;the source&quot; on API and UI development patch changes,
+ including a good deal of technical community discussion.
+	</p></li>
+
+<li><p><a href="http://fallenworlds.org/addonstudio/wow/wowace_home">WowAce: Developer Home</a><br>
+ Home of 'AceLib', for WoW add-on development. This site includes resources for developing
+ 'Ace' add-ons and is home for the ace development community.
+	</p></li>
+
+<li><p><a href="http://fallenworlds.org/addonstudio/wow/gettingstarted">AddOn Studio Product Site:
+ Getting Started</a><br/> In-depth systems level guide and tutorial for getting AddOn Studio
+ for World of Warcraft up and running. This document is designed to help new users with concepts
+ and issues surrounding managing their development tools, and provides an introduction to
+ software development, and explicit verbose instructions for installing and setting up their
+ tools using advanced concepts that most experienced developers would already be familiar.
+	</p></li>
+
+</ol><br/>
+
+<center><p class="foot">
+ Copyright &copy; 2010-2019 AddOn Studio. All rights reserved.
+ </p></center>
+<p class="foot">AddOn Studio for World of Warcraft is neither created or endorsed by Blizzard
+ Entertainment. This is a third party tool and tutorial and they are not supported by Blizzard
+ Entertainment. Portions of this tutorial may include, in textual and/or image form, trademarks
+ or registered trademarks of Blizzard Entertainment, Inc. Portions of this tutorial may include
+ reproductions of World of Warcraft content and other artwork and/or otherwise elude to game
+ functionality via &quot;screenshot&quot; which are property of Blizzard Entertainment, Inc.
+ &quot;JavaScript" is a trademark of Oracle Corporation. All other trademarks are the property
+ of their respective owners, including the WoW icon portion of the AddOn Studio for World of
+ Warcraft &quot;WoW Add-on&quot; icon image. Cataclysm &copy;2010, Wrath of the Lich King &copy;2008,
+ The Burning Crusade &copy;2006, are trademarks, and World of Warcraft &copy;2004, Warcraft and
+ Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc. in
+ the U.S. and/or other countries. All rights reserved.</p>
+
+</body>
+</html>

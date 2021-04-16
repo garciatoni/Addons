@@ -1,0 +1,9 @@
+
+ElvCharacterDB = {
+	["CliqueDatatext"] = {
+	},
+	["ChatEditHistory"] = {
+	},
+	["ChatHistoryLog"] = {
+	},
+}

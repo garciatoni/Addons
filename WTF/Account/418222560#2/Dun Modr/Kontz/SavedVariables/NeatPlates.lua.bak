@@ -1,0 +1,21 @@
+
+NeatPlatesOptions = {
+	["WelcomeShown"] = true,
+	["HealthFrequent"] = true,
+	["SecondSpecProfile"] = "Defecto",
+	["FriendlyAutomation"] = {
+	},
+	["EnemyAutomation"] = {
+	},
+	["NameplateClickableWidth"] = 1,
+	["FourthSpecProfile"] = "Defecto",
+	["ThirdSpecProfile"] = "DPS",
+	["ForceBlizzardFont"] = false,
+	["DisableCastBars"] = false,
+	["EnforceRequiredCVars"] = true,
+	["BlizzardScaling"] = false,
+	["ActiveTheme"] = "Quatre",
+	["NameplateClickableHeight"] = 1,
+	["OverrideOutline"] = 1,
+	["FirstSpecProfile"] = "Defecto",
+}

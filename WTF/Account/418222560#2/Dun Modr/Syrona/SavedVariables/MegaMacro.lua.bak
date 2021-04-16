@@ -1,0 +1,62 @@
+
+MegaMacroCharacterData = {
+	["Macros"] = {
+		{
+			["Id"] = 125,
+			["StaticTexture"] = 134400,
+			["IsStaticTextureFallback"] = true,
+			["Code"] = "/use [@mouseover,dead] Reanimador espectrofásico desechable",
+			["Scope"] = "ch",
+			["Class"] = "Paladín",
+			["ScopedIndex"] = 5,
+			["DisplayName"] = "CR",
+		}, -- [1]
+		{
+			["Scope"] = "ch",
+			["ScopedIndex"] = 1,
+			["Code"] = "/cast [harm] Choque sagrado\n",
+			["Id"] = 121,
+			["Class"] = "Paladín",
+			["StaticTexture"] = 134400,
+			["DisplayName"] = "Choque",
+		}, -- [2]
+		{
+			["Scope"] = "ch",
+			["ScopedIndex"] = 2,
+			["Code"] = "/cast [@mouseover,help] Destello de Luz;Sentencia\n",
+			["Id"] = 122,
+			["Class"] = "Paladín",
+			["StaticTexture"] = 134400,
+			["DisplayName"] = "Destello",
+		}, -- [3]
+		{
+			["Scope"] = "ch",
+			["ScopedIndex"] = 3,
+			["Code"] = "/cast [@mouseover] Imposición de manos\n",
+			["Id"] = 123,
+			["Class"] = "Paladín",
+			["StaticTexture"] = 134400,
+			["DisplayName"] = "Impo",
+		}, -- [4]
+		{
+			["Scope"] = "ch",
+			["ScopedIndex"] = 4,
+			["Code"] = "/cast [@mouseover,help] Limpiar; Luz cegadora\n",
+			["Id"] = 124,
+			["Class"] = "Paladín",
+			["StaticTexture"] = 134400,
+			["DisplayName"] = "Limpiar",
+		}, -- [5]
+	},
+	["Specializations"] = {
+		["Sagrado"] = {
+			["Macros"] = {
+			},
+		},
+		["Reprensión"] = {
+			["Macros"] = {
+			},
+		},
+	},
+	["Activated"] = true,
+}

@@ -1,0 +1,6 @@
+
+SimpleMacroDBA = {
+	["settings"] = {
+		["ContextMenu"] = false,
+	},
+}

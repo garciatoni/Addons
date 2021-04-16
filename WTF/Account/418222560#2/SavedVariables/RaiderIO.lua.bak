@@ -1,0 +1,19 @@
+
+RaiderIO_Config = {
+	["previouslyEnabledLogging"] = true,
+}
+RaiderIO_LastCharacter = "eu-Thunderstrak-dun-modr"
+RaiderIO_MissingCharacters = {
+	["eu-Sulua-ravencrest"] = true,
+	["eu-Macrogaming-ysondre"] = true,
+	["eu-Adörian-cthun"] = true,
+	["eu-Bulljack-cthun"] = true,
+	["eu-Khazflisto-dun-modr"] = true,
+	["eu-Luthiel-dun-modr"] = true,
+	["eu-Xalunia-dun-modr"] = true,
+	["eu-Erpot-cthun"] = true,
+	["eu-Laracroftlol-dun-modr"] = true,
+	["eu-Itstj-dun-modr"] = true,
+	["eu-Imïlce-cthun"] = true,
+}
+RaiderIO_CachedRuns = nil

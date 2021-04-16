@@ -1,0 +1,19 @@
+
+KuiNameplatesCoreSaved = {
+	["216_HEALTH_TRANSITION"] = true,
+	["2162_PERSONAL_FRAME_SIZE_TRANSITION"] = true,
+	["profiles"] = {
+		["default"] = {
+		},
+		["Druida Heak"] = {
+			["mouseover_glow"] = true,
+			["font_size_normal"] = 14,
+			["colour_hated"] = {
+				0.8666666666666667, -- [1]
+				0.2, -- [2]
+				0.1019607843137255, -- [3]
+			},
+			["colour_player_class"] = true,
+		},
+	},
+}

@@ -1,0 +1,102 @@
+
+TalentedDB = {
+	["class"] = {
+		["DEATHKNIGHT"] = {
+			[252] = {
+				["PvP"] = {
+				},
+				["PvE"] = {
+				},
+			},
+			[251] = {
+				["PvP"] = {
+				},
+				["PvE"] = {
+				},
+			},
+			[250] = {
+				["PvP"] = {
+				},
+				["PvE"] = {
+				},
+			},
+		},
+		["DRUID"] = {
+			[103] = {
+				["PvP"] = {
+				},
+				["PvE"] = {
+				},
+			},
+			[104] = {
+				["PvP"] = {
+				},
+				["PvE"] = {
+				},
+			},
+			[102] = {
+				["PvP"] = {
+				},
+				["PvE"] = {
+				},
+			},
+			[105] = {
+				["PvP"] = {
+				},
+				["PvE"] = {
+					["Raid"] = {
+						["name"] = "Raid",
+						["build"] = "1133333",
+					},
+				},
+			},
+		},
+		["DEMONHUNTER"] = {
+			[577] = {
+				["PvP"] = {
+				},
+				["PvE"] = {
+				},
+			},
+			[581] = {
+				["PvP"] = {
+				},
+				["PvE"] = {
+				},
+			},
+		},
+		["ROGUE"] = {
+			[260] = {
+				["PvE"] = {
+				},
+				["PvP"] = {
+				},
+			},
+			[261] = {
+				["PvE"] = {
+				},
+				["PvP"] = {
+				},
+			},
+			[259] = {
+				["PvE"] = {
+				},
+				["PvP"] = {
+				},
+			},
+		},
+	},
+	["global"] = {
+		["config"] = {
+			["hideIcyVeins"] = true,
+		},
+		["v2seen"] = true,
+	},
+	["profileKeys"] = {
+		["Nyxagard - Dun Modr"] = "Default",
+		["Kontz - Dun Modr"] = "Default",
+		["Lskdnsjng - Dun Modr"] = "Default",
+		["Shiradry - Dun Modr"] = "Default",
+		["Thunderstrak - Dun Modr"] = "Default",
+	},
+}

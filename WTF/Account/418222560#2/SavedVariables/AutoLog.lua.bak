@@ -1,0 +1,48 @@
+
+AutoLog_DB = {
+	["profileKeys"] = {
+		["Sagarra - Dun Modr"] = "Sagarra - Dun Modr",
+		["Sagar - Dun Modr"] = "Sagar - Dun Modr",
+		["Nynsar - Dun Modr"] = "Nynsar - Dun Modr",
+		["Derstrak - Dun Modr"] = "Derstrak - Dun Modr",
+		["Syrona - Sanguino"] = "Syrona - Sanguino",
+		["Nyxagard - Dun Modr"] = "Nyxagard - Dun Modr",
+		["Thunderstrak - Dun Modr"] = "Thunderstrak - Dun Modr",
+		["Nimkasi - Dun Modr"] = "Nimkasi - Dun Modr",
+		["Thanazos - Dun Modr"] = "Thanazos - Dun Modr",
+		["Shiradry - Dun Modr"] = "Shiradry - Dun Modr",
+		["Thunderstrak - Zul'jin"] = "Thunderstrak - Zul'jin",
+		["Nyxagart - Dun Modr"] = "Nyxagart - Dun Modr",
+		["Urthak - Dun Modr"] = "Urthak - Dun Modr",
+		["Shiradry - Sanguino"] = "Shiradry - Sanguino",
+		["Koontz - Dun Modr"] = "Koontz - Dun Modr",
+		["Syrona - Dun Modr"] = "Syrona - Dun Modr",
+		["Francisjosa - Hyjal"] = "Francisjosa - Hyjal",
+		["Thunderstrak - Sanguino"] = "Thunderstrak - Sanguino",
+		["Tassa - Dun Modr"] = "Tassa - Dun Modr",
+		["Koontz - Sanguino"] = "Koontz - Sanguino",
+	},
+	["global"] = {
+		["normal"] = {
+			["71TEN"] = false,
+			["72TNH"] = false,
+		},
+		["chatwarning"] = true,
+		["heroic"] = {
+			["71TEN"] = false,
+			["72TNH"] = false,
+			["85NYA"] = true,
+		},
+		["allraids"] = true,
+		["mythic"] = {
+			["71TEN"] = false,
+			["72TNH"] = false,
+			["85NYA"] = true,
+		},
+		["lfr"] = {
+			["71TEN"] = false,
+			["72TNH"] = false,
+		},
+		["warned"] = true,
+	},
+}

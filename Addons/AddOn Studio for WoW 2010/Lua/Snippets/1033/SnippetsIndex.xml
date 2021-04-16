@@ -1,0 +1,11 @@
+<SnippetCollection>
+  <Language Lang="Lua" Guid="{73DA124B-2CC5-4F79-A0DB-B11B6AAA2BE5}">
+    <SnippetDir>
+      <OnOff>On</OnOff>
+      <Installed>true</Installed>
+      <Locale>1033</Locale>
+      <DirPath>%InstallRoot%\Lua\Snippets\%LCID%\Lua\</DirPath>	
+      <LocalizedName>Lua</LocalizedName>
+    </SnippetDir>
+  </Language>
+</SnippetCollection>

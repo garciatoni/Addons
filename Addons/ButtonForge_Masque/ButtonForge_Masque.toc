@@ -1,0 +1,9 @@
+## Interface: 60000
+## Title: Button Forge - Masque Compatibility
+## Notes: A compatibility hack for Button Forge to correctly support Masque button skins.
+## Author: The Binary Fox
+## SavedVariables: 
+## OptionalDeps: 
+## Dependencies: ButtonForge, Masque
+## Version: 1.0.1
+ButtonForge_Masque.xml

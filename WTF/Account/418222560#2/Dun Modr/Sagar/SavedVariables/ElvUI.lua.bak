@@ -1,0 +1,54 @@
+
+ElvCharacterDB = {
+	["ChatEditHistory"] = {
+		"/bartender", -- [1]
+		"/d adsad", -- [2]
+		"/ec", -- [3]
+	},
+	["ChatHistoryLog"] = {
+		{
+			"adsad", -- [1]
+			"Sagar-DunModr", -- [2]
+			"Lengua común", -- [3]
+			"", -- [4]
+			"Sagar-DunModr", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			111, -- [11]
+			"Player-1378-0944C810", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff006fdcSagar|r",
+			[51] = 1599836775,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [1]
+		{
+			"compro |cffa335ee|Hitem:90655::::::::120:104::::::|h[Riendas del dragón nimbo rubí tronador]|h|r y |cffa335ee|Hitem:163575::::::::120:104::::::|h[Riendas de un sanguinario domesticado]|h|r", -- [1]
+			"Chipenoso-DunModr", -- [2]
+			"", -- [3]
+			"2. Comercio: Ciudad", -- [4]
+			"Chipenoso-DunModr", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Comercio: Ciudad", -- [9]
+			0, -- [10]
+			112, -- [11]
+			"Player-1378-073C628D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffe7b09Chipenoso|r",
+			[51] = 1599836798,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [2]
+	},
+}

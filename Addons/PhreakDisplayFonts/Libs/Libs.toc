@@ -1,0 +1,11 @@
+## Interface: 80300
+## Title:  Phreakin's Display Fonts
+## Notes: Various ttf fonts for use with SharedMediaLib
+## Version: 1.1.0
+## Author: Phreakin <phreakin@gmail.com>
+## X-Category: Miscellaneous
+## OptionalDeps: LibSharedMedia-3.0, LibSharedMedia-2.0, SharedMediaLib
+
+LibStub\LibStub.lua
+LibSharedMedia-3.0\LibSharedMedia-3.0.lua
+CallbackHandler-1.0\CallbackHandler-1.0.lua

@@ -1,0 +1,29 @@
+VER 3 0100000000000005 "Al" "INV_MISC_QUESTIONMARK"
+/cast [@mouseover,exists][] Atracción letal
+END
+VER 3 0100000000000008 "Cortar/revivir" "237527"
+/cast Helada mental
+END
+VER 3 0100000000000004 "DAD" "INV_MISC_QUESTIONMARK"
+/cast [@player] Muerte y descomposición
+END
+VER 3 0100000000000006 "Levantar a aliado" "INV_MISC_QUESTIONMARK"
+/use [@mouseover,help][@target]Levantar a aliado
+END
+VER 3 0100000000000003 "Orden" "136088"
+/cast [target=mouseover, exists] Orden oscura
+END
+VER 3 0100000000000001 "Sanguino" "538767"
+/cast [@mouseover,exists][] Abrazo de Sanguino
+END
+VER 3 0100000000000009 "Sindra" "1029007"
+/cast !Aliento de Sindragosa
+END
+VER 3 010000000000000A "stun" "132140"
+/cast Saltar
+/cast Roer
+END
+VER 3 0100000000000007 "stun" "538558"
+/cast [talent:3/2] Asfixiar
+/cast [talent:3/3] Granizo cegador
+END

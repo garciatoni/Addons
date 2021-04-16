@@ -1,0 +1,24 @@
+
+MegaMacroCharacterData = {
+	["Macros"] = {
+	},
+	["Specializations"] = {
+		[""] = {
+			["Macros"] = {
+			},
+		},
+		["Guardián"] = {
+			["Macros"] = {
+			},
+		},
+		["Equilibrio"] = {
+			["Macros"] = {
+			},
+		},
+		["Restauración"] = {
+			["Macros"] = {
+			},
+		},
+	},
+	["Activated"] = true,
+}

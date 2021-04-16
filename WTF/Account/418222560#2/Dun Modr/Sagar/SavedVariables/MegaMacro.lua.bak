@@ -1,0 +1,57 @@
+
+MegaMacroCharacterData = {
+	["Macros"] = {
+		{
+			["Id"] = 121,
+			["StaticTexture"] = 134400,
+			["Code"] = "/cast [@mouseover,help] Sanación en cadena;[harm] Cadena de relámpagos\n",
+			["Scope"] = "ch",
+			["Class"] = "Chamán",
+			["ScopedIndex"] = 1,
+			["DisplayName"] = "Cadena",
+		}, -- [1]
+		{
+			["Id"] = 122,
+			["StaticTexture"] = 134400,
+			["Code"] = "/cast [@mouseover,help,exist] Desatar vida;[harm] Descarga de relámpagos\n",
+			["Scope"] = "ch",
+			["Class"] = "Chamán",
+			["ScopedIndex"] = 2,
+			["DisplayName"] = "Desatar",
+		}, -- [2]
+		{
+			["Id"] = 123,
+			["StaticTexture"] = 134400,
+			["Code"] = "/cast [@mouseover,help] Mareas vivas;[harm] Ráfaga de lava\n",
+			["Scope"] = "ch",
+			["Class"] = "Chamán",
+			["ScopedIndex"] = 3,
+			["DisplayName"] = "Mareas",
+		}, -- [3]
+		{
+			["Id"] = 124,
+			["StaticTexture"] = 134400,
+			["Code"] = "/cast [@mouseover] Ola de sanación\n",
+			["Scope"] = "ch",
+			["Class"] = "Chamán",
+			["ScopedIndex"] = 4,
+			["DisplayName"] = "Ola",
+		}, -- [4]
+		{
+			["Id"] = 125,
+			["StaticTexture"] = 134400,
+			["Code"] = "/cast [@mouseover,help] Oleada de sanación;[harm] Choque de llamas\n",
+			["Scope"] = "ch",
+			["Class"] = "Chamán",
+			["ScopedIndex"] = 5,
+			["DisplayName"] = "Oleada",
+		}, -- [5]
+	},
+	["Specializations"] = {
+		["Restauración"] = {
+			["Macros"] = {
+			},
+		},
+	},
+	["Activated"] = true,
+}

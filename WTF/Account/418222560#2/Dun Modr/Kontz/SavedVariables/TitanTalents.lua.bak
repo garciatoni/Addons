@@ -1,0 +1,5 @@
+
+TitanTalentsCharSaved = {
+	["builds"] = {
+	},
+}

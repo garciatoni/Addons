@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns="http://fallenworlds.org/addonstudio/schemas/xmldoc">
+
+	<!-- wow os alias functions -->
+	<function name="time" ref="os.time">Reference to os.time. In the global table as the os module is not available in WoW.</function>
+	<function name="date" ref="os.date">Reference to os.date. In the global table as the os module is not available in WoW.</function>
+	<function name="difftime" ref="os.difftime">Reference to os.difftime. In the global table as the os module is not available in WoW.</function>
+
+	<!-- table .table alias functions hooked into _G[] by wow -->
+	<function name="foreach" ref="table.foreach">An alias for table.foreach. Iterates over a table calling func(index, value) for each entry</function>
+	<function name="foreachi" ref="table.foreachi">An alias for table.foreachi. Iterates over a numerically-indexed table, calling func(index, value) for each entry</function>
+	<function name="tinsert" ref="table.insert">An alias for table.insert</function>
+	<function name="tremove" ref="table.remove">An alias for table.remove</function>
+	<function name="sort" ref="table.sort">An alias for table.sort</function>
+
+	<!-- string table alias functions hooked into _G[] by wow -->
+	<function name="format" ref="string.format">An alias for string.format</function>
+	<function name="gsub" ref="string.gsub">An alias for string.gsub"</function>
+	<function name="gmatch" ref="string.gmatch">An alias for string.gmatch</function>
+	<function name="strchar" ref="string.char">An alias for string.char</function>
+	<function name="strconcat" ref="string.concat">An alias for string.concat</function>
+	<function name="strlower" ref="string.lower">An alias for string.lower</function>
+	<function name="strrev" ref="string.reverse">An alias for string.reverse</function>
+	<function name="strrep" ref="string.rep">An alias for string.rep</function>
+	<function name="strmatch" ref="string.match">An alias for string.match</function>
+	<function name="strlen" ref="string.len">An alias for string.len</function>
+	<function name="strfind" ref="string.find">An alias for string.find</function>
+	<function name="strbyte" ref="string.byte">An alias for string.byte</function>
+	<function name="strupper" ref="string.upper">An alias for string.upper</function>
+	<function name="strsub" ref="string.sub">An alias for string.sub</function>
+
+	<!-- math table alias functions hooked into _G[] by wow -->
+	<!-- wow math functions, these need own definitions because they work in degrees not radians. -->
+	<function name="abs" ref="math.abs">An alias for math.abs.</function>
+	<function name="floor" ref="math.floor">An alias for math.floor</function>
+	<function name="frexp" ref="math.frexp">An alias for math.frexp</function>
+	<function name="sqrt" ref="math.sqrt">An alias for math.sqrt</function>
+	<function name="log10" ref="math.log10">An alias for math.log10. This version uses degrees instead of radians.</function>
+	<function name="ldexp" ref="math.ldexp">An alias for math.ldexp</function>
+	<function name="deg" ref="math.deg">An alias for math.deg</function>
+	<function name="exp" ref="math.exp">An alias for math.exp</function>
+	<function name="min" ref="math.min">An alias for math.min</function>
+	<function name="log" ref="math.log">An alias for math.log</function>
+
+	<!-- wow table functions -->
+	<function name="tContains">
+		<summary>Trims leading and trailing whitespace from a string. (blizzard lua)</summary>
+		<param name="table" type="table">The table to search</param>
+		<param name="value" type="any">The value to search for.</param>
+		<return name="val" apitype="onenil">1 is the value was found, otherwise nil.</return>
+		<remarks>
+			the blizzard implementation:
+			function tContains(table, item)
+				local index = 1;
+				while table[index] do
+					if ( item == table[index] ) then return 1; end
+					index = index + 1;
+				end
+				return nil;
+			end
+		</remarks>
+	</function>
+	<function name="wipe">
+		<summary>Removes all entries from a table. (blizzard lua)</summary>
+		<param name="table" type="table">The table to clear.</param>
+		<return name="val" type="table">The empty table.</return>
+		<remarks>
+			Restores a table to its initial state (like tab = {} without the garbage), and retains its metatable.
+		</remarks>
+	</function>
+
+	<!-- wow lua string functions -->
+	<function name="strlenutf8">
+		<summary>Gets the true character length of an utf-8 encoded string.</summary>
+		<param name="str" type="string">The string to test</param>
+		<return name="length" type="number">the length in chars of the string.</return>
+		<remarks>
+			Returns the length of a string, taking UTF-8 multi-byte characters into account.
+			In Lua strings are bytes, and nearly all lua functions consider each byte a character. It is common to pass
+			utf-8 encoded strings through Lua strings as all of the characters will look like ASCII characters.
+		</remarks>
+	</function>
+	<function name="strtrim">
+		<summary>Trims leading and trailing whitespace from a string</summary>
+		<param name="str" type="string">The string to trim</param>
+		<return name="text" type="string">The string with any training or leading whitespace removed</return>
+	</function>
+	<function name="strsplit">
+		<summary>Splits a string using a delimiter, optionally into a specified number of pieces.</summary>
+		<param name="delimiter" type="string">delimiter string.</param>
+		<param name="subject" type="string" optional="true">string to split.</param>
+		<param name="pieces" type="number" optional="true">the limit of the number of pieces returned.</param>
+		<return name="..." type="array">An array of split strings.</return>
+		<remarks>
+			The delimiter uses characters (bytes in Lua) that will be interpreted as delimiter characters in the string.
+			The 'pieces' are the maximum number of pieces to make (the "last" piece would contain the rest of the
+			string.) By default, an unbounded number of pieces is returned. This function returns a "value array"
+			sometimes referred to as a parameter, argument, or return value array, and is an array of strings; not a
+			table. If the delimiter is not found in the 'subject' string, the whole subject string will be returned.
+		</remarks>
+	</function>
+	<function name="strjoin">
+		<summary>Joins a list of strings together</summary>
+		<param name="sep" type="string">The string to join between each two elements</param>
+		<param name="..." type="string">A list of strings to be joined together</param>
+		<return name="text" type="string">The list of strings joined together with the given separator string</return>
+	</function>
+
+</doc>

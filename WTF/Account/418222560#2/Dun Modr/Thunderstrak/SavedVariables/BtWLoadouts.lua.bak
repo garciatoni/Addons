@@ -1,0 +1,73 @@
+
+BtWLoadoutsCollapsed = {
+	["equipment"] = {
+		["DunModr-Kontz"] = true,
+		["DunModr-Koontz"] = true,
+		["children"] = {
+		},
+		["DunModr-Syrona"] = false,
+	},
+	["talents"] = {
+		["children"] = {
+		},
+	},
+	["actionbars"] = {
+	},
+	["pvptalents"] = {
+		["children"] = {
+		},
+	},
+	["essences"] = {
+		["children"] = {
+		},
+	},
+	["conditions"] = {
+	},
+	["soulbinds"] = {
+	},
+	["profiles"] = {
+		["children"] = {
+		},
+	},
+}
+BtWLoadoutsCategories = {
+	["equipment"] = {
+		"character", -- [1]
+	},
+	["talents"] = {
+		"spec", -- [1]
+	},
+	["actionbars"] = {
+	},
+	["pvptalents"] = {
+		"spec", -- [1]
+	},
+	["essences"] = {
+		"role", -- [1]
+	},
+	["conditions"] = {
+	},
+	["soulbinds"] = {
+	},
+	["profiles"] = {
+		"spec", -- [1]
+	},
+}
+BtWLoadoutsFilters = {
+	["equipment"] = {
+	},
+	["talents"] = {
+	},
+	["actionbars"] = {
+	},
+	["pvptalents"] = {
+	},
+	["essences"] = {
+	},
+	["conditions"] = {
+	},
+	["soulbinds"] = {
+	},
+	["profiles"] = {
+	},
+}

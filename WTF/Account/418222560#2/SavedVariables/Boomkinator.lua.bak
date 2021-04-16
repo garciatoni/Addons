@@ -1,0 +1,15 @@
+
+BoomkinatorDB = {
+	["profileKeys"] = {
+		["Thunderstrak - Dun Modr"] = "Default",
+		["Kontz - Dun Modr"] = "Kontz - Dun Modr",
+		["Adasa - The Sha'tar"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+		["Kontz - Dun Modr"] = {
+			["animate"] = true,
+		},
+	},
+}

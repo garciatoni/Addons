@@ -1,0 +1,37 @@
+VER 3 010000000000000E "Control" "INV_MISC_QUESTIONMARK"
+#showtooltip Control mental
+/cast [@mouseover] Control mental
+END
+VER 3 0100000000000012 "Fuerza Brillante" "571554"
+/cast [@mouseover] Fuerza brillante 
+END
+VER 3 0100000000000010 "Maligno/barrera" "INV_MISC_QUESTIONMARK"
+/cast [@mouseover,help]Palabra de poder: escudo;Purgar al maligno
+END
+VER 3 010000000000000D "Penitencia" "INV_MISC_QUESTIONMARK"
+#showtooltip penitencia
+/cast [@mouseover,help] Penitencia;[harm] Penitencia
+END
+VER 3 0100000000000011 "Purga" "136066"
+/cast [@mouseover,exists] Disipar magia;[harm] Disipar magia
+END
+VER 3 0100000000000005 "Purificar" "135894"
+/cast [@mouseover] Purificar
+END
+VER 3 0100000000000002 "Renovar" "135953"
+#showtooltip Renovar
+/cast [@mouseover] Renovar
+END
+VER 3 0100000000000008 "Salto" "463835"
+/cast [@mouseover] Salto de fe
+END
+VER 3 0100000000000004 "Sombras" "136202"
+/cast [@mouseover,help]Alivio de las Sombras;Punición
+END
+VER 3 0100000000000003 "Suplica" "1538777"
+#showtooltip Súplica
+/cast [@mouseover] Súplica
+END
+VER 3 0100000000000009 "Supresion" "135936"
+/cast [@mouseover] Supresión de dolor
+END

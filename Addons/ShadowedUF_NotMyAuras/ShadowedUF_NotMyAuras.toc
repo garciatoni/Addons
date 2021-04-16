@@ -1,0 +1,9 @@
+## Interface: 90001
+## Title: Shadowed UF Not My Auras
+## Notes: Add more options for distinguishing between auras you have cast, and those you have not
+## Author: Vysage
+## Version: v0.1.3
+## RequiredDeps: ShadowedUnitFrames
+
+localization\enUS.lua
+ShadowedUF_NotMyAuras.lua

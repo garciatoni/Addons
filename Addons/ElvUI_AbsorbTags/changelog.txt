@@ -1,0 +1,90 @@
+[b]Revision 5.0.1[/b]
+- Added tracking for Unwavering Ward.
+- Added tracking for Resounding Protection.
+
+[b]Revision 5.0.0[/b]
+Revamp for BFA.
+
+[b]Revision 4.1.1[/b]
+Updated to suit TukUI new website and database.
+
+[b]Revision 4.1.0[/b]
+Provisions for Healing Absorbs.
+
+[b]Revision 3.0.6[/b]
+Added Trinket from Nighthold Perfectly Preserved Cake - Delicious Cake.
+
+[b]Revision 3.0.5[/b]
+Added warrior Ignore Pain (untested).
+
+[b]Revision 3.0.4[/b]
+Added trinket proc from Vial of Nightmare Fog - Spirit Fragment.
+
+[b]Revision 3.0.3[/b]
+Added various new tricket procs as "common".
+
+[b]Revision 3.0.2[/b]
+Added Soul Barrier for Demon Hunters.
+
+[b]Revision 3.0.1[/b]
+Added Greater Blessing of Kings for Paladins.
+
+[b]Revision 3.0[/b]
+Updated to suit legion pre-patch.
+
+[b]Revision 2.2[/b]
+Added in health+absorbs tag, returning the units current health + the total absorbs on the unit from all sources.
+
+[b]Revision 2.1.2[/b]
+Fixed LUA issues with 2.1.1
+Added in absorbs-mine to reflect absorbs:mine to return "" rather then 0 when there is no absorb on the unit from player.
+
+[b]Revision 2.1.1[/b]
+Added in a copy of absorbs:mine (absorbs:mine_) to return "" rather then 0 when there is no absorb on the unit from player.
+
+[b]Revision 2.1[/b]
+Added in tracking of The Ulduar Legendary Weapon - Val'anyr, Hammer of Ancient Kings.
+
+[b]Revision 2.0.3[/b]
+Added health-absorbs tag as per Pehmil 's request. 
+
+[b]Revision 2.0.2[/b]
+Added in Tracking of the legendary ring proc for healers.
+
+[b]Revision 2.0.0[/b]
+Added in Tukui Project identifiers and updated for 6.2
+
+[b]Revision 1.8.5[/b]
+Fixed issues with Warlock [i]Life Tap (Glyphed)[/i].
+
+[b]Revision 1.8.4[/b]
+Added Warlock [i]Leech Life[/i].
+Fixed a potential issue when an incorrect [i]Spell ID[/i] is used for tracking.
+
+[b]Revision 1.8.3[/b]
+Added Death Knight [i]Purgatory[/i] (healing absorb).
+Added Death Knight [i]Death Pact[/i] (healing absorb).
+Fixed some tracking issues with Death Knight [i]Anti-Magic Shield[/i].
+
+[b]Revision 1.8.2[/b]
+Added a copy of [i]classcolour[/i] - [i]classcolor[/i].
+
+[b]Revision 1.8.1[/b]
+Added Monk [i]Guard[/i].
+
+[b]Revision 1.8.0[/b]
+Added additional health trackers
+Added new line tag
+Fixed tracking issues with [i]Sacred Shield[/i]
+
+[b]Revision 1.5.5[/b]
+Added class color [i]classcolor[/i].
+
+[b]Revision 1.5.2[/b]
+Added Priest [i]Clarity of Will[/i] tracking.
+
+[b]Revision 1.5.1[/b]
+Added Paladin [i]Saved by the Light[/i] tracking.
+
+[b]Revision 1.5.0[/b]
+Added in extra information into ELVUI's text format hover text for easier setup of absorb tags on your profiles.

@@ -1,0 +1,8 @@
+## Interface: 90005
+## Title: ClickedMedia
+## Author: Snakybo
+## Version: 0.17.2
+## Notes: Icon data for Clicked.
+## LoadOnDemand: 1
+
+MediaRetail.lua

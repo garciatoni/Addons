@@ -1,0 +1,26 @@
+VER 3 0100000000000007 "A" "INV_MISC_QUESTIONMARK"
+/use [@mouseover] Alivio presto
+END
+VER 3 0100000000000001 "Eliminar corrupción" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [@mouseover,help,nodead][@target]Eliminar corrupción
+END
+VER 3 0100000000000002 "Fuego lunar" "INV_MISC_QUESTIONMARK"
+/use [@mouseover,harm,nodead][]Fuego lunar
+END
+VER 3 0100000000000008 "R" "INV_MISC_QUESTIONMARK"
+/use [@mouseover]Resguardo de Cenarius
+END
+VER 3 0100000000000003 "Recrecimiento" "INV_MISC_QUESTIONMARK"
+/use [@mouseover]Recrecimiento
+END
+VER 3 0100000000000005 "Reju" "INV_MISC_QUESTIONMARK"
+/use [@mouseover] Rejuvenecimiento
+END
+VER 3 0100000000000004 "Renacer" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [@mouseover,help][]Renacer
+END
+VER 3 0100000000000006 "v" "INV_MISC_QUESTIONMARK"
+/use [@mouseover]Flor de vida
+END

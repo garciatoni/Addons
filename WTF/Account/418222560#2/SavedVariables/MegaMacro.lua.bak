@@ -1,0 +1,508 @@
+
+MegaMacroConfig = nil
+MegaMacroGlobalData = {
+	["Macros"] = {
+		{
+			["Scope"] = "gg",
+			["Code"] = "/cast [@mouseover,help] Alivio presto;[harm] Arañazo\n",
+			["Id"] = 2,
+			["StaticTexture"] = 134400,
+			["ScopedIndex"] = 2,
+			["DisplayName"] = "Arañazo/Alivio",
+		}, -- [1]
+		{
+			["Scope"] = "gg",
+			["Code"] = "/cancelaura Dominio astral\n/cast [@mouseover,help,exist] Recrecimiento\n",
+			["Id"] = 3,
+			["StaticTexture"] = 134400,
+			["ScopedIndex"] = 3,
+			["DisplayName"] = "Cancel/cura",
+		}, -- [2]
+		{
+			["Scope"] = "gg",
+			["Code"] = "/cast Piel de corteza\n/cast [noform:1] Forma de oso\n/cancelform \n",
+			["Id"] = 4,
+			["StaticTexture"] = 134400,
+			["ScopedIndex"] = 4,
+			["DisplayName"] = "Defensivo",
+		}, -- [3]
+		{
+			["Scope"] = "gg",
+			["Code"] = "/cast [@mouseover,help] Resguardo de Cenarius;Destripar\n",
+			["Id"] = 5,
+			["StaticTexture"] = 134400,
+			["ScopedIndex"] = 5,
+			["DisplayName"] = "Destripar/resgua",
+		}, -- [4]
+		{
+			["Scope"] = "gg",
+			["Code"] = "/cast [@mouseover,help,dead] Renacer; [@mouseover,help,exists] Estimular; [@player] Estimular",
+			["Id"] = 6,
+			["StaticTexture"] = 134400,
+			["ScopedIndex"] = 6,
+			["DisplayName"] = "Estimular",
+		}, -- [5]
+		{
+			["Scope"] = "gg",
+			["Code"] = "/cast [@mouseover,help] recrecimiento ; Flagelo\n",
+			["Id"] = 7,
+			["StaticTexture"] = 134400,
+			["ScopedIndex"] = 7,
+			["DisplayName"] = "Flagelo/cura",
+		}, -- [6]
+		{
+			["Scope"] = "gg",
+			["StaticTexture"] = 132212,
+			["Code"] = "/focus [@mouseover]\n",
+			["Id"] = 8,
+			["IsStaticTextureFallback"] = false,
+			["ScopedIndex"] = 8,
+			["DisplayName"] = "Foco",
+		}, -- [7]
+		{
+			["Scope"] = "gg",
+			["Code"] = "/cast [@mouseover,help] Rejuvenecimiento;[harm] Mordedura feroz\n",
+			["Id"] = 9,
+			["StaticTexture"] = 134400,
+			["ScopedIndex"] = 9,
+			["DisplayName"] = "Mordedura/Reju",
+		}, -- [8]
+		{
+			["Scope"] = "gg",
+			["Code"] = "/cast [@mouseover] Nutrir\n",
+			["Id"] = 10,
+			["StaticTexture"] = 134400,
+			["ScopedIndex"] = 10,
+			["DisplayName"] = "Nutrir",
+		}, -- [9]
+		{
+			["Scope"] = "gg",
+			["StaticTexture"] = 136112,
+			["Code"] = "/PULL 3\n",
+			["Id"] = 12,
+			["IsStaticTextureFallback"] = false,
+			["ScopedIndex"] = 12,
+			["DisplayName"] = "PULL",
+		}, -- [10]
+		{
+			["Scope"] = "gg",
+			["Code"] = "/run SetCVar(\"autounshift\",0)\n/cast [@mouseover,exists,help] Recrecimiento;[@player] Recrecimiento\n/run SetCVar(\"autounshift\",1)\n",
+			["Id"] = 13,
+			["StaticTexture"] = 134400,
+			["ScopedIndex"] = 13,
+			["DisplayName"] = "Recregat",
+		}, -- [11]
+		{
+			["Scope"] = "gg",
+			["Code"] = "/cast [@mouseover,help] Flor de vida;[harm] Triturar\n",
+			["Id"] = 16,
+			["StaticTexture"] = 134400,
+			["ScopedIndex"] = 16,
+			["DisplayName"] = "Triturar/Flor",
+		}, -- [12]
+	},
+	["Activated"] = true,
+	["Classes"] = {
+		["Paladín"] = {
+			["Macros"] = {
+				{
+					["Scope"] = "gc",
+					["ScopedIndex"] = 1,
+					["Class"] = "Paladín",
+					["Code"] = "/cast [@mouseover,help,exists] Bendición de protección; [harm] Martillo de cólera",
+					["Id"] = 61,
+					["IsStaticTextureFallback"] = true,
+					["StaticTexture"] = 134400,
+					["DisplayName"] = "Prote/pegar",
+				}, -- [1]
+			},
+			["Specializations"] = {
+				["Sagrado"] = {
+					["Macros"] = {
+					},
+				},
+				["Reprensión"] = {
+					["Macros"] = {
+					},
+				},
+			},
+		},
+		["Pícara"] = {
+			["Macros"] = {
+			},
+			["Specializations"] = {
+				["Forajido"] = {
+					["Macros"] = {
+					},
+				},
+				["Sutileza"] = {
+					["Macros"] = {
+					},
+				},
+			},
+		},
+		["Druida"] = {
+			["Macros"] = {
+				{
+					["Scope"] = "gc",
+					["ScopedIndex"] = 4,
+					["Class"] = "Druida",
+					["Code"] = "/cast [@arena1]  Ciclón",
+					["Id"] = 64,
+					["IsStaticTextureFallback"] = true,
+					["StaticTexture"] = 134400,
+					["DisplayName"] = "Ciclon1",
+				}, -- [1]
+				{
+					["Scope"] = "gc",
+					["ScopedIndex"] = 5,
+					["Class"] = "Druida",
+					["Code"] = "/cast [@arena2]  Ciclón",
+					["Id"] = 65,
+					["IsStaticTextureFallback"] = true,
+					["StaticTexture"] = 134400,
+					["DisplayName"] = "Ciclon2",
+				}, -- [2]
+				{
+					["Scope"] = "gc",
+					["ScopedIndex"] = 10,
+					["Class"] = "Druida",
+					["Code"] = "/cast [@mouseover] Ciclón ",
+					["Id"] = 66,
+					["IsStaticTextureFallback"] = true,
+					["StaticTexture"] = 134400,
+					["DisplayName"] = "CiclonMouse",
+				}, -- [3]
+				{
+					["Scope"] = "gc",
+					["ScopedIndex"] = 2,
+					["Class"] = "Druida",
+					["Code"] = "/cast [nocombat,nostealth] acechar;forma felina\n",
+					["Id"] = 62,
+					["IsStaticTextureFallback"] = true,
+					["StaticTexture"] = 514640,
+					["DisplayName"] = "Gato",
+				}, -- [4]
+				{
+					["Scope"] = "gc",
+					["ScopedIndex"] = 7,
+					["Class"] = "Druida",
+					["Code"] = "/cast [talent:3/2] Amputar; [talent:3/3] Rugido incapacitante",
+					["Id"] = 67,
+					["IsStaticTextureFallback"] = true,
+					["StaticTexture"] = 134400,
+					["DisplayName"] = "Stuns",
+				}, -- [5]
+				{
+					["Scope"] = "gc",
+					["ScopedIndex"] = 1,
+					["Class"] = "Druida",
+					["Code"] = "/cast [flyable] Forma de viaje(Cambio de forma);[swimming] Forma de viaje(Cambio de forma); Forma de montura(Cambio de forma)",
+					["Id"] = 61,
+					["IsStaticTextureFallback"] = true,
+					["StaticTexture"] = 132144,
+					["DisplayName"] = "Viaje",
+				}, -- [6]
+				{
+					["Scope"] = "gc",
+					["ScopedIndex"] = 10,
+					["Class"] = "Druida",
+					["Code"] = "/cancelform [@mouseover,help,nostance:0]\n/cast [@mouseover,exists] Carga salvaje; Carga salvaje",
+					["Id"] = 70,
+					["IsStaticTextureFallback"] = true,
+					["StaticTexture"] = 134400,
+					["DisplayName"] = "carga",
+				}, -- [7]
+				{
+					["Scope"] = "gc",
+					["ScopedIndex"] = 8,
+					["Class"] = "Druida",
+					["Code"] = "/cast [@arena3]  Ciclón",
+					["Id"] = 68,
+					["IsStaticTextureFallback"] = true,
+					["StaticTexture"] = 134400,
+					["DisplayName"] = "clon3",
+				}, -- [8]
+				{
+					["Scope"] = "gc",
+					["ScopedIndex"] = 3,
+					["Class"] = "Druida",
+					["Code"] = "/cast [@mouseover,exists] Espinas; [@player ]Espinas",
+					["Id"] = 63,
+					["IsStaticTextureFallback"] = true,
+					["StaticTexture"] = 134400,
+					["DisplayName"] = "espinas",
+				}, -- [9]
+				{
+					["Scope"] = "gc",
+					["ScopedIndex"] = 9,
+					["Class"] = "Druida",
+					["Code"] = "/use [nocombat, nostealth] Acechar; Forma felina(Cambio de forma)",
+					["Id"] = 69,
+					["IsStaticTextureFallback"] = true,
+					["StaticTexture"] = 134400,
+					["DisplayName"] = "sigilo",
+				}, -- [10]
+			},
+			["Specializations"] = {
+				[""] = {
+					["Macros"] = {
+					},
+				},
+				["Feral"] = {
+					["Macros"] = {
+						{
+							["Code"] = "#showtooltip Arañazo\n/cast [nostealth] Furia del tigre\n/cast Arañazo\n\n",
+							["Scope"] = "gs",
+							["Class"] = "Druida",
+							["DisplayName"] = "arañazo",
+							["Specialization"] = "Feral",
+							["StaticTexture"] = 132122,
+							["IsStaticTextureFallback"] = true,
+							["ScopedIndex"] = 1,
+							["Id"] = 91,
+						}, -- [1]
+						{
+							["Code"] = "/cast [@mouseover,help,dead] Renacer; Testarazo",
+							["Scope"] = "gs",
+							["Class"] = "Druida",
+							["DisplayName"] = "corte",
+							["Specialization"] = "Feral",
+							["ScopedIndex"] = 2,
+							["IsStaticTextureFallback"] = true,
+							["StaticTexture"] = 134400,
+							["Id"] = 92,
+						}, -- [2]
+					},
+				},
+				["Guardián"] = {
+					["Macros"] = {
+						{
+							["Code"] = "/cast [@mouseover,help,dead] Renacer; Testarazo",
+							["Scope"] = "gs",
+							["Class"] = "Druida",
+							["DisplayName"] = "Corte",
+							["Specialization"] = "Guardián",
+							["StaticTexture"] = 134400,
+							["IsStaticTextureFallback"] = true,
+							["ScopedIndex"] = 1,
+							["Id"] = 91,
+						}, -- [1]
+						{
+							["Code"] = "/cast [@mouseover,help,exists] Eliminar corrupción; Eliminar corrupción",
+							["Scope"] = "gs",
+							["Class"] = "Druida",
+							["DisplayName"] = "Eliminar",
+							["Specialization"] = "Guardián",
+							["StaticTexture"] = 135952,
+							["IsStaticTextureFallback"] = true,
+							["ScopedIndex"] = 2,
+							["Id"] = 92,
+						}, -- [2]
+					},
+				},
+				["Equilibrio"] = {
+					["Macros"] = {
+						{
+							["Code"] = "/cast [@mouseover,help,dead] Renacer; [@mouseover,help,exists] Estimular; Rayo solar",
+							["Scope"] = "gs",
+							["Class"] = "Druida",
+							["DisplayName"] = "Corte",
+							["Specialization"] = "Equilibrio",
+							["ScopedIndex"] = 1,
+							["IsStaticTextureFallback"] = true,
+							["StaticTexture"] = 252188,
+							["Id"] = 91,
+						}, -- [1]
+						{
+							["Code"] = "#Showtooltip Solar Beam\n/stopcasting\n/cast Enredo masivo\n/cast Rayo solar",
+							["Scope"] = "gs",
+							["Class"] = "Druida",
+							["DisplayName"] = "Root",
+							["Specialization"] = "Equilibrio",
+							["Id"] = 92,
+							["IsStaticTextureFallback"] = true,
+							["StaticTexture"] = 252188,
+							["ScopedIndex"] = 2,
+						}, -- [2]
+					},
+				},
+				["Restauración"] = {
+					["Macros"] = {
+						{
+							["Code"] = "/cast Forma de antárbol(Cambio de forma)\n/dance",
+							["Scope"] = "gs",
+							["Class"] = "Druida",
+							["DisplayName"] = "",
+							["Specialization"] = "Restauración",
+							["Id"] = 98,
+							["IsStaticTextureFallback"] = true,
+							["StaticTexture"] = 132145,
+							["ScopedIndex"] = 8,
+						}, -- [1]
+						{
+							["Code"] = "/cast [@player] Crecimiento salvaje",
+							["Scope"] = "gs",
+							["Class"] = "Druida",
+							["DisplayName"] = "Crecimiento",
+							["Specialization"] = "Restauración",
+							["Id"] = 92,
+							["IsStaticTextureFallback"] = true,
+							["ScopedIndex"] = 2,
+							["StaticTexture"] = 236153,
+						}, -- [2]
+						{
+							["Code"] = "/cast [@mouseover,help,dead] Renacer;[@mouseover,harm,exists,nodead]  Ciclón; [@player] Estimular",
+							["Scope"] = "gs",
+							["Class"] = "Druida",
+							["DisplayName"] = "Estimular",
+							["Specialization"] = "Restauración",
+							["Id"] = 91,
+							["IsStaticTextureFallback"] = true,
+							["ScopedIndex"] = 1,
+							["StaticTexture"] = 136048,
+						}, -- [3]
+						{
+							["Code"] = "/cast [@mouseover, harm]Fuego solar",
+							["Scope"] = "gs",
+							["Class"] = "Druida",
+							["DisplayName"] = "Fuego Solar",
+							["Specialization"] = "Restauración",
+							["ScopedIndex"] = 4,
+							["IsStaticTextureFallback"] = true,
+							["StaticTexture"] = 134400,
+							["Id"] = 94,
+						}, -- [4]
+						{
+							["Code"] = "/castsequence reset=2 Fuego Solar, Fuego lunar",
+							["Scope"] = "gs",
+							["Class"] = "Druida",
+							["DisplayName"] = "Fuegos",
+							["Specialization"] = "Restauración",
+							["Id"] = 93,
+							["IsStaticTextureFallback"] = true,
+							["ScopedIndex"] = 3,
+							["StaticTexture"] = 236216,
+						}, -- [5]
+						{
+							["Code"] = "/cast [@mouseover,harm] Fuego solar; Oleada de estrellas",
+							["Scope"] = "gs",
+							["Class"] = "Druida",
+							["DisplayName"] = "Pulsar",
+							["Specialization"] = "Restauración",
+							["StaticTexture"] = 134400,
+							["IsStaticTextureFallback"] = true,
+							["ScopedIndex"] = 6,
+							["Id"] = 96,
+						}, -- [6]
+						{
+							["Code"] = "/use Rocío de ambrosía\n/cast [nostealth] Acechar\n/p DRINK",
+							["Scope"] = "gs",
+							["Class"] = "Druida",
+							["DisplayName"] = "Restear",
+							["Specialization"] = "Restauración",
+							["Id"] = 97,
+							["IsStaticTextureFallback"] = true,
+							["StaticTexture"] = 134400,
+							["ScopedIndex"] = 7,
+						}, -- [7]
+						{
+							["Code"] = "/cast [@mouseover, exists] Sobrecrecimiento; [@player] Sobrecrecimiento",
+							["Scope"] = "gs",
+							["Class"] = "Druida",
+							["DisplayName"] = "Sobre",
+							["Specialization"] = "Restauración",
+							["ScopedIndex"] = 5,
+							["IsStaticTextureFallback"] = true,
+							["StaticTexture"] = 1408836,
+							["Id"] = 95,
+						}, -- [8]
+					},
+				},
+			},
+		},
+		["Caballero de la Muerte"] = {
+			["Macros"] = {
+			},
+			["Specializations"] = {
+				["Sangre"] = {
+					["Macros"] = {
+					},
+				},
+				["Profano"] = {
+					["Macros"] = {
+					},
+				},
+			},
+		},
+		["Chamán"] = {
+			["Macros"] = {
+			},
+			["Specializations"] = {
+				["Restauración"] = {
+					["Macros"] = {
+					},
+				},
+			},
+		},
+		["Cazadora de demonios"] = {
+			["Macros"] = {
+			},
+			["Specializations"] = {
+				["Venganza"] = {
+					["Macros"] = {
+						{
+							["Code"] = "/cast [@cursor] Sigilo de llamas\n",
+							["Scope"] = "gs",
+							["Class"] = "Cazadora de demonios",
+							["DisplayName"] = "",
+							["Specialization"] = "Venganza",
+							["Id"] = 91,
+							["IsStaticTextureFallback"] = true,
+							["StaticTexture"] = 1344652,
+							["ScopedIndex"] = 1,
+						}, -- [1]
+					},
+				},
+				["Devastación"] = {
+					["Macros"] = {
+					},
+				},
+			},
+		},
+		["Cazadora"] = {
+			["Macros"] = {
+			},
+			["Specializations"] = {
+				[""] = {
+					["Macros"] = {
+					},
+				},
+			},
+		},
+		["Bruja"] = {
+			["Macros"] = {
+			},
+			["Specializations"] = {
+				["Aflicción"] = {
+					["Macros"] = {
+					},
+				},
+			},
+		},
+		["Monje"] = {
+			["Macros"] = {
+			},
+			["Specializations"] = {
+				["Viajero del viento"] = {
+					["Macros"] = {
+					},
+				},
+				["Maestro cervecero"] = {
+					["Macros"] = {
+					},
+				},
+			},
+		},
+	},
+}

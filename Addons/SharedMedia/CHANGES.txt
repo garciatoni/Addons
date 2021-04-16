@@ -1,0 +1,23 @@
+------------------------------------------------------------------------
+r194 | nevcairiel | 2020-11-23 10:21:14 +0000 (Mon, 23 Nov 2020) | 1 line
+Changed paths:
+   M /trunk/SharedMedia.toc
+
+Update TOC for 9.0.2
+------------------------------------------------------------------------
+r193 | elkano | 2018-07-18 19:33:32 +0000 (Wed, 18 Jul 2018) | 3 lines
+Changed paths:
+   M /trunk/MyMedia.bat.txt
+   M /trunk/SharedMedia.toc
+   A /trunk/embeds.xml
+   M /trunk/fonts/deja_vu/DejaVuLGCSans.ttf
+   M /trunk/fonts/deja_vu/DejaVuLGCSerif.ttf
+   M /trunk/fonts/font info.txt
+   M /trunk/fonts/hack/Hack-Regular.ttf
+   A /trunk/fonts/hack/LICENSE.md
+
+- updated DejaVu to version 2.37
+- updated Hack to version 3.003
+- adjusted MyMedia TOC for WoW 8.0.1
+------------------------------------------------------------------------
+

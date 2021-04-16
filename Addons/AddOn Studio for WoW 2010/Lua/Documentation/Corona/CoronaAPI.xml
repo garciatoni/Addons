@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns="http://fallenworlds.org/addonstudio/schemas/xmldoc">
+<!-- for corona documentation, move this file to the [lang]/documentation folder -->
+	<function name="addEventListener">addEventListener(eventName, listener)</function>
+	<function name="align">align</function>
+	<function name="alpha">alpha</function>
+	<function name="analytics.init">analytics.init(applicationKey)</function>
+	<function name="analytics.logEvent">analytics.logEvent(eventID)</function>
+	<!--function name="audio.dispose">audio.dispose(audioHandle)</function-->
+	<!-- table .table functions -->
+	<!--<table name="table" virtual="true" />-->
+	<table name="audio">
+		<summary>
+			Contains functions to support audio.
+The Corona Audio system gives you access to advanced OpenAL features. Eventually
+it will replace the Corona Event Sound system. However, it is currently a "work
+in progress."
+		</summary>
+		<function name="dispose">
+			<summary>Releases audio memory associated with the handle.</summary>
+			<param name="audioHandle" type="table">The handle (aka "object") returned by the audio.load* functions that you want to free.</param>
+			<remarks>
+				You must not use the handle once the memory is freed. The audio should not be active
+				(playing or paused) on any channel when you try to free it.
+			</remarks>
+		</function>
+		<function name="fade">audio.fade([ { [channel=c] [, time=t] [, volume=v ] }])</function>
+		<function name="fadeOut">audio.fadeOut([ { [channel=c] [, time=t] }])</function>
+		<function name="findFreeChannel">audio.findFreeChannel([ startChannel ])</function>
+		<function name="freeChannels">audio.freeChannels</function>
+		<function name="getDuration">audio.getDuration(audioHandle)</function>
+		<function name="getMaxVolume">audio.getMaxVolume({ channel=c })</function>
+		<function name="getMinVolume">audio.getMinVolume({ channel=c })</function>
+		<function name="getVolume">audio.getVolume([ { channel=c }])</function>
+		<function name="isChannelActive">audio.isChannelActive(channel)</function>
+		<function name="isChannelPaused">audio.isChannelPaused(channel)</function>
+		<function name="isChannelPlaying">audio.isChannelPlaying(channel)</function>
+		<function name="loadSound">audio.loadSound(audiofileName [, baseDir ])</function>
+		<function name="loadStream">audio.loadStream(audiofileName [, baseDir ])</function>
+		<function name="pause">audio.pause()</function>
+		<function name="pause">audio.pause([channel])</function>
+		<function name="play">audio.play()</function>
+		<function name="play">audio.play(audioHandle [, { [channel=c] [, loops=l] [, duration=d] [, fadein=f] [, onComplete=o] }])</function>
+		<function name="reserveChannels">audio.reserveChannels(channels)</function>
+		<function name="reservedChannels">audio.reservedChannels</function>
+		<function name="resume">audio.resume([channel])</function>
+		<function name="rewind">audio.rewind([ audioHandle ] [, { channel=c }])</function>
+		<function name="seek">audio.seek(time [, audioHandle ] [, { channel=c }])</function>
+		<function name="setMaxVolume">audio.setMaxVolume(volume, { channel=c })</function>
+		<function name="setMinVolume">audio.setMinVolume(volume, { channel=c })</function>
+		<function name="setVolume">audio.setVolume(volume [,{ channel=c }])</function>
+		<function name="stop">audio.stop([channel])</function>
+		<function name="stopWithDelay">audio.stopWithDelay(duration [, { [ channel = c ] }])</function>
+		<function name="totalChannels">audio.totalChannels</function>
+		<function name="unreservedFreeChannels">audio.unreservedFreeChannels</function>
+		<function name="unreservedUsedChannels">audio.unreservedUsedChannels</function>
+		<function name="usedChannels">audio.usedChannels</function>
+	</table>
+	<function name="baseUrl">baseUrl</function>
+	<function name="body.angularDamping">body.angularDamping</function>
+	<function name="body.angularVelocity">body.angularVelocity</function>
+	<function name="body.bodyType">body.bodyType</function>
+	<function name="body.isAwake">body.isAwake</function>
+	<function name="body.isBodyActive">body.isBodyActive</function>
+	<function name="body.isBullet">body.isBullet</function>
+	<function name="body.isFixedRotation">body.isFixedRotation</function>
+	<function name="body.isSleepingAllowed">body.isSleepingAllowed</function>
+	<function name="body.linearDamping">body.linearDamping</function>
+	<function name="body:applyAngularImpulse">body:applyAngularImpulse(appliedForce)</function>
+	<function name="body:applyForce">body:applyForce(xForce, yForce, bodyX, bodyY)</function>
+	<function name="body:applyLinearImpulse">body:applyLinearImpulse(xForce, yForce, bodyX, bodyY)</function>
+	<function name="body:applyTorque">body:applyTorque(appliedForce)</function>
+	<function name="body:getLinearVelocity">body:getLinearVelocity()</function>
+	<function name="body:resetMassData">body:resetMassData()</function>
+	<function name="body:setLinearVelocity">body:setLinearVelocity(xVelocity, yVelocity)</function>
+	<function name="crypto.digest">crypto.digest(algorithm, string [, raw])</function>
+	<function name="crypto.hmac">crypto.hmac(algorithm, string, key [, raw])</function>
+	<function name="crypto.md4">crypto.md4</function>
+	<function name="crypto.md5">crypto.md5</function>
+	<function name="crypto.sha1">crypto.sha1</function>
+	<function name="crypto.sha224">crypto.sha224</function>
+	<function name="crypto.sha256">crypto.sha256</function>
+	<function name="crypto.sha384">crypto.sha384</function>
+	<function name="crypto.sha512">crypto.sha512</function>
+	<function name="dispatchEvent">dispatchEvent(event)</function>
+	<function name="display.captureScreen">display.captureScreen(saveToAlbumBool)</function>
+	<function name="display.contentCenterX">display.contentCenterX</function>
+	<function name="display.contentCenterY">display.contentCenterY</function>
+	<function name="display.contentHeight">display.contentHeight</function>
+	<function name="display.contentScaleX">display.contentScaleX</function>
+	<function name="display.contentScaleY">display.contentScaleY</function>
+	<function name="display.contentWidth">display.contentWidth</function>
+	<function name="display.getCurrentStage">display.getCurrentStage()</function>
+	<function name="display.loadRemoteImage">display.loadRemoteImage(url, method, listener [, params], destFilename [, baseDir] [, x, y])</function>
+	<function name="display.newCicle">display.newCicle()</function>
+	<function name="display.newCircle">display.newCircle(xCenter, yCenter, radius)</function>
+	<function name="display.newGroup">display.newGroup()</function>
+	<function name="display.newImage">display.newImage()</function>
+	<function name="display.newImage">display.newImage([parentGroup,] filename [,baseDirectory] [,left,top] [,isFullResolution])</function>
+	<function name="display.newImage">display.newImage(filename [,baseDirectory] [,left,top])</function>
+	<function name="display.newImageRect">display.newImageRect()</function>
+	<function name="display.newImageRect">display.newImageRect([parentGroup,] filename [, baseDirectory] width, height)</function>
+	<function name="display.newLine">display.newLine()</function>
+	<function name="display.newLine">display.newLine([parent,] x1, y1, x2, y2)</function>
+	<function name="display.newRect">display.newRect()</function>
+	<function name="display.newRect">display.newRect([parentGroup,] left, top, width, height)</function>
+	<function name="display.newRoundedRect">display.newRoundedRect()</function>
+	<function name="display.newRoundedRect">display.newRoundedRect([parentGroup,] left, top, width, height, cornerRadius)</function>
+	<function name="display.newText">display.newText()</function>
+	<function name="display.newText">display.newText([parentGroup,] string, left, top, font, size)</function>
+	<function name="display.save">display.save(displayObject, filename [, baseDirectory])</function>
+	<function name="display.screenOriginX">display.screenOriginX</function>
+	<function name="display.screenOriginY">display.screenOriginY</function>
+	<function name="display.setDefault">display.setDefault(key, r, g, b [,alpha])</function>
+	<function name="display.setStatusBar">display.setStatusBar()</function>
+	<function name="display.setStatusBar">display.setStatusBar(display.DarkStatusBar)</function>
+	<function name="display.setStatusBar">display.setStatusBar(display.DefaultStatusBar)</function>
+	<function name="display.setStatusBar">display.setStatusBar(display.HiddenStatusBar)</function>
+	<function name="display.setStatusBar">display.setStatusBar(display.TranslucentStatusBar)</function>
+	<function name="display.statusBarHeight">display.statusBarHeight</function>
+	<function name="display.viewableContentHeight">display.viewableContentHeight</function>
+	<function name="display.viewableContentWidth">display.viewableContentWidth</function>
+	<function name="easing.inExpo">easing.inExpo(time, tMax, start, delta)</function>
+	<function name="easing.inOutExpo">easing.inOutExpo(time, tMax, start, delta)</function>
+	<function name="easing.inOutQuad">easing.inOutQuad(time, tMax, start, delta)</function>
+	<function name="easing.inQuad">easing.inQuad(time, tMax, start, delta)</function>
+	<function name="easing.linear">easing.linear(time, tMax, start, delta)</function>
+	<function name="easing.outExpo">easing.outExpo(time, tMax, start, delta)</function>
+	<function name="easing.outQuad">easing.outQuad(time, tMax, start, delta)</function>
+	<function name="event.accuracy">event.accuracy</function>
+	<function name="event.altitude">event.altitude</function>
+	<function name="event.city">event.city</function>
+	<function name="event.cityDetail">event.cityDetail</function>
+	<function name="event.count">event.count</function>
+	<function name="event.country">event.country</function>
+	<function name="event.countryCode">event.countryCode</function>
+	<function name="event.delta">event.delta</function>
+	<function name="event.direction">event.direction</function>
+	<function name="event.errorCode">event.errorCode</function>
+	<function name="event.errorMessage">event.errorMessage</function>
+	<function name="event.force">event.force</function>
+	<function name="event.friction">event.friction</function>
+	<function name="event.geographic">event.geographic</function>
+	<function name="event.id">event.id</function>
+	<function name="event.invalidProducts">event.invalidProducts</function>
+	<function name="event.isError">event.isError</function>
+	<function name="event.isShake">event.isShake</function>
+	<function name="event.latitude">event.latitude</function>
+	<function name="event.longitude">event.longitude</function>
+	<function name="event.magnetic">event.magnetic</function>
+	<function name="event.name">event.name</function>
+	<function name="event.object1">event.object1</function>
+	<function name="event.object2">event.object2</function>
+	<function name="event.other">event.other</function>
+	<function name="event.phase">event.phase</function>
+	<function name="event.postalCode">event.postalCode</function>
+	<function name="event.products">event.products</function>
+	<function name="event.region">event.region</function>
+	<function name="event.regionDetail">event.regionDetail</function>
+	<function name="event.source">event.source</function>
+	<function name="event.speed">event.speed</function>
+	<function name="event.sprite">event.sprite</function>
+	<function name="event.street">event.street</function>
+	<function name="event.streetDetail">event.streetDetail</function>
+	<function name="event.time">event.time</function>
+	<function name="event.transaction">event.transaction</function>
+	<function name="event.type">event.type</function>
+	<function name="event.url">event.url</function>
+	<function name="event.x">event.x</function>
+	<function name="event.xGravity">event.xGravity</function>
+	<function name="event.xInstant">event.xInstant</function>
+	<function name="event.xStart">event.xStart</function>
+	<function name="event.y">event.y</function>
+	<function name="event.yGravity">event.yGravity</function>
+	<function name="event.yInstant">event.yInstant</function>
+	<function name="event.yStart">event.yStart</function>
+	<function name="event.zGravity">event.zGravity</function>
+	<function name="event.zInstant">event.zInstant</function>
+	<function name="facebook.login">facebook.login(appId, listener [, permissions ])</function>
+	<function name="facebook.logout">facebook.logout()</function>
+	<function name="facebook.request">facebook.request(path [, httpMethod, params])</function>
+	<function name="facebook.showDialog">facebook.showDialog(params)</function>
+	<function name="file:close">file:close()</function>
+	<function name="file:flush">file:flush()</function>
+	<function name="file:lines">file:lines()</function>
+	<function name="file:read">file:read([fmt1] [, fmt2] [, ...])</function>
+	<function name="file:seek">file:seek([mode] [, offset])</function>
+	<function name="file:setvbuf">file:setvbuf(mode [, size])</function>
+	<function name="file:write">file:write(arg1 [, arg2] [, ...])</function>
+	<function name="font">font</function>
+	<function name="getSampleRate">getSampleRate()</function>
+	<function name="getTunerFrequency">getTunerFrequency()</function>
+	<function name="getTunerVolume">getTunerVolume()</function>
+	<function name="group.numChildren">group.numChildren</function>
+	<function name="group:insert">group:insert()</function>
+	<function name="group:insert">group:insert([index,] child, [, resetTransform])</function>
+	<function name="group:remove">group:remove()</function>
+	<function name="group:remove">group:remove(indexOrChild)</function>
+	<function name="hasBackground">hasBackground</function>
+	<function name="height">height</function>
+	<function name="io.close">io.close([file])</function>
+	<function name="io.flush">io.flush()</function>
+	<function name="io.input">io.input([file])</function>
+	<function name="io.lines">io.lines([file])</function>
+	<function name="io.open">io.open(filename_path [, mode])</function>
+	<function name="io.output">io.output([file])</function>
+	<function name="io.popen">io.popen()</function>
+	<function name="io.read">io.read([fmt1] [, fmt2] [, ...])</function>
+	<function name="io.tmpfile">io.tmpfile()</function>
+	<function name="io.type">io.type(obj)</function>
+	<function name="io.write">io.write(arg1 [, arg2] [, ...])</function>
+	<function name="isHitTestable">isHitTestable</function>
+	<function name="isRecording">isRecording()</function>
+	<function name="isSecure">isSecure</function>
+	<function name="isVisible">isVisible</function>
+	<function name="joint.dampingRatio">joint.dampingRatio</function>
+	<function name="joint.frequency">joint.frequency</function>
+	<function name="joint.isLimitEnabled">joint.isLimitEnabled</function>
+	<function name="joint.isMotorEnabled">joint.isMotorEnabled</function>
+	<function name="joint.jointAngle">joint.jointAngle</function>
+	<function name="joint.jointSpeed">joint.jointSpeed</function>
+	<function name="joint.jointTranslation">joint.jointTranslation</function>
+	<function name="joint.length">joint.length</function>
+	<function name="joint.length1">joint.length1</function>
+	<function name="joint.length2">joint.length2</function>
+	<function name="joint.maxForce">joint.maxForce</function>
+	<function name="joint.maxMotorForce">joint.maxMotorForce</function>
+	<function name="joint.maxMotorTorque">joint.maxMotorTorque</function>
+	<function name="joint.maxTorque">joint.maxTorque</function>
+	<function name="joint.motorForce">joint.motorForce</function>
+	<function name="joint.motorSpeed">joint.motorSpeed</function>
+	<function name="joint.motorTorque">joint.motorTorque</function>
+	<function name="joint.ratio">joint.ratio</function>
+	<function name="joint:getAnchorA">joint:getAnchorA()</function>
+	<function name="joint:getAnchorB">joint:getAnchorB()</function>
+	<function name="joint:getLimits">joint:getLimits()</function>
+	<function name="joint:getReactionForce">joint:getReactionForce()</function>
+	<function name="joint:getRotationLimits">joint:getRotationLimits()</function>
+	<function name="joint:removeSelf">joint:removeSelf()</function>
+	<function name="joint:setLimits">joint:setLimits(upper, lower)</function>
+	<function name="joint:setRotationLimits">joint:setRotationLimits(lowerLimit, upperLimit)</function>
+	<function name="length">length</function>
+	<function name="local">local</function>
+	<function name="media.getSoundVolume">media.getSoundVolume()</function>
+	<function name="media.newEventSound">media.newEventSound(filename [, baseDir])</function>
+	<function name="media.newRecording">media.newRecording([path])</function>
+	<function name="media.pauseSound">media.pauseSound()</function>
+	<function name="media.playEventSound">media.playEventSound(sound [, baseDir] [, completionListener])</function>
+	<function name="media.playSound">media.playSound()</function>
+	<function name="media.playSound">media.playSound(soundfile [, baseDir] [, loop])</function>
+	<function name="media.playSound">media.playSound(soundfile [, baseDir] [, onComplete])</function>
+	<function name="media.playVideo">media.playVideo()</function>
+	<function name="media.playVideo">media.playVideo(path [, baseSource ], showControls, listener)</function>
+	<function name="media.setSoundVolume">media.setSoundVolume(vol)</function>
+	<function name="media.show">media.show(imageSource, listener)</function>
+	<function name="media.stopSound">media.stopSound()</function>
+	<function name="module">module(name [,...])</function>
+	<function name="movieclip.newAnim">movieclip.newAnim(frames)</function>
+	<function name="myMap.isLocationVisible = true">myMap.isLocationVisible = true</function>
+	<function name="myMap.isScrollEnabled = true">myMap.isScrollEnabled = true</function>
+	<function name="myMap.isZoomEnabled = true">myMap.isZoomEnabled = true</function>
+	<function name="myMap.mapType = mapType">myMap.mapType = mapType</function>
+	<function name="myMap:addMarker">myMap:addMarker(latitude, longitude, [{ title="Displayed Title", subtitle="subtitle text" }])</function>
+	<function name="myMap:getAddressLocation">myMap:getAddressLocation(location)</function>
+	<function name="myMap:getUserLocation">myMap:getUserLocation()</function>
+	<function name="myMap:removeAllMarkers">myMap:removeAllMarkers()</function>
+	<function name="myMap:setCenter">myMap:setCenter(latitude, longitude, isAnimated)</function>
+	<function name="myMap:setRegion">myMap:setRegion(latitude, longitude, latitudeSpan, longitudeSpan, isAnimated)</function>
+	<function name="native.cancelAlert">native.cancelAlert(alert)</function>
+	<function name="native.cancelWebPopup">native.cancelWebPopup()</function>
+	<function name="native.getFontNames">native.getFontNames()</function>
+	<function name="native.newFont">native.newFont(name [, size])</function>
+	<function name="native.newTextBox">native.newTextBox(left, top, width, height)</function>
+	<function name="native.newTextField">native.newTextField(left, top, width, height [, listener])</function>
+	<function name="native.setActivityIndicator">native.setActivityIndicator(stateBool)</function>
+	<function name="native.setKeyboardFocus">native.setKeyboardFocus(textField)</function>
+	<function name="native.showAlert">native.showAlert(title, message [, buttonLabels [, listener]])</function>
+	<function name="native.showWebPopup">native.showWebPopup(url [, options])</function>
+	<function name="native.showWebPopup">native.showWebPopup(x, y, width, height, url [, options])</function>
+	<function name="network.download">network.download(url, method, listener [, params], destFilename [, baseDir])</function>
+	<function name="network.request">network.request(url, method, listener [, params])</function>
+	<function name="nextFrame">nextFrame()</function>
+	<function name="openfeint.downloadBlob">openfeint.downloadBlob(blobKey, listenerFunction)</function>
+	<function name="openfeint.init">openfeint.init(productKey, productSecret, displayName, appId)</function>
+	<function name="openfeint.launchDashboard">openfeint.launchDashboard(dashBoardView)</function>
+	<function name="openfeint.launchDashboard">openfeint.launchDashboard(dashBoardView, options)</function>
+	<function name="openfeint.setHighScore">openfeint.setHighScore({ leaderboardID=ID, score=highScore [, displayText=displayString] })</function>
+	<function name="openfeint.unlockAchievement">openfeint.unlockAchievement(achievementID)</function>
+	<function name="openfeint.uploadBlob">openfeint.uploadBlob(blobKey, blobData)</function>
+	<function name="os.clock">os.clock()</function>
+	<function name="os.date">os.date([format [, time] ])</function>
+	<function name="os.difftime">os.difftime(t1, t2)</function>
+	<function name="os.execute">os.execute(cmd)</function>
+	<function name="os.exit">os.exit([exit])</function>
+	<function name="os.remove">os.remove(file)</function>
+	<function name="os.rename">os.rename(oldname, newname)</function>
+	<function name="os.time">os.time([table])</function>
+	<function name="package.loaded">package.loaded</function>
+	<function name="package.loaders">package.loaders</function>
+	<function name="package.seeall">package.seeall(module)</function>
+	<function name="parent">parent</function>
+	<function name="physics.addBody">physics.addBody(object, [bodyType,] {density=density, friction=friction, bounce=bounce [,radius=radius]})</function>
+	<function name="physics.addBody">physics.addBody(object, [bodyType,] {density=density, friction=friction, bounce=bounce [,shape=shape]})</function>
+	<function name="physics.addBody">physics.addBody(object, {density=density, friction=friction, bounce=bounce})</function>
+	<function name="physics.newJoint">physics.newJoint(jointType, object1, object2, anchorX, anchorY)</function>
+	<function name="play { startFrame=startFrame, endFrame=endFrame, loop=loop, remove=removeBool }">play { startFrame=startFrame, endFrame=endFrame, loop=loop, remove=removeBool }</function>
+	<function name="play">play()</function>
+	<function name="previousFrame">previousFrame()</function>
+	<function name="removeEventListener">removeEventListener(eventName, listener)</function>
+	<function name="require">require(moduleName)</function>
+	<function name="reverse { startFrame=startFrame, endFrame=endFrame, loop=loop, remove=removeBool }">reverse { startFrame=startFrame, endFrame=endFrame, loop=loop, remove=removeBool }</function>
+	<function name="reverse">reverse()</function>
+	<function name="rotate">rotate(deltaAngle)</function>
+	<function name="rotation">rotation</function>
+	<function name="scale">scale(sx, sy)</function>
+	<function name="setDrag">setDrag(drag=true/false)</function>
+	<function name="setFillColor">setFillColor(red, green, blue [, alpha])</function>
+	<function name="setLabels { frameLabel1=num1, frameLabel2=num2, frameLabelN=numN }">setLabels { frameLabel1=num1, frameLabel2=num2, frameLabelN=numN }</function>
+	<function name="setReferencePoint">setReferencePoint(referencePoint)</function>
+	<function name="setSampleRate">setSampleRate(r)</function>
+	<function name="setStrokeColor">setStrokeColor(red, green, blue [, alpha])</function>
+	<function name="setTextColor">setTextColor(red, green, blue [, alpha])</function>
+	<function name="size">size</function>
+	<function name="sprite.add">sprite.add(spriteSet, sequenceName, startFrame, frameCount, time, [loopParam])</function>
+	<function name="sprite.newSpriteSet">sprite.newSpriteSet(spriteSheet, startFrame, frameCount)</function>
+	<function name="sprite.newSpriteSheet">sprite.newSpriteSheet(spriteSheetFile, [baseDir,] frameWidth, frameHeight)</function>
+	<function name="sprite.newSpriteSheetFromData">sprite.newSpriteSheetFromData(spriteSheetImageFile, [baseDir,] coordinateData)</function>
+	<function name="spriteInstance.animating">spriteInstance.animating</function>
+	<function name="spriteInstance.currentFrame">spriteInstance.currentFrame</function>
+	<function name="spriteInstance.newSprite">spriteInstance.newSprite(spriteSet)</function>
+	<function name="spriteInstance.sequence">spriteInstance.sequence</function>
+	<function name="spriteInstance.sequences">spriteInstance.sequences</function>
+	<function name="spriteInstance:addListener">spriteInstance:addListener(listenerFunction)</function>
+	<function name="spriteInstance:pause">spriteInstance:pause()</function>
+	<function name="spriteInstance:play">spriteInstance:play()</function>
+	<function name="spriteInstance:prepare">spriteInstance:prepare([sequence])</function>
+	<function name="spriteSheet:dispose">spriteSheet:dispose()</function>
+	<function name="stage:setFocus">stage:setFocus(displayObject)</function>
+	<function name="stageBounds">stageBounds</function>
+	<function name="stageHeight">stageHeight</function>
+	<function name="stageWidth">stageWidth</function>
+	<function name="startRecording">startRecording()</function>
+	<function name="startTuner">startTuner()</function>
+	<function name="stop">stop()</function>
+	<function name="stopAtFrame">stopAtFrame(frame)</function>
+	<function name="stopRecording">stopRecording()</function>
+	<function name="stopTuner">stopTuner()</function>
+	<function name="store.canMakePurchases">store.canMakePurchases</function>
+	<function name="store.finishTransaction">store.finishTransaction(transaction)</function>
+	<function name="store.init">store.init(listener)</function>
+	<function name="store.loadProducts">store.loadProducts(arrayOfProductIdentifiers, listener)</function>
+	<function name="store.purchase">store.purchase(arrayOfProducts)</function>
+	<function name="strokeWidth">strokeWidth</function>
+	<function name="system.getInfo">system.getInfo(parm)</function>
+	<function name="system.getPreference">system.getPreference(category, name)</function>
+	<function name="system.getTimer">system.getTimer()</function>
+	<function name="system.openURL">system.openURL(url)</function>
+	<function name="system.pathForFile">system.pathForFile()</function>
+	<function name="system.setAccelerometerInterval">system.setAccelerometerInterval(frequency)</function>
+	<function name="system.setIdleTimer">system.setIdleTimer(enabled)</function>
+	<function name="system.setLocationAccuracy">system.setLocationAccuracy(distance)</function>
+	<function name="system.setLocationThreshold">system.setLocationThreshold(distance)</function>
+	<function name="system.vibrate">system.vibrate()</function>
+	<function name="text">text</function>
+	<function name="timer.cancel">timer.cancel(timerId)</function>
+	<function name="timer.performWithDelay">timer.performWithDelay(delay, listener [, iterations])</function>
+	<function name="transition.cancel">transition.cancel(tween)</function>
+	<function name="transition.dissolve">transition.dissolve(src, dst, duration, delayDuration)</function>
+	<function name="transition.from">transition.from(target, params)</function>
+	<function name="transition.to">transition.to(target, params)</function>
+	<function name="translate">translate(deltaX, deltaY)</function>
+	<function name="urlRequest">urlRequest</function>
+	<function name="width">width</function>
+	<function name="x">x</function>
+	<function name="xOrigin">xOrigin</function>
+	<function name="xReference">xReference</function>
+	<function name="xScale">xScale</function>
+	<function name="y">y</function>
+	<function name="yOrigin">yOrigin</function>
+	<function name="yReference">yReference</function>
+	<function name="yScale">yScale</function>
+</doc>

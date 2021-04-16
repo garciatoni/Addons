@@ -1,0 +1,7 @@
+## Interface: 80000
+## Title: Error Hider
+## Version: 1.0.1-8.0.1
+## Author: Jordy141
+## Notes: Lightweight addon that hides Lua error popups. Note that this doesn't FIX errors, just HIDE them!
+## SavedVariablesPerCharacter: enabled, verbose
+code.lua

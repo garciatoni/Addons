@@ -1,0 +1,11 @@
+<SnippetCollection>
+		<Language Lang="XML" Guid="{73DA124B-2CC5-4F79-A0DB-B11B6AAA2BE5}">
+				<SnippetDir>
+						<OnOff>On</OnOff>
+						<Installed>true</Installed>
+						<Locale>1033</Locale>
+						<DirPath>%InstallRoot%\%LCID%\Snippets\WoW\</DirPath>
+						<LocalizedName>World of Warcraft</LocalizedName>
+				</SnippetDir>
+		</Language>
+</SnippetCollection>

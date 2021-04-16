@@ -1,0 +1,2 @@
+OPie_Classic: disabled
+Quartz: enabled

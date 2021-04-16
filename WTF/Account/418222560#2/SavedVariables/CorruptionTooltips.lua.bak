@@ -1,0 +1,86 @@
+
+CorruptionTooltipsDB = {
+	["profileKeys"] = {
+		["Adadsdbdfv - Argent Dawn"] = "Adadsdbdfv - Argent Dawn",
+		["Thunderstruk - Dun Modr"] = "Thunderstruk - Dun Modr",
+		["Sagarra - Dun Modr"] = "Sagarra - Dun Modr",
+		["Sagar - Dun Modr"] = "Sagar - Dun Modr",
+		["Zanagor - Dun Modr"] = "Zanagor - Dun Modr",
+		["Shiradry - Dun Modr"] = "Shiradry - Dun Modr",
+		["Shageer - Dun Modr"] = "Shageer - Dun Modr",
+		["Thundër - Dun Modr"] = "Thundër - Dun Modr",
+		["Zaradel - Dun Modr"] = "Zaradel - Dun Modr",
+		["Syrona - Dun Modr"] = "Syrona - Dun Modr",
+		["Nyxagard - Dun Modr"] = "Nyxagard - Dun Modr",
+		["Urthak - Dun Modr"] = "Urthak - Dun Modr",
+		["Thunderstrak - Dun Modr"] = "Thunderstrak - Dun Modr",
+		["Nimkasi - Dun Modr"] = "Nimkasi - Dun Modr",
+		["Thanazos - Dun Modr"] = "Thanazos - Dun Modr",
+		["Koontz - Sanguino"] = "Koontz - Sanguino",
+		["Ankaranir - Zul'jin"] = "Ankaranir - Zul'jin",
+		["Nyxagart - Dun Modr"] = "Nyxagart - Dun Modr",
+		["Thunderstrak - Zul'jin"] = "Thunderstrak - Zul'jin",
+		["Shiradry - Sanguino"] = "Shiradry - Sanguino",
+		["Kontz - Dun Modr"] = "Kontz - Dun Modr",
+		["Fsfsit - Dun Modr"] = "Fsfsit - Dun Modr",
+		["Francisjosa - Hyjal"] = "Francisjosa - Hyjal",
+		["Koontz - Dun Modr"] = "Koontz - Dun Modr",
+		["Kontz - Zul'jin"] = "Kontz - Zul'jin",
+		["Derstrak - Dun Modr"] = "Derstrak - Dun Modr",
+	},
+	["profiles"] = {
+		["Adadsdbdfv - Argent Dawn"] = {
+		},
+		["Thunderstruk - Dun Modr"] = {
+		},
+		["Sagarra - Dun Modr"] = {
+		},
+		["Sagar - Dun Modr"] = {
+		},
+		["Zanagor - Dun Modr"] = {
+		},
+		["Shageer - Dun Modr"] = {
+		},
+		["Shiradry - Dun Modr"] = {
+		},
+		["Thundër - Dun Modr"] = {
+		},
+		["Zaradel - Dun Modr"] = {
+		},
+		["Syrona - Dun Modr"] = {
+		},
+		["Nyxagard - Dun Modr"] = {
+		},
+		["Urthak - Dun Modr"] = {
+		},
+		["Kontz - Dun Modr"] = {
+		},
+		["Nimkasi - Dun Modr"] = {
+		},
+		["Thanazos - Dun Modr"] = {
+		},
+		["Koontz - Sanguino"] = {
+		},
+		["Ankaranir - Zul'jin"] = {
+		},
+		["Nyxagart - Dun Modr"] = {
+		},
+		["Thunderstrak - Zul'jin"] = {
+		},
+		["Shiradry - Sanguino"] = {
+		},
+		["Thunderstrak - Dun Modr"] = {
+			["showlevel"] = true,
+		},
+		["Fsfsit - Dun Modr"] = {
+		},
+		["Francisjosa - Hyjal"] = {
+		},
+		["Koontz - Dun Modr"] = {
+		},
+		["Kontz - Zul'jin"] = {
+		},
+		["Derstrak - Dun Modr"] = {
+		},
+	},
+}

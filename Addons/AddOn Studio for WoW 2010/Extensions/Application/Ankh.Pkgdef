@@ -1,0 +1,257 @@
+[$RootKey$\ToolWindows\{2fac1ebf-6b37-4be3-9a44-f9ed32d561cd}]
+@="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"Name"="Ankh.VSPackage.LogToolWindow"
+"Orientation"="Bottom"
+"Style"="Tabbed"
+"DontForceCreate"=dword:00000001
+
+[$RootKey$\Languages\Language Services\AnkhSVN Log Messages]
+@="{1dfe69ce-7f9b-4cc5-b09b-e5bde95e9439}"
+"Package"="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"LangResID"=dword:0000012D
+"MatchBracesAtCaret"=dword:00000001
+"MaxErrorMessages"=dword:0000000A
+"RequestStockColors"=dword:00000001
+"ShowMatchingBrace"=dword:00000001
+"Single Code Window Only"=dword:00000001
+"MatchBraces"=dword:00000001
+"EnableLineNumbersOption"=dword:00000001
+"DefaultToInsertSpaces"=dword:00000001
+"ShowHotURLs"=dword:00000001
+
+[$RootKey$\AutomationProperties\TextEditor\AnkhSVN Log Messages]
+@="AnkhSVN Log Messages"
+"Description"="#305"
+"Name"="AnkhLogMessages"
+"Package"="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"ResourcePackage"="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"ProfileSave"=dword:00000001
+
+[$RootKey$\Packages\{604ad610-5cf9-4bd5-8acc-f49810e2efd4}\Automation]
+"AnkhLogMessages"="AnkhSVN Log Messages"
+
+[$RootKey$\Services\{1dfe69ce-7f9b-4cc5-b09b-e5bde95e9439}]
+@="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"Name"="AnkhSVN Log Messages"
+
+[$RootKey$\Languages\Language Services\AnkhSVN Unified Diff]
+@="{9e5ab2dc-5a41-4d39-ab71-5dca5908aa32}"
+"Package"="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"LangResID"=dword:00000130
+"CodeSense"=dword:00000000
+"RequestStockColors"=dword:00000001
+"ShowDropdownBarOption"=dword:00000001
+
+[$RootKey$\AutomationProperties\TextEditor\AnkhSVN Unified Diff]
+@="AnkhSVN Unified Diff"
+"Description"="#306"
+"Name"="AnkhUnifiedDiff"
+"Package"="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"ResourcePackage"="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"ProfileSave"=dword:00000001
+
+[$RootKey$\Packages\{604ad610-5cf9-4bd5-8acc-f49810e2efd4}\Automation]
+"AnkhUnifiedDiff"="AnkhSVN Unified Diff"
+
+[$RootKey$\Editors\{923f6990-98c1-4dd5-983e-25088c02975d}]
+@="AnkhDynamicEditorFactory"
+"DisplayName"="#303"
+"Package"="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"EditorTrustLevel"=dword:00000000
+
+[$RootKey$\Editors\{923f6990-98c1-4dd5-983e-25088c02975d}\LogicalViews]
+
+[$RootKey$\Languages\File Extensions\.diff]
+@="{9e5ab2dc-5a41-4d39-ab71-5dca5908aa32}"
+
+[$RootKey$\Services\{9e5ab2dc-5a41-4d39-ab71-5dca5908aa32}]
+@="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"Name"="AnkhSVN Unified Diff"
+
+[$RootKey$\ToolsOptionsPages\Source Control]
+@="#106"
+"Package"="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+
+[$RootKey$\ToolsOptionsPages\Source Control\Subversion User Tools]
+@="#108"
+"Package"="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"Page"="{ae1a4db8-09c3-438d-93bd-0fe37412ce34}"
+
+[$RootKey$\ToolsOptionsPages\Source Control\Subversion User Tools\VisibilityCmdUIContexts]
+"{8770915b-b235-42ec-bbc6-8e93286e59b5}"=dword:00000001
+
+[$RootKey$\ToolsOptionsPages\Source Control]
+@="#106"
+"Package"="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+
+[$RootKey$\ToolsOptionsPages\Source Control\Subversion]
+@="#107"
+"Package"="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"Page"="{f362b52e-e8f8-43de-a02d-5072a2a96e6a}"
+
+[$RootKey$\ToolsOptionsPages\Source Control\Subversion\VisibilityCmdUIContexts]
+"{8770915b-b235-42ec-bbc6-8e93286e59b5}"=dword:00000001
+
+[$RootKey$\Packages\{604ad610-5cf9-4bd5-8acc-f49810e2efd4}]
+"AnkhSVN-UI-Version"="2.6.12735.14"
+
+[$RootKey$\ToolWindows\{748becbe-04a1-4ffa-8e1e-46840f91a083}]
+@="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"Name"="Ankh.VSPackage.RepositoryExplorerToolWindow"
+"Style"="MDI"
+"DontForceCreate"=dword:00000001
+
+[$RootKey$\ToolWindows\{896e815d-3862-4978-a1bc-cb6a3e70045c}]
+@="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"Name"="Ankh.VSPackage.PendingChangesToolWindow"
+"Orientation"="Bottom"
+"Style"="Tabbed"
+"Window"="{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+
+[$RootKey$\Packages\{604ad610-5cf9-4bd5-8acc-f49810e2efd4}]
+@="AnkhSVN - Subversion Support for Visual Studio"
+"InprocServer32"="mscoree.dll"
+"Class"="Ankh.VSPackage.AnkhSvnPackage"
+"Assembly"="Ankh.Package, Version=2.6.12735.14, Culture=neutral, PublicKeyToken=477ccd7a32a5e7a5"
+
+[$RootKey$\ToolWindows\{c3630016-f162-4af5-b165-9f468a642e9a}]
+@="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"Name"="Ankh.VSPackage.SvnInfoToolWindow"
+"Orientation"="Right"
+"Style"="Tabbed"
+"Window"="{eefa5220-e298-11d0-8f78-00a0c9110057}"
+
+[$RootKey$\ToolWindows\{896e815d-3862-4978-a1bc-cb6a3e70045c}\Visibility]
+"{8770915b-b235-42ec-bbc6-8e93286e59b5}"=dword:00000000
+
+[$RootKey$\ToolWindows\{c3630016-f162-4af5-b165-9f468a642e9a}\Visibility]
+"{8770915b-b235-42ec-bbc6-8e93286e59b5}"=dword:00000000
+
+[$RootKey$\SolutionPersistence\SubversionScc]
+@="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+
+[$RootKey$\SolutionPersistence\SvnOrigin]
+@="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+
+[$RootKey$\Extensions\AnkhSVN\ProjectHandling\{2150e333-8fdc-42a3-9474-1a3956d46de8}]
+@="Solution Folder"
+"flags"=dword:00003000
+
+[$RootKey$\Extensions\AnkhSVN\ProjectHandling\{e24c65dc-7377-472b-9aba-bc803b73c61a}]
+@="Website (Venus Project System)"
+"flags"=dword:00001010
+
+[$RootKey$\Extensions\AnkhSVN\ProjectHandling\{d2abab84-bf74-430a-b69e-9dc6d40dda17}]
+@=".asproj, .dwproj project"
+"flags"=dword:00000100
+
+[$RootKey$\Extensions\AnkhSVN\ProjectHandling\{d183a3d8-5fd8-494b-b014-37f57b35e655}]
+@=".dtproj (SQL2008, SQL2008-R2) project"
+"flags"=dword:00000100
+
+[$RootKey$\Extensions\AnkhSVN\ProjectHandling\{159641d6-6404-4a2a-ae62-294de0fe8301}]
+@=".dtproj (SQL2012) project"
+"flags"=dword:00000100
+
+[$RootKey$\Extensions\AnkhSVN\ProjectHandling\{f14b399a-7131-4c87-9e4b-1186c45ef12d}]
+@=".rptproj"
+"flags"=dword:00000100
+
+[$RootKey$\Extensions\AnkhSVN\ProjectHandling\{999d2cb9-9277-4465-a902-1604ed3686a3}]
+@=".smdlproj"
+"flags"=dword:00000100
+
+[$RootKey$\Services\{d8c473d2-9634-4513-91d5-e1a671fe2df4}]
+@="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"Name"="SubversionScc"
+
+[$RootKey$\SourceControlProviders]
+@="{8770915b-b235-42ec-bbc6-8e93286e59b5}"
+
+[$RootKey$\SourceControlProviders\{8770915b-b235-42ec-bbc6-8e93286e59b5}]
+@="AnkhSVN - Subversion Support for Visual Studio"
+"Service"="{d8c473d2-9634-4513-91d5-e1a671fe2df4}"
+
+[$RootKey$\SourceControlProviders\{8770915b-b235-42ec-bbc6-8e93286e59b5}\Name]
+@="#100"
+"Package"="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+
+[$RootKey$\SourceControlProviders]
+
+[$RootKey$\SourceControlProviders\{8770915b-b235-42ec-bbc6-8e93286e59b5}]
+
+[$RootKey$\SourceControlProviders\{8770915b-b235-42ec-bbc6-8e93286e59b5}\Commands]
+"OpenCommand"="{aa61c329-d559-468f-8f0f-4f03896f704d}|33554432"
+
+[$RootKey$\SourceControlProviders]
+
+[$RootKey$\SourceControlProviders\{8770915b-b235-42ec-bbc6-8e93286e59b5}]
+
+[$RootKey$\SourceControlProviders\{8770915b-b235-42ec-bbc6-8e93286e59b5}\Commands]
+"ShareCommand"="{aa61c329-d559-468f-8f0f-4f03896f704d}|33554436"
+
+[$RootKey$\Extensions\AnkhSVN\Themes]
+"{de3dbbcd-f642-433c-8353-8f1df4370aba}"=dword:00000001
+
+[$RootKey$\Extensions\AnkhSVN\Themes]
+"{1ded0138-47ce-435e-84ef-9ec1f439b749}"=dword:00000002
+
+[$RootKey$\Extensions\AnkhSVN\Themes]
+"{a4d6a176-b948-4b29-8c66-53c97a1ed7d0}"=dword:00000001
+
+[$RootKey$\Languages\File Extensions\.patch]
+@="{9e5ab2dc-5a41-4d39-ab71-5dca5908aa32}"
+
+[$RootKey$\ToolWindows\{a1929d7e-610a-48b0-8152-8e4aa202427f}]
+@="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"Name"="Ankh.VSPackage.WorkingCopyExplorerToolWindow"
+"Style"="MDI"
+"DontForceCreate"=dword:00000001
+
+[$RootKey$\Packages\{604ad610-5cf9-4bd5-8acc-f49810e2efd4}]
+"ID"=dword:00000001
+"MinEdition"="Standard"
+"ProductVersion"="2.0"
+"ProductName"="AnkhSVN"
+"CompanyName"="AnkhSVN Core Team"
+
+[$RootKey$\AutoLoadPackages\{8770915b-b235-42ec-bbc6-8e93286e59b5}]
+"{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"=dword:00000000
+
+[$RootKey$\Menus]
+"{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"=", 1000.ctmenu, 1"
+
+[$RootKey$\KeyBindingTables\{0d2ca125-6cdf-407a-9c03-e8427e27f34d}]
+@="#501"
+"Package"="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"AllowNavKeyBinding"=dword:00000000
+
+[$RootKey$\KeyBindingTables\{6e66dfc4-cb72-4023-bdf5-6b139df2f19b}]
+@="#502"
+"Package"="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"AllowNavKeyBinding"=dword:00000000
+
+[$RootKey$\KeyBindingTables\{fd4828f6-49a3-4e2f-bf36-8304884219ca}]
+@="#504"
+"Package"="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"AllowNavKeyBinding"=dword:00000000
+
+[$RootKey$\RuntimeConfiguration\dependentAssembly\bindingRedirection\{3cbbbf2e-22f7-4f02-af63-892bd2120485}]
+"name"="Ankh.ExtensionPoints"
+"culture"="neutral"
+"publicKeyToken"="068e4b3e6ce74d73"
+"oldVersion"="2.1.7172.0-2.6.12735.14"
+"newVersion"="2.6.12735.14"
+"codeBase"="$PackageFolder$\Ankh.ExtensionPoints.dll"
+
+[$RootKey$\OutputWindow\{ba0eec02-577c-424e-b6aa-fc8499d917ba}]
+@="#111"
+"Package"="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"Name"="AnkhSVN"
+"InitiallyInvisible"=dword:00000000
+"ClearWithSolution"=dword:00000000
+
+[$RootKey$\InstalledProducts\AnkhSvnPackage]
+"Package"="{604ad610-5cf9-4bd5-8acc-f49810e2efd4}"
+"UseInterface"=dword:00000001
+

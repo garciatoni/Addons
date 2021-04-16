@@ -1,0 +1,38 @@
+
+SkadaDB = {
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Adaffkkg - Twisting Nether"] = "Default",
+		["Nyxagart - Dun Modr"] = "Default",
+		["Thundër - Dun Modr"] = "Default",
+		["Adasa - The Sha'tar"] = "Default",
+		["Shiradry - Sanguino"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["windows"] = {
+				{
+					["y"] = 207.0373687744141,
+					["background"] = {
+						["height"] = 99.25921630859375,
+					},
+					["point"] = "BOTTOMLEFT",
+					["mode"] = "Curación de enemigo usada",
+					["barwidth"] = 201.4818267822266,
+					["x"] = 22.09889984130859,
+				}, -- [1]
+			},
+			["versions"] = {
+				["1.6.7"] = true,
+				["1.6.4"] = true,
+				["1.6.3"] = true,
+			},
+			["modeclicks"] = {
+				["Curación de enemigo usada"] = 1,
+			},
+		},
+	},
+}

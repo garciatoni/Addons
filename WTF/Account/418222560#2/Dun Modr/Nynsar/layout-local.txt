@@ -1,0 +1,8 @@
+Version: 1
+Frame: ExRTNote
+FrameLevel: 1
+Anchor: TOPLEFT
+X: 172
+Y: -175
+W: 296
+H: 370

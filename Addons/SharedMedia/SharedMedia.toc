@@ -1,0 +1,17 @@
+## Interface: 90002
+## Title: SharedMedia
+## Notes: Inserts some media into LibSharedMedia's storage.
+## Version: 3.1.0-194
+## Author: Elkano
+## X-Category: Miscellaneous
+
+## X-Revision: 194
+## X-Date: 2020-11-23T10:21:14Z
+
+## OptionalDeps: LibStub, LibSharedMedia-3.0
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+
+SharedMedia.lua

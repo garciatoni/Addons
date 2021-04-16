@@ -1,0 +1,5 @@
+# Do not delete the following line!
+## Interface: 30000
+
+## Wowbench forward prototypes
+Prototypes.xml

@@ -1,0 +1,6 @@
+OPie_Classic: disabled
+WeakAurasCompanion: enabled
+WeakAurasTemplates: disabled
+WeakAurasModelPaths: disabled
+WeakAuras: disabled
+WeakAurasOptions: disabled

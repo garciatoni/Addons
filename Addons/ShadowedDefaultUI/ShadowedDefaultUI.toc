@@ -1,0 +1,6 @@
+## Interface: 70000
+## Author: Zneak @ Frostmourne
+## Version: v1.0
+## Title: Shadowed Default UI
+## Notes: A small low resource addon to change the default user interface.
+ShadowedDefaultUI.lua

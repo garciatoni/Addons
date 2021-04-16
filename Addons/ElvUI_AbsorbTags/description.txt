@@ -1,0 +1,91 @@
+This addon allows more tracking of absorbs on ElvUIs raid frames.
+Simply put in the absorb you wish to track into ElvUI's "Text Format".
+
+[b]Latest Changes:[/b]
+- Updated to suit 8.2.5.
+
+[b]Current Bugs:[/b]
+
+[b]Extra Information[/b]
+
+[b]Sample Usage:[/b]
+[absorbs:mine] / [absorbs]
+[namecolor][name:short] [health:absorbs]
+
+[b]Screenshots[/b]
+
+[b]Available tags:[/b]
+absorbs-total - Shows the total absorbs on the unit from all sources (returns ' ' when 0)
+absorbs:total - Shows the total absorbs on the unit from all sources (returns '0' when 0)
+absorbs-mine - shows players absorbs on unit in the raid frames (self varies based on class) (returns ' ' when 0)
+absorbs:mine - shows players absorbs on unit in the raid frames (self varies based on class) (returns '0' when 0)
+absorbs-percentage - shows units total absorb / maxhp as a percentage in the raid frames
+health:absorbs - shows the total absorbs + current hp as a percentage of maxhp on the unit from all sources
+health-absorbs - shows the total absorbs + current hp on the unit from all sources
+health+absorbs - shows the total absorbs + current hp on the unit from all sources
+classcolor - Changes the text colour to the class colour of the unit
+
+health-current - Shows the current health of the unit
+health-max - Shows the max health of the unit
+health-precentage - Shows the percentage of health of the unit
+nl - Adds a line break
+
+[b]General Tags[/b]
+absorbs:common - Tracks many "random" absorbs (from trinket procs / weapons) [listed below]
+  absorbs:lk-valanyr - shows total players absorb on the unit proc'd by the Ulduar Legendary Healing Mace in the raid frames
+  absorbs:wod-legendary-ring - shows total players absorb on the unit proc'd by the Warlords Legendary Ring in the raid frames
+  absorbs:legion-shroud-of-the-naglfar - shows total players absorb on the unit proc'd by Naglfar Fare in the raid frames
+  absorbs:legion-spirit-fragment - shows total players absorb on the unit proc'd by Vial of Nightmare Fog in the raid frames
+  absorbs:legion-delicious-cake - shows total players absorb on the unit proc'd by Perfectly Preserved Cake in the raid frames
+  <i>All absorbs:*class* tags also include the "common" absorbs.</i>
+
+[b]Death Knight Tags[/b]
+absorbs:death-knight - shows total players absorbs on unit (same as absorbs:mine for a death knight) in the raid frames
+  absorbs:death-knight:anti-magic-shield - shows players remaining ams shield on unit in the raid frames
+  absorbs:death-knight:blood-shield - shows players remaining blood shield on unit in the raid frames
+  absorbs:death-knight:purgatory - shows players remaining purgatory healing absorb on the unit in the raid frames
+
+[b]Demon Hunter Tags[/b]
+absorbs:demon-hunter - shows total players absorbs on unit (same as absorbs:mine for a demon hunter) in the raid frames
+  absorbs:demon-hunter:soul-barrier - shows players remaining soul barrier on unit in the raid frames
+
+[b]Druid Tags[/b]
+None
+
+[b]Hunter Tags[/b]
+None
+
+[b]Mage Tags[/b]
+absorbs:mage - shows total players absorbs on unit (same as absorbs:mine for a mage) in the raid frames
+  absorbs:mage:ice-barrier - shows players remaining ice barrier on unit in the raid frames
+
+[b]Monk Tags[/b]
+absorbs:monk - shows total players absorbs on unit (same as absorbs:mine for a monk) in the raid frames
+  absorbs:monk:life-cocoon - shows players remaining life cocoon on unit in the raid frames
+
+[b]Paladin Tags[/b]
+absorbs:paladin - shows total players absorbs on unit (same as absorbs:mine for a paladin) in the raid frames
+  absorbs:paladin:greater-blessing-of-kings - shows players remaining greater blessing of kings on unit in the raid frames
+  absorbs:paladin:bulwark-of-light - shows players remaining bulwark of light on unit in the raid frames
+  absorbs:paladin:pally-prot-t18-2pc - shows players remaining avengers-reprieve (prot-t18-2pc set) on unit in the raid frames
+  absorbs:paladin:shield-of-vengeance - shows players remaining shield of vengeance on unit in the raid frames
+
+[b]Priest Tags[/b]
+absorbs:priest - shows total players absorbs on unit (same as absorbs:mine for a priest) in the raid frames
+  absorbs:priest:clarity-of-will - shows players remaining clarity-of-will on unit in the raid frames
+  absorbs:priest:power-word-shield - shows players remaining power word: shield on unit in the raid frames
+
+[b]Rogue Tags[/b]
+None
+
+[b]Shaman Tags[/b]
+None
+
+[b]Warlock Tags[/b]
+absorbs:warlock - shows total players absorbs on unit (same as absorbs:mine for a warlock) in the raid frames
+  absorbs:warlock:dark-pact - shows players remaining dark pact on unit in the raid frames						
+  absorbs:warlock:soul-leech - shows players remaining soul leech on unit in the raid frames
+
+[b]Warrior Tags[/b]
+absorbs:warrior - shows total players absorbs on unit (same as absorbs:mine for a warrior) in the raid frames
+  absorbs:warrior:ignore-pain - shows players remaining ignore pain on unit in the raid frames

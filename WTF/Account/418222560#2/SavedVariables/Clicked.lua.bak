@@ -1,0 +1,2041 @@
+
+ClickedDB = {
+	["profileKeys"] = {
+		["Koontz - Dun Modr"] = "DEATHKNIGHT",
+		["Thunderstrak - Dun Modr"] = "Thunderstrak - Dun Modr",
+		["Nimkasi - Dun Modr"] = "MONK",
+		["Koontz - Sanguino"] = "SHAMAN",
+		["Nyxa - Dun Modr"] = "HUNTER",
+		["Syrona - Dun Modr"] = "PALADIN",
+		["Thunderstrak - Zul'jin"] = "DRUID",
+		["Thunderstrak - Sanguino"] = "Thunderstrak - Dun Modr",
+		["Nynsar - Dun Modr"] = "Thunderstrak - Dun Modr",
+		["Nyxagard - Dun Modr"] = "ROGUE",
+		["Shiradry - Dun Modr"] = "DEMONHUNTER",
+		["Sagar - Dun Modr"] = "SHAMAN",
+		["Thunderstruk - Dun Modr"] = "WARLOCK",
+		["Syrona - Sanguino"] = "PALADIN",
+	},
+	["profiles"] = {
+		["HUNTER"] = {
+			["version"] = "0.13.4",
+		},
+		["Thunderstrak - Dun Modr"] = {
+			["bindings"] = {
+				{
+					["identifier"] = 1,
+					["type"] = "SPELL",
+					["action"] = {
+						["cancelQueuedSpell"] = false,
+						["macroValue"] = "",
+						["allowStartAttack"] = true,
+						["macroMode"] = "FIRST",
+						["spellValue"] = "Cura de la Naturaleza",
+						["targetUnitAfterCast"] = false,
+						["interrupt"] = true,
+						["itemValue"] = "",
+					},
+					["keybind"] = "BUTTON2",
+					["integrations"] = {
+					},
+					["targets"] = {
+						["hovercast"] = {
+							["enabled"] = true,
+							["vitals"] = "ALIVE",
+							["hostility"] = "HELP",
+						},
+						["regular"] = {
+							{
+								["vitals"] = "ANY",
+								["hostility"] = "ANY",
+								["unit"] = "DEFAULT",
+							}, -- [1]
+							["enabled"] = false,
+						},
+					},
+					["load"] = {
+						["playerNameRealm"] = {
+							["value"] = "Thunderstrak",
+							["selected"] = false,
+						},
+						["instanceType"] = {
+							["single"] = "NONE",
+							["selected"] = 0,
+							["multiple"] = {
+								"NONE", -- [1]
+							},
+						},
+						["combat"] = {
+							["value"] = "IN_COMBAT",
+							["selected"] = false,
+						},
+						["talent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["class"] = {
+							["single"] = "DRUID",
+							["selected"] = 0,
+							["multiple"] = {
+								"DRUID", -- [1]
+							},
+						},
+						["never"] = false,
+						["pet"] = {
+							["value"] = "ACTIVE",
+							["selected"] = false,
+						},
+						["warMode"] = {
+							["value"] = false,
+							["selected"] = false,
+						},
+						["covenant"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["race"] = {
+							["single"] = "NightElf",
+							["selected"] = 0,
+							["multiple"] = {
+								"NightElf", -- [1]
+							},
+						},
+						["specialization"] = {
+							["single"] = 4,
+							["selected"] = 0,
+							["multiple"] = {
+								4, -- [1]
+							},
+						},
+						["inGroup"] = {
+							["value"] = "IN_GROUP_PARTY_OR_RAID",
+							["selected"] = false,
+						},
+						["pvpTalent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["spellKnown"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["playerInGroup"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["form"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+					},
+					["cache"] = {
+						["displayName"] = "Cast Cura de la Naturaleza",
+						["displayIcon"] = 236288,
+					},
+				}, -- [1]
+				{
+					["identifier"] = 2,
+					["type"] = "SPELL",
+					["action"] = {
+						["cancelQueuedSpell"] = false,
+						["macroValue"] = "",
+						["allowStartAttack"] = true,
+						["macroMode"] = "FIRST",
+						["spellValue"] = "Rejuvenecimiento",
+						["targetUnitAfterCast"] = false,
+						["interrupt"] = false,
+						["itemValue"] = "",
+					},
+					["keybind"] = "4",
+					["integrations"] = {
+					},
+					["targets"] = {
+						["hovercast"] = {
+							["enabled"] = true,
+							["vitals"] = "ALIVE",
+							["hostility"] = "HELP",
+						},
+						["regular"] = {
+							{
+								["vitals"] = "ALIVE",
+								["hostility"] = "HELP",
+								["unit"] = "MOUSEOVER",
+							}, -- [1]
+							["enabled"] = false,
+						},
+					},
+					["load"] = {
+						["playerNameRealm"] = {
+							["value"] = "Thunderstrak",
+							["selected"] = false,
+						},
+						["instanceType"] = {
+							["single"] = "NONE",
+							["selected"] = 0,
+							["multiple"] = {
+								"NONE", -- [1]
+							},
+						},
+						["combat"] = {
+							["value"] = "IN_COMBAT",
+							["selected"] = false,
+						},
+						["talent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["class"] = {
+							["single"] = "DRUID",
+							["selected"] = 0,
+							["multiple"] = {
+								"DRUID", -- [1]
+							},
+						},
+						["never"] = false,
+						["pet"] = {
+							["value"] = "ACTIVE",
+							["selected"] = false,
+						},
+						["warMode"] = {
+							["value"] = false,
+							["selected"] = false,
+						},
+						["covenant"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["race"] = {
+							["single"] = "NightElf",
+							["selected"] = 0,
+							["multiple"] = {
+								"NightElf", -- [1]
+							},
+						},
+						["specialization"] = {
+							["single"] = 4,
+							["selected"] = 0,
+							["multiple"] = {
+								4, -- [1]
+							},
+						},
+						["inGroup"] = {
+							["value"] = "IN_GROUP_PARTY_OR_RAID",
+							["selected"] = false,
+						},
+						["pvpTalent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["spellKnown"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["playerInGroup"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["form"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+					},
+					["cache"] = {
+						["displayName"] = "Cast Rejuvenecimiento",
+						["displayIcon"] = 136081,
+					},
+				}, -- [2]
+				{
+					["identifier"] = 3,
+					["type"] = "SPELL",
+					["action"] = {
+						["cancelQueuedSpell"] = false,
+						["macroValue"] = "",
+						["allowStartAttack"] = true,
+						["macroMode"] = "FIRST",
+						["spellValue"] = "Flor de vida",
+						["targetUnitAfterCast"] = false,
+						["interrupt"] = false,
+						["itemValue"] = "",
+					},
+					["keybind"] = "3",
+					["integrations"] = {
+					},
+					["load"] = {
+						["playerNameRealm"] = {
+							["value"] = "Thunderstrak",
+							["selected"] = false,
+						},
+						["instanceType"] = {
+							["single"] = "NONE",
+							["selected"] = 0,
+							["multiple"] = {
+								"NONE", -- [1]
+							},
+						},
+						["combat"] = {
+							["value"] = "IN_COMBAT",
+							["selected"] = false,
+						},
+						["talent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["covenant"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["form"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["pet"] = {
+							["value"] = "ACTIVE",
+							["selected"] = false,
+						},
+						["warMode"] = {
+							["value"] = "IN_WAR_MODE",
+							["selected"] = false,
+						},
+						["playerInGroup"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["race"] = {
+							["single"] = "NightElf",
+							["selected"] = 0,
+							["multiple"] = {
+								"NightElf", -- [1]
+							},
+						},
+						["specialization"] = {
+							["single"] = 4,
+							["selected"] = 0,
+							["multiple"] = {
+								4, -- [1]
+							},
+						},
+						["inGroup"] = {
+							["value"] = "IN_GROUP_PARTY_OR_RAID",
+							["selected"] = false,
+						},
+						["pvpTalent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["spellKnown"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["class"] = {
+							["single"] = "DRUID",
+							["selected"] = 0,
+							["multiple"] = {
+								"DRUID", -- [1]
+							},
+						},
+						["never"] = false,
+					},
+					["targets"] = {
+						["hovercast"] = {
+							["enabled"] = true,
+							["vitals"] = "ALIVE",
+							["hostility"] = "HELP",
+						},
+						["regular"] = {
+							{
+								["vitals"] = "ALIVE",
+								["hostility"] = "HELP",
+								["unit"] = "MOUSEOVER",
+							}, -- [1]
+							["enabled"] = false,
+						},
+					},
+					["cache"] = {
+						["displayName"] = "Cast Flor de vida",
+						["displayIcon"] = 134206,
+					},
+				}, -- [3]
+				{
+					["identifier"] = 5,
+					["type"] = "SPELL",
+					["action"] = {
+						["cancelQueuedSpell"] = false,
+						["macroValue"] = "",
+						["allowStartAttack"] = true,
+						["macroMode"] = "FIRST",
+						["spellValue"] = "Recrecimiento",
+						["targetUnitAfterCast"] = false,
+						["interrupt"] = false,
+						["itemValue"] = "",
+					},
+					["keybind"] = "2",
+					["integrations"] = {
+					},
+					["load"] = {
+						["playerNameRealm"] = {
+							["value"] = "Thunderstrak",
+							["selected"] = false,
+						},
+						["instanceType"] = {
+							["single"] = "NONE",
+							["selected"] = 0,
+							["multiple"] = {
+								"NONE", -- [1]
+							},
+						},
+						["combat"] = {
+							["value"] = "IN_COMBAT",
+							["selected"] = false,
+						},
+						["talent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["never"] = false,
+						["form"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["pet"] = {
+							["value"] = "ACTIVE",
+							["selected"] = false,
+						},
+						["spellKnown"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["covenant"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["race"] = {
+							["single"] = "NightElf",
+							["selected"] = 0,
+							["multiple"] = {
+								"NightElf", -- [1]
+							},
+						},
+						["specialization"] = {
+							["single"] = 4,
+							["selected"] = 0,
+							["multiple"] = {
+								4, -- [1]
+							},
+						},
+						["inGroup"] = {
+							["value"] = "IN_GROUP_PARTY_OR_RAID",
+							["selected"] = false,
+						},
+						["playerInGroup"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["warMode"] = {
+							["value"] = false,
+							["selected"] = false,
+						},
+						["pvpTalent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["class"] = {
+							["single"] = "DRUID",
+							["selected"] = 0,
+							["multiple"] = {
+								"DRUID", -- [1]
+							},
+						},
+					},
+					["targets"] = {
+						["hovercast"] = {
+							["enabled"] = true,
+							["vitals"] = "ALIVE",
+							["hostility"] = "HELP",
+						},
+						["regular"] = {
+							{
+								["vitals"] = "ANY",
+								["hostility"] = "ANY",
+								["unit"] = "DEFAULT",
+							}, -- [1]
+							["enabled"] = false,
+						},
+					},
+					["cache"] = {
+						["displayName"] = "Cast Recrecimiento",
+						["displayIcon"] = 136085,
+					},
+				}, -- [4]
+				{
+					["identifier"] = 6,
+					["type"] = "SPELL",
+					["action"] = {
+						["cancelQueuedSpell"] = false,
+						["macroValue"] = "",
+						["allowStartAttack"] = true,
+						["macroMode"] = "FIRST",
+						["spellValue"] = "Alivio presto",
+						["targetUnitAfterCast"] = false,
+						["interrupt"] = false,
+						["itemValue"] = "",
+					},
+					["keybind"] = "1",
+					["integrations"] = {
+					},
+					["targets"] = {
+						["hovercast"] = {
+							["enabled"] = true,
+							["vitals"] = "ALIVE",
+							["hostility"] = "HELP",
+						},
+						["regular"] = {
+							{
+								["vitals"] = "ALIVE",
+								["hostility"] = "HELP",
+								["unit"] = "MOUSEOVER",
+							}, -- [1]
+							["enabled"] = false,
+						},
+					},
+					["load"] = {
+						["playerNameRealm"] = {
+							["value"] = "Thunderstrak",
+							["selected"] = false,
+						},
+						["instanceType"] = {
+							["single"] = "NONE",
+							["selected"] = 0,
+							["multiple"] = {
+								"NONE", -- [1]
+							},
+						},
+						["combat"] = {
+							["value"] = "IN_COMBAT",
+							["selected"] = false,
+						},
+						["talent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["form"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["class"] = {
+							["single"] = "DRUID",
+							["selected"] = 0,
+							["multiple"] = {
+								"DRUID", -- [1]
+							},
+						},
+						["pet"] = {
+							["value"] = "ACTIVE",
+							["selected"] = false,
+						},
+						["spellKnown"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["covenant"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["race"] = {
+							["single"] = "NightElf",
+							["selected"] = 0,
+							["multiple"] = {
+								"NightElf", -- [1]
+							},
+						},
+						["specialization"] = {
+							["single"] = 4,
+							["selected"] = 0,
+							["multiple"] = {
+								4, -- [1]
+							},
+						},
+						["inGroup"] = {
+							["value"] = "IN_GROUP_PARTY_OR_RAID",
+							["selected"] = false,
+						},
+						["pvpTalent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["warMode"] = {
+							["value"] = false,
+							["selected"] = false,
+						},
+						["playerInGroup"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["never"] = false,
+					},
+					["cache"] = {
+						["displayName"] = "Cast Alivio presto",
+						["displayIcon"] = 134914,
+					},
+				}, -- [5]
+				{
+					["identifier"] = 7,
+					["type"] = "SPELL",
+					["action"] = {
+						["cancelQueuedSpell"] = false,
+						["macroValue"] = "",
+						["allowStartAttack"] = true,
+						["macroMode"] = "FIRST",
+						["spellValue"] = "Resguardo de Cenarius",
+						["targetUnitAfterCast"] = false,
+						["interrupt"] = false,
+						["itemValue"] = "",
+					},
+					["keybind"] = "5",
+					["integrations"] = {
+					},
+					["load"] = {
+						["playerNameRealm"] = {
+							["value"] = "Thunderstrak",
+							["selected"] = false,
+						},
+						["instanceType"] = {
+							["single"] = "NONE",
+							["selected"] = 0,
+							["multiple"] = {
+								"NONE", -- [1]
+							},
+						},
+						["combat"] = {
+							["value"] = "IN_COMBAT",
+							["selected"] = false,
+						},
+						["talent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["class"] = {
+							["single"] = "DRUID",
+							["selected"] = 0,
+							["multiple"] = {
+								"DRUID", -- [1]
+							},
+						},
+						["never"] = false,
+						["pet"] = {
+							["value"] = "ACTIVE",
+							["selected"] = false,
+						},
+						["warMode"] = {
+							["value"] = false,
+							["selected"] = false,
+						},
+						["covenant"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["race"] = {
+							["single"] = "NightElf",
+							["selected"] = 0,
+							["multiple"] = {
+								"NightElf", -- [1]
+							},
+						},
+						["specialization"] = {
+							["single"] = 4,
+							["selected"] = 0,
+							["multiple"] = {
+								4, -- [1]
+							},
+						},
+						["inGroup"] = {
+							["value"] = "IN_GROUP_PARTY_OR_RAID",
+							["selected"] = false,
+						},
+						["playerInGroup"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["spellKnown"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["pvpTalent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["form"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+					},
+					["targets"] = {
+						["hovercast"] = {
+							["enabled"] = true,
+							["vitals"] = "ALIVE",
+							["hostility"] = "HELP",
+						},
+						["regular"] = {
+							{
+								["vitals"] = "ALIVE",
+								["unit"] = "MOUSEOVER",
+								["hostility"] = "HELP",
+							}, -- [1]
+							["enabled"] = false,
+						},
+					},
+					["cache"] = {
+						["displayName"] = "Cast Resguardo de Cenarius",
+						["displayIcon"] = 132137,
+					},
+				}, -- [6]
+				{
+					["identifier"] = 8,
+					["type"] = "SPELL",
+					["action"] = {
+						["cancelQueuedSpell"] = false,
+						["macroValue"] = "",
+						["allowStartAttack"] = true,
+						["macroMode"] = "FIRST",
+						["spellValue"] = "Corteza de hierro",
+						["targetUnitAfterCast"] = false,
+						["interrupt"] = false,
+						["itemValue"] = "",
+					},
+					["keybind"] = "MOUSEWHEELUP",
+					["integrations"] = {
+					},
+					["targets"] = {
+						["hovercast"] = {
+							["enabled"] = true,
+							["vitals"] = "ALIVE",
+							["hostility"] = "HELP",
+						},
+						["regular"] = {
+							{
+								["vitals"] = "ALIVE",
+								["hostility"] = "HELP",
+								["unit"] = "MOUSEOVER",
+							}, -- [1]
+							["enabled"] = false,
+						},
+					},
+					["load"] = {
+						["playerNameRealm"] = {
+							["value"] = "Thunderstrak",
+							["selected"] = false,
+						},
+						["instanceType"] = {
+							["single"] = "NONE",
+							["selected"] = 0,
+							["multiple"] = {
+								"NONE", -- [1]
+							},
+						},
+						["combat"] = {
+							["value"] = "IN_COMBAT",
+							["selected"] = false,
+						},
+						["talent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["form"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["class"] = {
+							["single"] = "DRUID",
+							["selected"] = 0,
+							["multiple"] = {
+								"DRUID", -- [1]
+							},
+						},
+						["pet"] = {
+							["value"] = "ACTIVE",
+							["selected"] = false,
+						},
+						["warMode"] = {
+							["value"] = false,
+							["selected"] = false,
+						},
+						["covenant"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["race"] = {
+							["single"] = "NightElf",
+							["selected"] = 0,
+							["multiple"] = {
+								"NightElf", -- [1]
+							},
+						},
+						["specialization"] = {
+							["single"] = 4,
+							["selected"] = 0,
+							["multiple"] = {
+								4, -- [1]
+							},
+						},
+						["inGroup"] = {
+							["value"] = "IN_GROUP_PARTY_OR_RAID",
+							["selected"] = false,
+						},
+						["pvpTalent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["spellKnown"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["playerInGroup"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["never"] = false,
+					},
+					["cache"] = {
+						["displayName"] = "Cast Corteza de hierro",
+						["displayIcon"] = 572025,
+					},
+				}, -- [7]
+				{
+					["cache"] = {
+						["displayIcon"] = 1408836,
+						["displayName"] = "Cast Sobrecrecimiento",
+					},
+					["identifier"] = 10,
+					["action"] = {
+						["itemValue"] = "",
+						["macroValue"] = "",
+						["interrupt"] = false,
+						["allowStartAttack"] = true,
+						["spellValue"] = "Sobrecrecimiento",
+						["targetUnitAfterCast"] = false,
+						["macroMode"] = "FIRST",
+						["cancelQueuedSpell"] = false,
+					},
+					["keybind"] = "º",
+					["integrations"] = {
+					},
+					["load"] = {
+						["playerNameRealm"] = {
+							["value"] = "Thunderstrak",
+							["selected"] = false,
+						},
+						["never"] = false,
+						["combat"] = {
+							["value"] = "IN_COMBAT",
+							["selected"] = false,
+						},
+						["instanceType"] = {
+							["single"] = "NONE",
+							["selected"] = 0,
+							["multiple"] = {
+								"NONE", -- [1]
+							},
+						},
+						["playerInGroup"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["form"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["pet"] = {
+							["value"] = "ACTIVE",
+							["selected"] = false,
+						},
+						["warMode"] = {
+							["value"] = false,
+							["selected"] = false,
+						},
+						["covenant"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["race"] = {
+							["single"] = "NightElf",
+							["selected"] = 0,
+							["multiple"] = {
+								"NightElf", -- [1]
+							},
+						},
+						["specialization"] = {
+							["single"] = 4,
+							["selected"] = 0,
+							["multiple"] = {
+								4, -- [1]
+							},
+						},
+						["inGroup"] = {
+							["value"] = "IN_GROUP_PARTY_OR_RAID",
+							["selected"] = false,
+						},
+						["pvpTalent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["spellKnown"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["class"] = {
+							["single"] = "DRUID",
+							["selected"] = 0,
+							["multiple"] = {
+								"DRUID", -- [1]
+							},
+						},
+						["talent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+					},
+					["targets"] = {
+						["hovercast"] = {
+							["enabled"] = true,
+							["vitals"] = "ALIVE",
+							["hostility"] = "HELP",
+						},
+						["regular"] = {
+							{
+								["vitals"] = "ALIVE",
+								["unit"] = "MOUSEOVER",
+								["hostility"] = "HELP",
+							}, -- [1]
+							["enabled"] = false,
+						},
+					},
+					["type"] = "SPELL",
+				}, -- [8]
+				["next"] = 11,
+			},
+			["version"] = "0.17.2",
+		},
+		["PALADIN"] = {
+			["bindings"] = {
+				{
+					["identifier"] = 1,
+					["type"] = "SPELL",
+					["action"] = {
+						["itemValue"] = "",
+						["macroValue"] = "",
+						["interrupt"] = false,
+						["allowStartAttack"] = false,
+						["spellValue"] = "Destello de Luz",
+						["targetUnitAfterCast"] = false,
+						["macroMode"] = "FIRST",
+						["cancelQueuedSpell"] = false,
+					},
+					["cache"] = {
+						["displayName"] = "Cast Destello de Luz",
+						["displayIcon"] = 135907,
+					},
+					["integrations"] = {
+					},
+					["targets"] = {
+						["hovercast"] = {
+							["enabled"] = true,
+							["vitals"] = "ALIVE",
+							["hostility"] = "HELP",
+						},
+						["regular"] = {
+							{
+								["vitals"] = "ANY",
+								["unit"] = "DEFAULT",
+								["hostility"] = "ANY",
+							}, -- [1]
+							["enabled"] = false,
+						},
+					},
+					["load"] = {
+						["playerNameRealm"] = {
+							["value"] = "Syrona",
+							["selected"] = false,
+						},
+						["form"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["combat"] = {
+							["value"] = "IN_COMBAT",
+							["selected"] = false,
+						},
+						["instanceType"] = {
+							["single"] = "NONE",
+							["selected"] = 0,
+							["multiple"] = {
+								"NONE", -- [1]
+							},
+						},
+						["never"] = false,
+						["class"] = {
+							["single"] = "PALADIN",
+							["selected"] = 0,
+							["multiple"] = {
+								"PALADIN", -- [1]
+							},
+						},
+						["pet"] = {
+							["value"] = "ACTIVE",
+							["selected"] = false,
+						},
+						["spellKnown"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["pvpTalent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["race"] = {
+							["single"] = "LightforgedDraenei",
+							["selected"] = 0,
+							["multiple"] = {
+								"LightforgedDraenei", -- [1]
+							},
+						},
+						["specialization"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["inGroup"] = {
+							["value"] = "IN_GROUP_PARTY_OR_RAID",
+							["selected"] = false,
+						},
+						["talent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["warMode"] = {
+							["value"] = "IN_WAR_MODE",
+							["selected"] = false,
+						},
+						["covenant"] = {
+							["single"] = 2,
+							["selected"] = 0,
+							["multiple"] = {
+								2, -- [1]
+							},
+						},
+						["playerInGroup"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+					},
+					["keybind"] = "2",
+				}, -- [1]
+				{
+					["identifier"] = 2,
+					["type"] = "SPELL",
+					["action"] = {
+						["itemValue"] = "",
+						["macroValue"] = "",
+						["interrupt"] = false,
+						["allowStartAttack"] = false,
+						["spellValue"] = "Luz del mártir",
+						["targetUnitAfterCast"] = false,
+						["macroMode"] = "FIRST",
+						["cancelQueuedSpell"] = false,
+					},
+					["cache"] = {
+						["displayName"] = "Cast Luz del mártir",
+						["displayIcon"] = 1360762,
+					},
+					["integrations"] = {
+					},
+					["targets"] = {
+						["hovercast"] = {
+							["enabled"] = true,
+							["vitals"] = "ANY",
+							["hostility"] = "HELP",
+						},
+						["regular"] = {
+							{
+								["vitals"] = "ANY",
+								["unit"] = "DEFAULT",
+								["hostility"] = "HELP",
+							}, -- [1]
+							["enabled"] = false,
+						},
+					},
+					["load"] = {
+						["playerNameRealm"] = {
+							["value"] = "Syrona",
+							["selected"] = false,
+						},
+						["form"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["combat"] = {
+							["value"] = "IN_COMBAT",
+							["selected"] = false,
+						},
+						["instanceType"] = {
+							["single"] = "NONE",
+							["selected"] = 0,
+							["multiple"] = {
+								"NONE", -- [1]
+							},
+						},
+						["never"] = false,
+						["class"] = {
+							["single"] = "PALADIN",
+							["selected"] = 0,
+							["multiple"] = {
+								"PALADIN", -- [1]
+							},
+						},
+						["pet"] = {
+							["value"] = "ACTIVE",
+							["selected"] = false,
+						},
+						["spellKnown"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["pvpTalent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["race"] = {
+							["single"] = "LightforgedDraenei",
+							["selected"] = 0,
+							["multiple"] = {
+								"LightforgedDraenei", -- [1]
+							},
+						},
+						["specialization"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["inGroup"] = {
+							["value"] = "IN_GROUP_PARTY_OR_RAID",
+							["selected"] = false,
+						},
+						["talent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["warMode"] = {
+							["value"] = "IN_WAR_MODE",
+							["selected"] = false,
+						},
+						["covenant"] = {
+							["single"] = 2,
+							["selected"] = 0,
+							["multiple"] = {
+								2, -- [1]
+							},
+						},
+						["playerInGroup"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+					},
+					["keybind"] = "4",
+				}, -- [2]
+				{
+					["identifier"] = 3,
+					["type"] = "SPELL",
+					["action"] = {
+						["itemValue"] = "",
+						["macroValue"] = "",
+						["interrupt"] = false,
+						["allowStartAttack"] = false,
+						["spellValue"] = "Choque Sagrado",
+						["targetUnitAfterCast"] = false,
+						["macroMode"] = "FIRST",
+						["cancelQueuedSpell"] = false,
+					},
+					["cache"] = {
+						["displayName"] = "Cast Choque Sagrado",
+						["displayIcon"] = 135972,
+					},
+					["integrations"] = {
+					},
+					["targets"] = {
+						["hovercast"] = {
+							["enabled"] = true,
+							["vitals"] = "ALIVE",
+							["hostility"] = "ANY",
+						},
+						["regular"] = {
+							{
+								["vitals"] = "ALIVE",
+								["unit"] = "MOUSEOVER",
+								["hostility"] = "HELP",
+							}, -- [1]
+							{
+								["vitals"] = "ALIVE",
+								["unit"] = "TARGET",
+								["hostility"] = "HARM",
+							}, -- [2]
+							["enabled"] = false,
+						},
+					},
+					["load"] = {
+						["playerNameRealm"] = {
+							["value"] = "Syrona",
+							["selected"] = false,
+						},
+						["form"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["combat"] = {
+							["value"] = "IN_COMBAT",
+							["selected"] = false,
+						},
+						["instanceType"] = {
+							["single"] = "NONE",
+							["selected"] = 0,
+							["multiple"] = {
+								"NONE", -- [1]
+							},
+						},
+						["never"] = false,
+						["class"] = {
+							["single"] = "PALADIN",
+							["selected"] = 0,
+							["multiple"] = {
+								"PALADIN", -- [1]
+							},
+						},
+						["pet"] = {
+							["value"] = "ACTIVE",
+							["selected"] = false,
+						},
+						["spellKnown"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["pvpTalent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["race"] = {
+							["single"] = "LightforgedDraenei",
+							["selected"] = 0,
+							["multiple"] = {
+								"LightforgedDraenei", -- [1]
+							},
+						},
+						["specialization"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["inGroup"] = {
+							["value"] = "IN_GROUP_PARTY_OR_RAID",
+							["selected"] = false,
+						},
+						["talent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["warMode"] = {
+							["value"] = "IN_WAR_MODE",
+							["selected"] = false,
+						},
+						["covenant"] = {
+							["single"] = 2,
+							["selected"] = 0,
+							["multiple"] = {
+								2, -- [1]
+							},
+						},
+						["playerInGroup"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+					},
+					["keybind"] = "BUTTON2",
+				}, -- [3]
+				{
+					["identifier"] = 4,
+					["type"] = "SPELL",
+					["action"] = {
+						["itemValue"] = "",
+						["macroValue"] = "",
+						["interrupt"] = false,
+						["allowStartAttack"] = false,
+						["spellValue"] = "Palabra de gloria",
+						["targetUnitAfterCast"] = false,
+						["macroMode"] = "FIRST",
+						["cancelQueuedSpell"] = false,
+					},
+					["cache"] = {
+						["displayName"] = "Cast Palabra de gloria",
+						["displayIcon"] = 133192,
+					},
+					["integrations"] = {
+					},
+					["targets"] = {
+						["hovercast"] = {
+							["enabled"] = true,
+							["vitals"] = "ALIVE",
+							["hostility"] = "HELP",
+						},
+						["regular"] = {
+							{
+								["vitals"] = "ANY",
+								["unit"] = "DEFAULT",
+								["hostility"] = "ANY",
+							}, -- [1]
+							["enabled"] = false,
+						},
+					},
+					["load"] = {
+						["playerNameRealm"] = {
+							["value"] = "Syrona",
+							["selected"] = false,
+						},
+						["form"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["combat"] = {
+							["value"] = "IN_COMBAT",
+							["selected"] = false,
+						},
+						["instanceType"] = {
+							["single"] = "NONE",
+							["selected"] = 0,
+							["multiple"] = {
+								"NONE", -- [1]
+							},
+						},
+						["never"] = false,
+						["class"] = {
+							["single"] = "PALADIN",
+							["selected"] = 0,
+							["multiple"] = {
+								"PALADIN", -- [1]
+							},
+						},
+						["pet"] = {
+							["value"] = "ACTIVE",
+							["selected"] = false,
+						},
+						["spellKnown"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["pvpTalent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["race"] = {
+							["single"] = "LightforgedDraenei",
+							["selected"] = 0,
+							["multiple"] = {
+								"LightforgedDraenei", -- [1]
+							},
+						},
+						["specialization"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["inGroup"] = {
+							["value"] = "IN_GROUP_PARTY_OR_RAID",
+							["selected"] = false,
+						},
+						["talent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["warMode"] = {
+							["value"] = "IN_WAR_MODE",
+							["selected"] = false,
+						},
+						["covenant"] = {
+							["single"] = 2,
+							["selected"] = 0,
+							["multiple"] = {
+								2, -- [1]
+							},
+						},
+						["playerInGroup"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+					},
+					["keybind"] = "1",
+				}, -- [4]
+				{
+					["identifier"] = 5,
+					["type"] = "SPELL",
+					["action"] = {
+						["itemValue"] = "",
+						["macroValue"] = "",
+						["spellValue"] = "Bendición de sacrificio",
+						["macroMode"] = "FIRST",
+						["interrupt"] = false,
+						["targetUnitAfterCast"] = false,
+						["allowStartAttack"] = false,
+						["cancelQueuedSpell"] = false,
+					},
+					["cache"] = {
+						["displayName"] = "Cast Bendición de sacrificio",
+						["displayIcon"] = 135966,
+					},
+					["integrations"] = {
+					},
+					["targets"] = {
+						["hovercast"] = {
+							["enabled"] = true,
+							["vitals"] = "ALIVE",
+							["hostility"] = "HELP",
+						},
+						["regular"] = {
+							{
+								["vitals"] = "ANY",
+								["unit"] = "DEFAULT",
+								["hostility"] = "ANY",
+							}, -- [1]
+							["enabled"] = false,
+						},
+					},
+					["load"] = {
+						["playerNameRealm"] = {
+							["value"] = "Syrona",
+							["selected"] = false,
+						},
+						["class"] = {
+							["single"] = "PALADIN",
+							["selected"] = 0,
+							["multiple"] = {
+								"PALADIN", -- [1]
+							},
+						},
+						["combat"] = {
+							["value"] = "IN_COMBAT",
+							["selected"] = false,
+						},
+						["instanceType"] = {
+							["single"] = "NONE",
+							["selected"] = 0,
+							["multiple"] = {
+								"NONE", -- [1]
+							},
+						},
+						["form"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["never"] = false,
+						["pet"] = {
+							["value"] = "ACTIVE",
+							["selected"] = false,
+						},
+						["spellKnown"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["covenant"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["race"] = {
+							["single"] = "LightforgedDraenei",
+							["selected"] = 0,
+							["multiple"] = {
+								"LightforgedDraenei", -- [1]
+							},
+						},
+						["specialization"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["inGroup"] = {
+							["value"] = "IN_GROUP_PARTY_OR_RAID",
+							["selected"] = false,
+						},
+						["talent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["warMode"] = {
+							["value"] = "IN_WAR_MODE",
+							["selected"] = false,
+						},
+						["playerInGroup"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["pvpTalent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+					},
+					["keybind"] = "MOUSEWHEELUP",
+				}, -- [5]
+				{
+					["identifier"] = 6,
+					["type"] = "SPELL",
+					["action"] = {
+						["itemValue"] = "",
+						["macroValue"] = "",
+						["spellValue"] = "Limpiar",
+						["macroMode"] = "FIRST",
+						["interrupt"] = false,
+						["targetUnitAfterCast"] = false,
+						["allowStartAttack"] = false,
+						["cancelQueuedSpell"] = false,
+					},
+					["cache"] = {
+						["displayName"] = "Cast Limpiar",
+						["displayIcon"] = 135949,
+					},
+					["integrations"] = {
+					},
+					["targets"] = {
+						["hovercast"] = {
+							["enabled"] = true,
+							["vitals"] = "ALIVE",
+							["hostility"] = "HELP",
+						},
+						["regular"] = {
+							{
+								["vitals"] = "ANY",
+								["unit"] = "DEFAULT",
+								["hostility"] = "ANY",
+							}, -- [1]
+							["enabled"] = false,
+						},
+					},
+					["load"] = {
+						["playerNameRealm"] = {
+							["value"] = "Syrona",
+							["selected"] = false,
+						},
+						["class"] = {
+							["single"] = "PALADIN",
+							["selected"] = 0,
+							["multiple"] = {
+								"PALADIN", -- [1]
+							},
+						},
+						["combat"] = {
+							["value"] = "IN_COMBAT",
+							["selected"] = false,
+						},
+						["instanceType"] = {
+							["single"] = "NONE",
+							["selected"] = 0,
+							["multiple"] = {
+								"NONE", -- [1]
+							},
+						},
+						["form"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["never"] = false,
+						["pet"] = {
+							["value"] = "ACTIVE",
+							["selected"] = false,
+						},
+						["spellKnown"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["covenant"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["race"] = {
+							["single"] = "LightforgedDraenei",
+							["selected"] = 0,
+							["multiple"] = {
+								"LightforgedDraenei", -- [1]
+							},
+						},
+						["specialization"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["inGroup"] = {
+							["value"] = "IN_GROUP_PARTY_OR_RAID",
+							["selected"] = false,
+						},
+						["talent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["warMode"] = {
+							["value"] = "IN_WAR_MODE",
+							["selected"] = false,
+						},
+						["playerInGroup"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["pvpTalent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+					},
+					["keybind"] = "9",
+				}, -- [6]
+				{
+					["identifier"] = 7,
+					["type"] = "SPELL",
+					["action"] = {
+						["itemValue"] = "",
+						["macroValue"] = "",
+						["spellValue"] = "Luz Sagrada",
+						["macroMode"] = "FIRST",
+						["interrupt"] = false,
+						["targetUnitAfterCast"] = false,
+						["allowStartAttack"] = false,
+						["cancelQueuedSpell"] = false,
+					},
+					["cache"] = {
+						["displayName"] = "Cast Luz Sagrada",
+						["displayIcon"] = 135981,
+					},
+					["integrations"] = {
+					},
+					["targets"] = {
+						["hovercast"] = {
+							["enabled"] = true,
+							["vitals"] = "ALIVE",
+							["hostility"] = "HELP",
+						},
+						["regular"] = {
+							{
+								["vitals"] = "ANY",
+								["unit"] = "DEFAULT",
+								["hostility"] = "ANY",
+							}, -- [1]
+							["enabled"] = false,
+						},
+					},
+					["load"] = {
+						["playerNameRealm"] = {
+							["value"] = "Syrona",
+							["selected"] = false,
+						},
+						["class"] = {
+							["single"] = "PALADIN",
+							["selected"] = 0,
+							["multiple"] = {
+								"PALADIN", -- [1]
+							},
+						},
+						["combat"] = {
+							["value"] = "IN_COMBAT",
+							["selected"] = false,
+						},
+						["instanceType"] = {
+							["single"] = "NONE",
+							["selected"] = 0,
+							["multiple"] = {
+								"NONE", -- [1]
+							},
+						},
+						["form"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["never"] = false,
+						["pet"] = {
+							["value"] = "ACTIVE",
+							["selected"] = false,
+						},
+						["spellKnown"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["covenant"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["race"] = {
+							["single"] = "LightforgedDraenei",
+							["selected"] = 0,
+							["multiple"] = {
+								"LightforgedDraenei", -- [1]
+							},
+						},
+						["specialization"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["inGroup"] = {
+							["value"] = "IN_GROUP_PARTY_OR_RAID",
+							["selected"] = false,
+						},
+						["talent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["warMode"] = {
+							["value"] = "IN_WAR_MODE",
+							["selected"] = false,
+						},
+						["playerInGroup"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["pvpTalent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+					},
+					["keybind"] = "º",
+				}, -- [7]
+				{
+					["identifier"] = 8,
+					["type"] = "SPELL",
+					["action"] = {
+						["itemValue"] = "",
+						["macroValue"] = "",
+						["spellValue"] = "Bendición de libertad",
+						["macroMode"] = "FIRST",
+						["interrupt"] = false,
+						["targetUnitAfterCast"] = false,
+						["allowStartAttack"] = false,
+						["cancelQueuedSpell"] = false,
+					},
+					["cache"] = {
+						["displayName"] = "Cast Bendición de libertad",
+						["displayIcon"] = 135968,
+					},
+					["integrations"] = {
+					},
+					["targets"] = {
+						["hovercast"] = {
+							["enabled"] = true,
+							["vitals"] = "ALIVE",
+							["hostility"] = "HELP",
+						},
+						["regular"] = {
+							{
+								["vitals"] = "ANY",
+								["unit"] = "DEFAULT",
+								["hostility"] = "ANY",
+							}, -- [1]
+							["enabled"] = false,
+						},
+					},
+					["load"] = {
+						["playerNameRealm"] = {
+							["value"] = "Syrona",
+							["selected"] = false,
+						},
+						["class"] = {
+							["single"] = "PALADIN",
+							["selected"] = 0,
+							["multiple"] = {
+								"PALADIN", -- [1]
+							},
+						},
+						["combat"] = {
+							["value"] = "IN_COMBAT",
+							["selected"] = false,
+						},
+						["instanceType"] = {
+							["single"] = "NONE",
+							["selected"] = 0,
+							["multiple"] = {
+								"NONE", -- [1]
+							},
+						},
+						["form"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["never"] = false,
+						["pet"] = {
+							["value"] = "ACTIVE",
+							["selected"] = false,
+						},
+						["spellKnown"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["covenant"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["race"] = {
+							["single"] = "LightforgedDraenei",
+							["selected"] = 0,
+							["multiple"] = {
+								"LightforgedDraenei", -- [1]
+							},
+						},
+						["specialization"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["inGroup"] = {
+							["value"] = "IN_GROUP_PARTY_OR_RAID",
+							["selected"] = false,
+						},
+						["talent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+						["warMode"] = {
+							["value"] = "IN_WAR_MODE",
+							["selected"] = false,
+						},
+						["playerInGroup"] = {
+							["value"] = "",
+							["selected"] = false,
+						},
+						["pvpTalent"] = {
+							["single"] = 1,
+							["selected"] = 0,
+							["multiple"] = {
+								1, -- [1]
+							},
+						},
+					},
+					["keybind"] = "F8",
+				}, -- [8]
+				["next"] = 9,
+			},
+			["version"] = "0.17.2",
+		},
+		["ROGUE"] = {
+			["version"] = "0.17.2",
+		},
+		["WARLOCK"] = {
+			["version"] = "0.17.2",
+		},
+		["DEMONHUNTER"] = {
+			["version"] = "0.17.2",
+		},
+		["DEATHKNIGHT"] = {
+			["version"] = "0.16.2",
+		},
+		["DRUID"] = {
+			["version"] = "0.17.2",
+			["groups"] = {
+				{
+					["displayIcon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
+					["name"] = "New Group",
+					["identifier"] = "group-1",
+				}, -- [1]
+				["next"] = 2,
+			},
+		},
+		["MONK"] = {
+			["version"] = "0.15.3",
+			["minimap"] = {
+				["minimapPos"] = 166.7851550196535,
+			},
+		},
+		["SHAMAN"] = {
+			["version"] = "0.15.3",
+		},
+	},
+}

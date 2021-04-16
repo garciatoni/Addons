@@ -1,0 +1,14 @@
+
+NeatPlatesSettings = {
+	["GlobalEmphasizedAuraList"] = "",
+	["DefaultProfile"] = "Defecto",
+	["GlobalAuraLookup"] = {
+	},
+	["GlobalEmphasizedAuraPriority"] = {
+	},
+	["GlobalEmphasizedAuraLookup"] = {
+	},
+	["GlobalAuraList"] = "",
+	["GlobalAuraPriority"] = {
+	},
+}

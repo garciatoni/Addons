@@ -1,0 +1,864 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<doc xmlns="http://fallenworlds.org/addonstudio/schemas/xmldoc">
+	<!-- Common Lua documentation. Some runtimes do not include modules like coroutine and os
+	for various reasons. These are in a separate file. -->
+
+	<!--                                                                          for remarks: column 100 >|  -->
+	<!-- basic lua functions -->
+	<variable name="_VERSION" type="string">
+		<summary>The current Lua version.</summary>
+		<remarks>
+			A global variable (not a function) that holds a string containing the current interpreter version. The
+			current contents of this variable is "Lua 5.1".
+		</remarks>
+	</variable>
+	<variable name="_G" type="table">
+		<summary>The global environment table.</summary>
+		<remarks>
+			A global variable (not a function) that holds the global environment (that is, _G._G = _G). Lua itself
+			does not use this variable; changing its value does not affect any environment, nor vice-versa. (Use setfenv
+			to change environments.)
+		</remarks>
+	</variable>
+
+	<!-- table functions -->
+	<function name="pairs">
+		<summary>Gets a name/value pair iterator to traverse a table, used with 'for'.</summary>
+		<param name="table" type="table">the table to iterate over.</param>
+		<return name="f" type="function">iterator function</return>
+		<return name="t" type="table">the table to iterate</return>
+		<return name="i" type="any">index of nil</return>
+		<remarks>
+			Returns three values: the next function, the table t, and nil, so that the construction
+			for k,v in pairs(t) do body end
+			will iterate over all key–value pairs of table t.
+
+			See function 'next' for the caveats of modifying the table during its traversal.
+		</remarks>
+	</function>
+	<function name="ipairs">
+		<summary>Gets a index/value pair iterator to traverse a table, used with 'for'.</summary>
+		<param name="table" type="table">the table to iterate over.</param>
+		<return name="f" type="function">iterator function</return>
+		<return name="t" type="table">the table to iterate</return>
+		<return name="i" type="number">index</return>
+		<remarks>
+			Returns three values: an iterator function, the table t, and 0, so that the construction
+			for i,v in ipairs(t) do body end
+			will iterate over the pairs (1,t[1]), (2,t[2]), ···, up to the first integer key absent from the table.
+		</remarks>
+	</function>
+	<function name="next">
+		<summary>Allows a program to traverse all fields of a table. Normally used internally by 'for'</summary>
+		<param name="table" type="table">the table to traverse</param>
+		<param name="index" type="number" optional="true">the table index</param>
+		<return name="index" type="number">the next index. When next is called with and 'index' of nil, will be the first index</return>
+		<return name="value" type="any">the value of the item in the table</return>
+		<remarks>
+			Allows a program to traverse all fields of a table. Its first argument is a table and its second
+			argument is an index in this table. next returns the next index of the table and its associated
+			value. When called with nil as its second argument, next returns an initial index and its associated
+			value. When called with the last index, or with nil in an empty table, next returns nil. If the
+			second argument is absent, then it is interpreted as nil. In particular, you can use next(t) to check
+			whether a table is empty.
+			The order in which the indices are enumerated is not specified, even for numeric indices. (To traverse
+			a table in numeric order, use a numerical for or the ipairs function.)
+			The behavior of next is undefined if, during the traversal, you assign any value to a non-existent
+			field in the table. You may however modify existing fields. In particular, you may clear existing fields.
+		</remarks>
+	</function>
+
+	<!-- debug and runtime functions -->
+	<function name="assert">
+		<summary>Issues an error when the value of its argument v is false (i.e., nil or false).</summary>
+		<param name="v" type="any">the value</param>
+		<param name="message" type="string" optional="true">Failure message. (defaults to "assertion failed!")</param>
+		<return name="..." type="any">False if fails, otherwise all of the arguments.</return>
+	</function>
+	<function name="collectgarbage">
+		<summary>Generic interface to the garbage collector. Performs different functions according to its first argument</summary>
+		<param name="opt" type="number">Operation</param>
+		<param name="arg" type="number" optional="true">Operation argument</param>
+		<return name="val" type="any">Return value from the Operation</return>
+		<remarks>
+			This function is a generic interface to the garbage collector. It performs different functions according
+			to its first argument, opt:
+			"stop": stops the garbage collector.
+			"restart": restarts the garbage collector.
+			"collect": performs a full garbage-collection cycle.
+			"count": returns the total memory in use by Lua (in Kbytes).
+			"step": performs a garbage-collection step. The step "size" is controlled by arg (larger values mean
+					more steps) in a non-specified way. If you want to control the step size you must experimentally
+					tune the value of arg. Returns true if the step finished a collection cycle.
+			"setpause": sets arg as the new value for the pause of the collector (see §2.10). Returns the previous
+					value for pause.
+			"setstepmul": sets arg as the new value for the step multiplier of the collector (see §2.10). Returns
+					the previous value for step.
+		</remarks>
+	</function>
+	<function name="debugstack">
+		<summary>Gets information about the current function call stack</summary>
+		<param name="start" type="number">The stack level to start the traceback. 0 is the debugstack() function itself, while 1 is the function that called debugstack.</param>
+		<param name="countTop" type="number">The maximum number of functions to output at the top of the stack trace.</param>
+		<param name="countBot" type="number">The maximum number of functions to output at the bottom of the stack trace.</param>
+		<return name="debugstring" type="string">The stack traceback as a multi-line string</return>
+	</function>
+	<function name="debugprofilestop">
+		<summary>Gets the value of the running debug profile timer</summary>
+		<return name="time" type="number">The current value of the debug profile timer in milliseconds (with sub millisecond precision)</return>
+	</function>
+
+	<!-- call and stack environment functions -->
+	<function name="error">
+		<summary>Throws an error with the given error message. Never Returns; Use pcall() to catch errors.</summary>
+		<param name="message" type="string">the error message</param>
+		<param name="level" type="number" optional="true">stack level to blame</param>
+		<remarks>
+			Terminates the last protected function called and returns message as the error message. Function error
+			never returns.
+			Usually, error adds some information about the error position at the beginning of the message. The level
+			argument specifies how to get the error position. With level 1 (the default), the error position is where
+			the error function was called. Level 2 points the error to where the function that called error was called;
+			and so on. Passing a level 0 avoids the addition of error position information to the message.
+		</remarks>
+	</function>
+	<function name="pcall" variadic="true">
+		<summary>Safely calls the specified function with the given arguments.</summary>
+		<param name="f" type="function">Function to call</param>
+		<param name="arg1" type="any" optional="true">First argument</param>
+		<param name="···" type="any" optional="true">Second and subsequent arguments.</param>
+		<return name="success" type="boolean">true if succeeds, false otherwise.</return>
+		<return name="..." type="any">If fails, error message as string. Otherwise, the return values from the function call.</return>
+		<remarks>
+			Calls function f with the given arguments in protected mode. This means that any error inside f is not
+			propagated; instead, pcall catches the error and returns a status code. Its first result is the status
+			code (a boolean), which is true if the call succeeds without errors. In such case, pcall also returns
+			all results from the call, after this first result. In case of any error, pcall returns false plus the
+			error message.
+		</remarks>
+	</function>
+	<function name="xpcall">
+		<summary>Safely calls the specified function with the specified error handler.</summary>
+		<param name="f" type="function">the function to call.</param>
+		<param name="err" type="function">the error handler function, which is passed the original error object if fails.</param>
+		<return name="success" type="boolean">true if succeeds, false otherwise.</return>
+		<return name="..." type="any">If fails, error message as string. Otherwise, the return values from the function call.</return>
+		<remarks>
+			This function is similar to pcall, except that you can set a new error handler.
+			xpcall calls function f in protected mode, using err as the error handler. Any error inside f is not
+			propagated; instead, xpcall catches the error, calls the err function with the original error object,
+			and returns a status code. Its first result is the status code (a boolean), which is true if the call
+			succeeds without errors. In this case, xpcall also returns all results from the call, after this first
+			result. In case of any error, xpcall returns false plus the result from err.
+		</remarks>
+	</function>
+	<function name="getfenv">
+		<summary>Gets the current environment in use by the function.</summary>
+		<param name="f" optional="true">a function, or a number that specifies the stack level. 1 is current stack level. (default is 1)</param>
+		<return name="val" type="table"></return>
+		<remarks>
+			Returns the current environment in use by the function. f can be a Lua function or a number that
+			specifies the function at that stack level: Level 1 is the function calling getfenv. If the given function
+			is not a Lua function, or if f is 0, getfenv returns the global environment. The default for f is 1.
+		</remarks>
+	</function>
+	<function name="setfenv">
+		<summary>Sets the environment to be used by the given function.</summary>
+		<param name="f" type="number">Function to set the environment for.</param>
+		<param name="table" type="number">the table holding the environment to set</param>
+		<return name="val" type="function">the given function 'f'.</return>
+		<remarks>
+			Sets the environment to be used by the given function. f can be a Lua function or a number that specifies
+			the function at that stack level: Level 1 is the function calling setfenv. setfenv returns the given
+			function.
+			As a special case, when f is 0 setfenv changes the environment of the running thread. In this case,
+			setfenv returns no values.
+		</remarks>
+	</function>
+
+	<!-- language and generation functions -->
+	<function name="loadstring">
+		<summary>Compiles a Lua code string for execution, returning a reference to the new function.</summary>
+		<param name="block" type="string">a string of Lua code. Can be very long.</param>
+		<param name="name" type="string" optional="true">name the code block. Shown as the "file name" in error messages.</param>
+		<return name="func" type="function">reference to a function, otherwise 'nil' if unable to compile the code block</return>
+		<return name="error" type="string">will contain an error message, if func was nil</return>
+		<remarks>
+			Similar to load, but gets the chunk from the given string. To load and run a given string, use the idiom
+					assert(loadstring(s))()
+			When absent, chunkname defaults to the given string.
+			http://www.wowwiki.com/API_loadstring
+		</remarks>
+	</function>
+	<function name="newproxy">
+		<summary>Creates a zero-size "userdata" object, optionally with a sharable empty metatable. (unsupported)</summary>
+		<paramchoice>
+			<param name="createMetatable" type="boolean">Whether to create a metatable for the userdata.</param>
+			<param name="shareMetatableWith" type="userdata">Userdata to share metatable with.</param>
+		</paramchoice>
+		<return name="val" type="userdata">a new zero-size userdata object</return>
+		<remarks>
+			If an object previously created by newproxy is passed, the new userdata will share that proxy's metatable.
+			From the scripting side, userdata is an opaque block of memory, and is used in the implementation of the
+			Secure Headers added in WoW 3.0.
+
+			Newproxy is an unsupported and undocumented function in the Lua base library. From Lua code, the setmetatable
+			function may only be used on objects of table type. The newproxy function circumvents that limitation by
+			creating a zero-size userdata and setting either a new, empty metatable on it or using the metatable of
+			another newproxy instance. We are then free to modify the metatable from Lua. This is the only way to create
+			a proxy object from Lua which honors certain metamethods, such as __len.
+		</remarks>
+	</function>
+
+	<!-- prototype functions -->
+	<function name="getmetatable">
+		<summary>Gets the metatable of the given object.</summary>
+		<param name="object" type="table">the value</param>
+		<return name="metatable" type="table">the tables associated metatable, otherwise nil if object has no metatable.</return>
+		<remarks>
+			If object does not have a metatable, returns nil. Otherwise, if the object's metatable has a "__metatable"
+			field, returns the associated value. Otherwise, returns the metatable of the given object.
+		</remarks>
+	</function>
+	<function name="setmetatable">
+		<summary>Sets the metatable for the given table.</summary>
+		<param name="table" type="table">the table who's metatable is to be set</param>
+		<param name="metatable" type="table">the metatable to set. If nil removes the metatable.</param>
+		<return name="val" type="table">the metatable that was set.</return>
+		<remarks>
+			Sets the metatable for the given table. (You cannot change the metatable of other types from Lua, only
+			from C.) If metatable is nil, removes the metatable of the given table. If the original metatable has a
+			"__metatable" field, raises an error.
+			This function returns table.
+		</remarks>
+	</function>
+	<function name="rawequal">
+		<summary>Checks whether v1 is equal to v2, without invoking any metamethod.</summary>
+		<param name="v1" type="any">First value</param>
+		<param name="v2" type="any">Second value</param>
+		<return name="val" type="boolean">true if equal, false otherwise.</return>
+	</function>
+	<function name="rawget">
+		<summary>Gets the real value of table[index], without invoking any metamethod.</summary>
+		<param name="table" type="table">Table to get value from. Must actually be a table.</param>
+		<param name="index" type="any">the index or key to use to look up the value.</param>
+		<return name="val" type="any">Value of the table item</return>
+	</function>
+	<function name="rawset">
+		<summary>Sets the real value of table[index] to value, without invoking any metamethod.</summary>
+		<param name="table" type="table">Table to set the value in.</param>
+		<param name="index" type="number">the index or key to use to look up the value. Cannot be nil.</param>
+		<param name="value" type="any">the value to set, can be any Lua value.</param>
+		<return name="table" type="table">the table used to set the value, passed in from the 'table' parameter.</return>
+	</function>
+
+	<!-- type and conversion functions -->
+	<function name="tonumber">
+		<summary>Tries to convert its argument to a number.</summary>
+		<param name="e" type="any">the value to coerce to a number.</param>
+		<param name="base" type="number" optional="true">Base value to assume when converting a string. Acceptable range is 2 to 36.</param>
+		<return name="val" type="number">the coerced number, otherwise nil if unable to convert.</return>
+		<remarks>
+			Tries to convert its argument to a number. If the argument is already a number or a string convertible
+			to a number, then tonumber returns this number; otherwise, it returns nil.
+			An optional argument specifies the base to interpret the numeral. The base may be any integer between
+			2 and 36, inclusive. In bases above 10, the letter 'A' (in either upper or lower case) represents 10, 'B'
+			represents 11, and so forth, with 'Z' representing 35. In base 10 (the default), the number can have a
+			decimal part, as well as an optional exponent part (see §2.1). In other bases, only unsigned integers
+			are accepted.
+		</remarks>
+	</function>
+	<function name="tostring">
+		<summary>Tries to convert a value of any type to a string.</summary>
+		<param name="e" type="any">the value</param>
+		<return name="val" type="string">String representation of the value 'e'</return>
+		<remarks>
+			Receives an argument of any type and converts it to a string in a reasonable format. For complete control
+			of how numbers are converted, use string.format.
+			If the metatable of e has a "__tostring" field, then tostring calls the corresponding value with e as
+			argument, and uses the result of the call as its result.
+		</remarks>
+	</function>
+	<function name="type">
+		<summary>Gets the type name of the specified Lua object.</summary>
+		<param name="v">the variable to get the type for.</param>
+		<return name="type" type="string">type as a string: "nil", "number", "string", "table", "function" or "userdata"</return>
+		<remarks>
+			Returns the type of its only argument, coded as a string. The possible results of this function
+			are "nil" (a string, not the value nil), "number", "string", "boolean", "table", "function", "thread",
+			and "userdata".
+		</remarks>
+	</function>
+
+	<!-- native array functions -->
+	<function name="select">
+		<summary>Gets the array element count, or gets a subset of the array starting at index.</summary>
+		<paramchoice>
+			<param name="token" type="string">if "#" is passed, gets the count of array elements.</param>
+			<param name="index" type="number">the starting index of the array subset to return.</param>
+		</paramchoice>
+		<param name="···" type="array">the array.</param>
+		<return name="···" type="array">the element count, or a new array starting at 'index'.</return>
+		<remarks>
+			If index is a number, returns all arguments after argument number index. Otherwise, index must be the
+			string "#", and select returns the total number of extra arguments it received.
+		</remarks>
+	</function>
+	<function name="unpack">
+		<summary>Converts the elements from the given table into an argument array. There is no 'pack' function, see remarks.</summary>
+		<param name="list" type="table">Table to unpack</param>
+		<param name="i" type="number" optional="true">the index of the first argument to get (default is 1)</param>
+		<param name="j" type="number" optional="true">the index of the last argument to get (default is last element index)</param>
+		<return name="val" type="array">the unpacked argument array.</return>
+		<remarks>
+			Returns the elements from the given table as an argument array. This function is equivalent to
+			'return list[i], list[i+1], ···, list[j]'
+			except that the above code can be written only for a fixed number of elements. By default, i is 1 and j
+			is the length of the list, as defined by the length operator (see Lua Reference §2.5.5).
+			There is no 'pack' function. Pack is achieved using the idioms: {...}  (or) {myFunc()} (or) {a,b,c,...,myfunc()}.
+			Furthermore, he result of 'select(1,unpack({...}))' would be the same as '...'.
+		</remarks>
+	</function>
+
+	<!-- string table functions -->
+	<!--<table name="string" virtual="true" />-->
+	<table name="string">
+		<summary>
+			Contains functions to support strings.
+		</summary>
+		<remarks>
+			This library provides generic functions for string manipulation, such as finding and extracting substrings,
+			and pattern matching. When indexing a string in Lua, the first character is at position 1 (not at 0, as in C).
+			Indices are allowed to be negative and are interpreted as indexing backwards, from the end of the string.
+			Thus, the last character is at position -1, and so on.
+
+			The string library provides all its functions inside the table string. It also sets a metatable for strings
+			where the __index field points to the string table. Therefore, you can use the string functions in object-
+			oriented style. For instance, string.byte(s, i) can be written as s:byte(i).
+
+			The string library assumes one-byte character encodings. Lua's pattern matching scheme is not the same as
+			regular expression (regex) scheme.
+		</remarks>
+		<method name="byte">
+			<summary>Gets the internal numeric code of the i-th character of the string.</summary>
+			<param name="s" type="string">The string</param>
+			<param name="i" type="number" optional="true">Index of the first character, defaults to 1</param>
+			<param name="j" type="number" optional="true">Index of the last character, defaults to 'i'</param>
+			<return name="byte" type="number">The byte value (usually ASCII) or nil if the index is invalid</return>
+			<remarks>
+				The first valid index is 1. The last valid index is the length of the string. Returns the byte value
+				(usually ASCII on most platforms) of the character at the specified position or nil if the index is invalid.
+				If no 'i' is supplied then the first byte is returned, not a list of all the byte values. If the string
+				is composed of encoded characters such as utf-8, this function returns the raw encoded value at that
+				position, not an unencoded character value.
+
+				Specifically this function returns the internal numerical codes of the characters s[i], s[i+1], ···, s[j].
+				The default value for: i is 1; the default value for j is i.
+				Note that numerical codes are not necessarily portable across platforms.
+			</remarks>
+		</method>
+		<method name="char">
+			<summary>Gets a string for a list of numeric codes (usually ASCII codes).</summary>
+			<param name="···" type="number">The list of integers.</param>
+			<return name="val" type="string">A new string object consisting of the values in the list integers.</return>
+			<remarks>
+				Generate a string representing the character codes passed as arguments. Can receive zero or more integers.
+				Returns a string with length equal to the number of arguments, in which each character has the internal
+				numerical code equal to its corresponding argument.
+				Note that numerical codes are not necessarily portable across platforms.
+			</remarks>
+		</method>
+		<method name="dump">
+			<summary>Gets a compiled byte representation of the supplied instantiated function.</summary>
+			<param name="f" type="function">Function to get bytes for.</param>
+			<return name="val" type="string">Compiled byte data for the function as a string.</return>
+			<remarks>
+				Returns a string containing a binary representation of the given function, so that a later loadstring
+				on this string returns a copy of the function. function must be a Lua function without upvalues.
+			</remarks>
+		</method>
+		<method name="find">
+			<summary>Look for match of pattern in string, optionally from specific location or using plain substring.</summary>
+			<param name="s" type="string">The string to search</param>
+			<param name="pattern" type="string">The patterns to search for.</param>
+			<param name="init" type="number" optional="true">Index to start the search, defaults to 1, can be negative</param>
+			<param name="plain" type="boolean" optional="true">If true turns off the pattern matching for 'pattern', default is false.</param>
+			<return name="..." type="number">List of positions found, otherwise nil if none found.</return>
+			<remarks>
+				Find the first occurrence of the pattern in the string passed. If an instance of the pattern is found
+				a pair of values representing the start and end of the string is returned. If the pattern cannot be found
+				nil is returned.
+				> = string.find("Hello Lua user", "Lua")
+				7       9
+				> = string.find("Hello Lua user", "banana")
+				nil
+				Can optionally specify where to start the search with a third argument. The argument may also be negative
+				which means we count back from the end of the string and start the search.
+
+				Looks for the first match of pattern in the string s. If it finds a match, then find returns the indices
+				of s where this occurrence starts and ends; otherwise, it returns nil. A third, optional numerical argument
+				init specifies where to start the search; its default value is 1 and can be negative. A value of true as a
+				fourth, optional argument 'plain' turns off the pattern matching facilities, so the function does a plain
+				"find substring" operation, with no characters in pattern being considered "magic". Note that if plain is
+				given, then init must be given as well.
+				If the pattern has captures, then in a successful match the captured values are also returned, after the
+				two indices.
+			</remarks>
+		</method>
+		<method name="format">
+			<summary>Create a formatted string from the format and arguments provided.</summary>
+			<param name="format" type="string">The format string</param>
+			<param name="···" type="any" optional="true">The list of values to apply to the format</param>
+			<return name="val" type="string">The formatted string</return>
+			<remarks>
+				This is similar to the printf("format",...) function in C. Lua does not support the ANSI C format
+				specifiers *, l, L, n, p, and h but includes an extra specifier, q, which formats a string in a form suitable
+				to be safely read back by the Lua interpreter: the string is written between double quotes, and all double
+				quotes, newlines, embedded zeros, and backslashes in the string are correctly escaped when written.
+
+				Returns a formatted version of its variable number of arguments following the description given in its
+				first argument (which must be a string). The format string follows the same rules as the printf family
+				of standard C functions. The only differences are that the options/modifiers *, l, L, n, p, and h are
+				not supported and that there is an extra option, q. The q option formats a string in a form suitable to
+				be safely read back by the Lua interpreter: the string is written between double quotes, and all double
+				quotes, newlines, embedded zeros, and backslashes in the string are correctly escaped when written. For
+				instance, the call
+				string.format('%q', 'a string with "quotes" and \n new line')
+
+				will produce the string:
+				"a string with \"quotes\" and \
+				new line"
+
+				The options c, d, E, e, f, g, G, i, o, u, X, and x all expect a number as argument, whereas q and s expect
+				a string. This function does not accept string values containing embedded zeros, except as arguments to
+				the q option.
+
+				[ WoW Specific: The 'q' option is the same as the one used by WoW to preparse all strings before saving
+				them between sessions in the AddOn database files. The _G.format alias version, however, includes the
+				positional argument specifiers from Lua 4.0. ]
+			</remarks>
+		</method>
+		<method name="gmatch">
+			<summary>Gets a pattern iterator to scan a string, used with 'for'.</summary>
+			<param name="s" type="string">the string to scan</param>
+			<param name="pattern" type="string">the patterns to search for</param>
+			<return name="f" type="function">iterator function</return>
+			<return name="s" type="string">the string to iterate</return>
+			<return name="i" type="nil">index</return>
+			<remarks>
+				Returns an iterator function that, each time it is called, returns the next captures from pattern over
+				string s. If pattern specifies no captures, then the whole match is produced in each call.
+				As an example, the following loop
+
+				s = "hello world from Lua"
+				for w in string.gmatch(s, "%a+") do
+				print(w)
+				end
+
+				will iterate over all the words from string s, printing one per line. The next example collects all pairs
+				key=value from the given string into a table:
+
+				t = {}
+				s = "from=world, to=Lua"
+				for k, v in string.gmatch(s, "(%w+)=(%w+)") do
+				t[k] = v
+				end
+
+				For this function, a '^' at the start of a pattern does not work as an anchor, as this would prevent the
+				iteration.
+			</remarks>
+		</method>
+		<method name="gsub">
+			<summary>Replaces all instances of the pattern provided with the replacement 'repl'.</summary>
+			<param name="s" type="string">The string to scan.</param>
+			<param name="pattern" type="string">The patterns to search for.</param>
+			<param name="repl" type="any">The object used for replacements, can be nearly any type.</param>
+			<param name="n" type="number" optional="true">The limit number of substitutions</param>
+			<return name="val" type="string">A new string containing the substitutions.</return>
+			<return name="count" type="number">The number of substitutions made.</return>
+			<remarks>
+				This is a very powerful function and can be used in multiple ways. Used simply it can replace all instances
+				of the pattern provided with the replacement. A pair of values is returned, the modified string and the
+				number of substitutions made. The optional fourth argument n can be used to limit the number of
+				substitutions made.
+
+				Returns a copy of s in which all (or the first n, if given) occurrences of the pattern have been replaced
+				by a replacement string specified by repl, which can be a string, a table, or a function. gsub also
+				returns, as its second value, the total number of matches that occurred.
+
+				If repl is a string, then its value is used for replacement. The character % works as an escape character:
+				any sequence in repl of the form %n, with n between 1 and 9, stands for the value of the n-th captured
+				substring (see below). The sequence %0 stands for the whole match. The sequence %% stands for a single %.
+
+				If repl is a table, then the table is queried for every match, using the first capture as the key; if the
+				pattern specifies no captures, then the whole match is used as the key.
+
+				If repl is a function, then this function is called every time a match occurs, with all captured substrings
+				passed as arguments, in order; if the pattern specifies no captures, then the whole match is passed as a
+				sole argument.
+
+				If the value returned by the table query or by the function call is a string or a number, then it is used
+				as the replacement string; otherwise, if it is false or nil, then there is no replacement (that is, the
+				original match is kept in the string).
+
+				examples:
+				x = string.gsub("hello world", "(%w+)", "%1 %1")
+				--> x="hello hello world world"
+				x = string.gsub("hello world", "%w+", "%0 %0", 1)
+				--> x="hello hello world"
+				x = string.gsub("hello world from Lua", "(%w+)%s*(%w+)", "%2 %1")
+				--> x="world hello Lua from"
+				x = string.gsub("home = $HOME, user = $USER", "%$(%w+)", os.getenv)
+				--> x="home = /home/roberto, user = roberto"
+				x = string.gsub("4+5 = $return 4+5$", "%$(.-)%$", function (s)
+				return loadstring(s)()
+				end)
+				--> x="4+5 = 9"
+				local t = {name="lua", version="5.1"}
+				x = string.gsub("$name-$version.tar.gz", "%$(%w+)", t)
+				--> x="lua-5.1.tar.gz"
+			</remarks>
+		</method>
+		<method name="len">
+			<summary>Gets the length in bytes of a string.</summary>
+			<param name="s" type="string">String to get the length for.</param>
+			<return name="val" type="number">the length of the string</return>
+			<remarks>
+				Receives a string and returns its length. The empty string "" has length 0. Embedded zeros are counted,
+				so "a\000bc\000" has length 5. See also string.strlenutf8 - for utf8-aware string length parsing.
+			</remarks>
+		</method>
+		<method name="lower">
+			<summary>Gets a new lower case string.</summary>
+			<param name="s" type="string">The string to convert.</param>
+			<return name="val" type="string">The lower case string.</return>
+			<remarks>
+				Receives a string and returns a copy of this string with all uppercase letters changed to lowercase. All
+				other characters are left unchanged. The definition of what an uppercase letter is depends on the current
+				locale.
+			</remarks>
+		</method>
+		<method name="match">
+			<summary>Finds all instances of 'pattern' in the supplied string.</summary>
+			<param name="s" type="string">The string to scan.</param>
+			<param name="pattern" type="string">The patterns to search for.</param>
+			<param name="init" type="number" optional="true">Start position in the string to begin the scan. Defaults to 1, can be negative.</param>
+			<return name="..." type="string">A list of 'captures' found.</return>
+			<remarks>
+				This function is similar to string.find, except that strmatch returns the actual matched strings as a
+				value array, whereas strfind returns the starting and ending character positions, and then only those
+				of the first match found. Multiple return values occur when there are more than one parenthesized section
+				within pattern. Parentheses set off each section to be returned. If no match is found, returns nil.
+				Negative values for init search from the end of the string, where -1 starts at the last character, and so on.
+
+				Looks for the first match of pattern in the string s. If it finds one, then match returns the captures
+				from the pattern; otherwise it returns nil. If pattern specifies no captures, then the whole match is
+				returned. A third, optional numerical argument init specifies where to start the search; its default
+				value is 1 and can be negative.
+			</remarks>
+		</method>
+		<method name="rep">
+			<summary>Generate a string which is n copies of the string passed concatenated together.</summary>
+			<param name="s" type="string">String to concatenate</param>
+			<param name="n" type="number">The number of instances of 's' in the concatenated string.</param>
+			<return name="val" type="string">the concatenated string</return>
+			<remarks>
+				Returns a string that is the concatenation of n copies of the string s.
+
+				> = string.rep("Lua ",5)
+				Lua Lua Lua Lua Lua
+			</remarks>
+		</method>
+		<method name="reverse">
+			<summary>Gets a reversed string.</summary>
+			<param name="s" type="string">The string to reverse</param>
+			<return name="val" type="string">The reversed string.</return>
+			<remarks>
+				Returns a string that is the string s reversed.
+			</remarks>
+		</method>
+		<method name="sub">
+			<summary>Gets a substring of the supplied string.</summary>
+			<param name="s" type="string">The string.</param>
+			<param name="i" type="number">First index of the sub string.</param>
+			<param name="j" type="number" optional="true">Last index of the sub string, defaults to -1.</param>
+			<return name="val" type="number"></return>
+			<remarks>
+				Returns the substring of s that starts at i and continues until j; i and j can be negative. If j is absent,
+				then it is assumed to be equal to -1 (which is the same as the string length). In particular, the call
+				string.sub(s,1,j) returns a prefix of s with length j, and string.sub(s, -i) returns a suffix of s with
+				length i.
+			</remarks>
+		</method>
+		<method name="upper">
+			<summary>Gets a new string with all uppercase letters.</summary>
+			<param name="s" type="string">The string</param>
+			<return name="val" type="string">The new uppercase string.</return>
+			<remarks>
+				Receives a string and returns a copy of this string with all lowercase letters changed to uppercase. All
+				other characters are left unchanged. The definition of what a lowercase letter is depends on the current
+				locale.
+			</remarks>
+		</method>
+	</table>
+
+	<!-- table table functions -->
+	<!--<table name="table" virtual="true" />-->
+	<table name="table">
+		<summary>
+			Contains functions to support tables.
+		</summary>
+		<function name="foreach">
+			<summary>Execute function for each element in table. (deprecated, use pairs).</summary>
+			<param name="table" type="table">the table to iterate over.</param>
+			<param name="func" type="function">the function to be called for each element.</param>
+		</function>
+		<function name="foreachi">
+			<summary>Execute function for each element in table, indices are visited in sequential order. (deprecated, use ipairs).</summary>
+			<param name="table" type="table">the table to iterate over.</param>
+			<param name="func" type="function">the function to be called for each element.</param>
+		</function>
+		<function name="insert">
+			<summary>Insert value into table at position pos.</summary>
+			<param name="table" type="table">the table to apply the insert to.</param>
+			<param name="pos" type="number" optional="true">Position to insert the item. (defaults to end of table)</param>
+			<param name="value" type="table">the value to add to the table.</param>
+		</function>
+		<function name="remove">
+			<summary>Remove and return the table element at position pos.</summary>
+			<param name="table" type="table">the table to apply the removal to.</param>
+			<param name="pos" type="number" optional="true">Position to remove the item. (defaults to last entry in table)</param>
+			<return name="value" type="any">the value of the item removed.</return>
+		</function>
+		<function name="concat">
+			<summary>Concatenate the elements of a table together to form a string.  Each element must be able to be coerced into a string.</summary>
+			<param name="table" type="table">the table to apply the removal to.</param>
+			<param name="sep" type="number" optional="true">A separator to be placed between the elements.</param>
+			<param name="i" type="number" optional="true">Start element of a range of elements.</param>
+			<param name="j" type="number" optional="true">End element of a range of elements.</param>
+			<return name="value" type="string">the concatenated string.</return>
+		</function>
+	</table>
+
+	<!-- string table functions -->
+	<!--<table name="math" virtual="true" />-->
+	<table name="math">
+		<summary>
+			Contains functions to support math.
+		</summary>
+		<function name="abs">
+			<summary>Gets the absolute value of x.</summary>
+			<param name="x" type="number">the value</param>
+			<return name="val" type="number">the absolute value of x.</return>
+		</function>
+		<function name="acos">
+			<summary>Gets the arc cosine of x (in radians).</summary>
+			<param name="x" type="number">the value</param>
+			<return name="val" type="number">the arc cosine of x (in radians).</return>
+		</function>
+		<function name="asin">
+			<summary>Gets the arc sine of x (in radians).</summary>
+			<param name="x" type="number">the value</param>
+			<return name="val" type="number">the arc sine of x (in radians).</return>
+		</function>
+		<function name="atan">
+			<summary>Gets the arc tangent of x (in radians).</summary>
+			<param name="x" type="number">the value</param>
+			<return name="val" type="number">the arc tangent of x (in radians).</return>
+		</function>
+		<function name="atan2">
+			<summary>Gets the arc tangent of y/x (in radians) using the signs of the parameters for the quadrant.</summary>
+			<param name="y" type="number">the value y</param>
+			<param name="x" type="number">the value x</param>
+			<return name="val" type="number">the arc tangent of y/x (in radians)</return>
+			<remarks>
+				Gets the arc tangent of y/x (in radians), but uses the signs of both parameters to find the quadrant
+				of the result. (It also handles correctly the case of x being zero.)
+			</remarks>
+		</function>
+		<function name="ceil">
+			<summary>Gets the smallest integer larger than or equal to x.</summary>
+			<param name="x" type="number">the value</param>
+			<return name="val" type="number">the smallest integer larger than or equal to x.</return>
+		</function>
+		<function name="cos">
+			<summary>Gets the cosine of x (assumed to be in radians).</summary>
+			<param name="x" type="number">the value</param>
+			<return name="val" type="number">the cosine of x (assumed to be in radians).</return>
+		</function>
+		<function name="cosh">
+			<summary>Gets the hyperbolic cosine of x.</summary>
+			<param name="x" type="number">the value</param>
+			<return name="val" type="number">the hyperbolic cosine of x.</return>
+		</function>
+		<function name="deg">
+			<summary>Gets the angle x (given in radians) in degrees.</summary>
+			<param name="x" type="number">the value</param>
+			<return name="val" type="number">the angle x (given in radians) in degrees.</return>
+		</function>
+		<function name="exp">
+			<summary>Gets the value e^x.</summary>
+			<param name="x" type="number">the value</param>
+			<return name="val" type="number">the value e^x.</return>
+		</function>
+		<function name="floor">
+			<summary>Gets the largest integer smaller than or equal to x.</summary>
+			<param name="x" type="number">the value</param>
+			<return name="val" type="number">the largest integer smaller than or equal to x.</return>
+		</function>
+		<function name="fmod">
+			<summary>Gets the remainder of the division of x by y that rounds the quotient towards zero.</summary>
+			<param name="x" type="number">the value x</param>
+			<param name="y" type="number">the value y</param>
+			<return name="val" type="number">the remainder of the division of x by y.</return>
+		</function>
+		<function name="frexp">
+			<summary>Gets m and e such that x = m2^e.</summary>
+			<param name="x" type="number">the value</param>
+			<return name="m" type="number">Returns m of x = m2^e.</return>
+			<return name="e" type="number">Returns e of x = m2^e.</return>
+			<remarks>
+				Gets m and e such that x = m2^e, e is an integer and the absolute value of m is in the range
+				[0.5, 1] (or zero when x is zero).
+			</remarks>
+		</function>
+		<function name="huge">
+			<summary>The value HUGE_VAL, a value larger than or equal to any other numerical value.</summary>
+			<return name="val" type="number">HUGE_VAL</return>
+		</function>
+		<function name="ldexp">
+			<summary>Gets m2^e (e should be an integer).</summary>
+			<param name="m" type="number">the value</param>
+			<param name="e" type="number">the value</param>
+			<return name="val" type="number">Returns m2e (e should be an integer).</return>
+		</function>
+		<function name="log">
+			<summary>Gets the natural logarithm of x.</summary>
+			<param name="x" type="number">the value</param>
+			<return name="val" type="number">the natural logarithm of x.</return>
+		</function>
+		<function name="log10">
+			<summary>Gets the base-10 logarithm of x.</summary>
+			<param name="x" type="number">the value</param>
+			<return name="val" type="number">the base-10 logarithm of x.</return>
+		</function>
+		<function name="max" variadic="true">
+			<summary>Gets the maximum value among its arguments.</summary>
+			<param name="x" type="number">the value</param>
+			<param name="···" type="number">Values to compare to x</param>
+			<return name="val" type="number">the maximum value among its arguments.</return>
+		</function>
+		<function name="min" variadic="true">
+			<summary>Gets the minimum value among its arguments.</summary>
+			<param name="x" type="number">the value</param>
+			<param name="···" type="number" optional="true">Values to compare to x</param>
+			<return name="val" type="number">the minimum value among its arguments.</return>
+		</function>
+		<function name="modf">
+			<summary>Gets two numbers, the integral part of x and the fractional part of x.</summary>
+			<param name="x" type="number">the value</param>
+			<return name="i" type="number">Integral part</return>
+			<return name="f" type="number">Fractional part</return>
+		</function>
+		<function name="pi">
+			<summary>Gets the value of pi.</summary>
+			<return name="val" type="number">the value of pi.</return>
+		</function>
+		<function name="pow">
+			<summary>Gets x^y. (You can also use the ^ operator in expression x^y to compute this value.)</summary>
+			<param name="x" type="number">the value</param>
+			<param name="y" type="number">the exponent</param>
+			<return name="val" type="number">Returns x^y.</return>
+		</function>
+		<function name="rad">
+			<summary>Gets the angle x (given in degrees) in radians.</summary>
+			<param name="x" type="number">the value</param>
+			<return name="val" type="number">the angle x (given in degrees) in radians.</return>
+		</function>
+		<function name="random">
+			<summary>This function is an interface to the simple pseudo-random generator function rand provided by ANSI C.</summary>
+			<param name="m" type="number" optional="true">Used without n, returns in range [1,m]</param>
+			<param name="n" type="number" optional="true">Upperbounds of random in [m,n].</param>
+			<return name="val" type="number">Random number</return>
+			<remarks>
+				No guarantees can be given for its statistical properties. When called without arguments, returns a
+				uniform pseudo-random real number in the range [0,1]. When called with an integer number m, math.random
+				returns a uniform pseudo-random integer in the range [1, m]. When called with two integer numbers m and n,
+				math.random returns a uniform pseudo-random integer in the range [m, n].
+			</remarks>
+		</function>
+		<function name="randomseed">
+			<summary>Sets x as the "seed" for the pseudo-random generator: equal seeds produce equal sequences of numbers.</summary>
+			<param name="x" type="number">the value</param>
+		</function>
+		<function name="sin">
+			<summary>Gets the sine of x (assumed to be in radians).</summary>
+			<param name="x" type="number">the value</param>
+			<return name="val" type="number">the sine of x (assumed to be in radians).</return>
+		</function>
+		<function name="sinh">
+			<summary>Gets the hyperbolic sine of x.</summary>
+			<param name="x" type="number">the value</param>
+			<return name="val" type="number">the hyperbolic sine of x.</return>
+		</function>
+		<function name="sqrt">
+			<summary>Gets the square root of x. (You can also use the expression x^0.5 to compute this value.)</summary>
+			<param name="x" type="number">the value</param>
+			<return name="val" type="number">the square root of x.</return>
+		</function>
+		<function name="tan">
+			<summary>Gets the tangent of x (assumed to be in radians).</summary>
+			<param name="x" type="number">the value</param>
+			<return name="val" type="number">the tangent of x (assumed to be in radians).</return>
+		</function>
+		<function name="tanh">
+			<summary>Gets the hyperbolic tangent of x.</summary>
+			<param name="x" type="number">the value</param>
+			<return name="val" type="number">the hyperbolic tangent of x.</return>
+		</function>
+	</table>
+
+	<!-- bit table functions -->
+	<!--<table name="bit" virtual="true" />-->
+	<table name="bit">
+		<summary>
+			Contains functions to support bitwise logical arithmetic.
+		</summary>
+		<function name="lshift">
+			<summary>Gets 'a' shifted to the left 'b' places.</summary>
+			<param name="a" type="number">the number to shift.</param>
+			<param name="b" type="number">the number of bit places to shift left.</param>
+			<return name="val" type="number">the shifted value.</return>
+		</function>
+		<function name="rshift">
+			<summary>Gets 'a' shifted to the right 'b' places.</summary>
+			<param name="a" type="number">the number to shift.</param>
+			<param name="b" type="number">the number of bit places to shift right.</param>
+			<return name="val" type="number">the shifted value.</return>
+		</function>
+		<function name="bnot">
+			<summary>Computes the bitwise 'not' of its argument.</summary>
+			<param name="a" type="number">the number to invert.</param>
+			<return name="val" type="number">the inverted value.</return>
+		</function>
+		<function name="bor">
+			<summary>Computes the bitwise 'or' of all of its arguments. More than two arguments are allowed.</summary>
+			<param name="a" type="number">the left component.</param>
+			<param name="b" type="number">the right component.</param>
+			<return name="val" type="number">the or'd value.</return>
+		</function>
+		<function name="band">
+			<summary>Computes the bitwise 'and' of all of its arguments. More than two arguments are allowed.</summary>
+			<param name="a" type="number">the left component.</param>
+			<param name="b" type="number">the right component.</param>
+			<return name="val" type="number">the and'ed value.</return>
+		</function>
+		<function name="bxor">
+			<summary>Computes the bitwise 'xor' of all of its arguments. More than two arguments are allowed.</summary>
+			<param name="a" type="number">the left component.</param>
+			<param name="b" type="number">the right component.</param>
+			<return name="val" type="number">the xor'd value.</return>
+		</function>
+	</table>
+
+</doc>

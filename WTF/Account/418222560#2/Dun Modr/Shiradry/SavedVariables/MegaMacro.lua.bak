@@ -1,0 +1,34 @@
+
+MegaMacroCharacterData = {
+	["Macros"] = {
+		{
+			["Scope"] = "ch",
+			["ScopedIndex"] = 1,
+			["Code"] = "Soy Druida Heal  370, exp 8/8 hc 2/8 MM Busco guild para raidear\n",
+			["Id"] = 121,
+			["Class"] = "Cazadora de demonios",
+			["StaticTexture"] = 134400,
+			["DisplayName"] = "asd",
+		}, -- [1]
+		{
+			["Scope"] = "ch",
+			["ScopedIndex"] = 2,
+			["Code"] = "/i PULL\n",
+			["Id"] = 122,
+			["Class"] = "Cazadora de demonios",
+			["StaticTexture"] = 134400,
+			["DisplayName"] = "gfj",
+		}, -- [2]
+	},
+	["Specializations"] = {
+		["Venganza"] = {
+			["Macros"] = {
+			},
+		},
+		["Devastación"] = {
+			["Macros"] = {
+			},
+		},
+	},
+	["Activated"] = true,
+}

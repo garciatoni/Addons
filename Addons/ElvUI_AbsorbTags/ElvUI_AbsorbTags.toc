@@ -1,0 +1,26 @@
+## Interface: 80300
+## Title: |cff1784d1ElvUI |cff83F3F7Absorb Tags
+## Notes: Adds various absorbs to |cff1784d1ElvUI|r's unit frame tags.
+## Author: Krypt87
+## Version: 5.0.1
+## RequiredDeps: ElvUI
+## X-Tukui-ProjectID: 85
+## X-Tukui-ProjectFolders: ElvUI_AbsorbTags
+
+ElvUI_AbsorbTags.lua
+
+includes\General.lua
+
+includes\Items.lua
+
+includes\DeathKnight.lua
+includes\Druid.lua
+includes\Hunter.lua
+includes\Mage.lua
+includes\Monk.lua
+includes\Paladin.lua
+includes\Priest.lua
+includes\Rogue.lua
+includes\Shaman.lua
+includes\Warlock.lua
+includes\Warrior.lua

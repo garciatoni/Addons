@@ -1,0 +1,16 @@
+
+MegaMacroCharacterData = {
+	["Macros"] = {
+	},
+	["Specializations"] = {
+		["Forajido"] = {
+			["Macros"] = {
+			},
+		},
+		["Sutileza"] = {
+			["Macros"] = {
+			},
+		},
+	},
+	["Activated"] = true,
+}

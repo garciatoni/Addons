@@ -1,0 +1,75 @@
+
+p {
+	font-size: 12pt;
+	font-family: Arial, sans-serif;
+	margin-left: 0.2in;
+	margin-top: 2px;
+	margin-bottom: 4px;
+}
+
+h1 { font-family: Arial, sans-serif; font-size: 19pt; }
+
+h2 { font-family: Arial, sans-serif; }
+
+h3 { font-family: Arial, sans-serif; }
+
+h4 { font-family: Arial, sans-serif; }
+
+p.Title {
+	x-next-class: ;
+	x-next-type: P;
+	font-size: 22pt;
+	text-align: Center;
+	x-text-underline: Normal;
+	font-family: "Arial Black", sans-serif;
+	letter-spacing: -0.7pt;
+	font-weight: normal;
+	font-style: normal;
+}
+
+ol, p {
+	font-size: 12pt;
+	font-family: Arial, sans-serif;
+	background-color: Transparent;
+	x-text-underline: Off;
+	margin-left: 0.25in;
+	margin-top: 5px;
+	margin-bottom: 7px;
+	text-decoration: none;
+}
+
+ol, ul { margin-left: 0.5in; }
+
+p.kd-list1 { list-style: decimal; margin-left: 0.25in; }
+li.kd-p-list1 { list-style: decimal; }
+
+p.kd-listb1 { list-style: disc; }
+li.kd-p-listb1 { list-style: disc; }
+
+p.pi {
+	font-weight: bold;
+	font-style: normal;
+	font-family: "Microsoft Sans Serif", sans-serif;
+	margin-top: 9px;
+	margin-left: 0.385in;
+}
+p.pe {
+	font-weight:normal;
+	font-style: normal;
+	font-family: "Microsoft Sans Serif", sans-serif;
+	margin-top: 9px;
+	margin-left: 0.6in;
+}
+
+a.dropspot { font-family: Arial, sans-serif; }
+div.droptext { font-family: Arial, sans-serif; }
+a.expandspot { font-family: Arial, sans-serif; }
+
+span.expandtext { font-family: Arial, sans-serif; }
+span.glosstext { font-family: Arial, sans-serif; }
+span.code { font-family:'Courier New', monospace; font-size:12pt; }
+code { font-family:'Courier New', monospace; font-size:12pt; }
+
+img.illus { border:none; float:none; border-style:none; }
+img.illusb { border:solid; float:none; border-width:1px; border-color:#cccccc; }
+

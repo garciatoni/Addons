@@ -1,0 +1,2 @@
+
+AzeritePowerEnabled = 1

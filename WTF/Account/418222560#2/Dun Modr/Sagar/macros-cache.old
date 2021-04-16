@@ -1,0 +1,15 @@
+VER 3 0100000000000002 "Cadena" "136042"
+/cast [@mouseover,help] Sanación en cadena;[harm] Cadena de relámpagos
+END
+VER 3 0100000000000006 "Desatar" "462328"
+/cast [@mouseover,help,exist] Desatar vida;[harm] Descarga de relámpagos
+END
+VER 3 0100000000000003 "Mareas" "252995"
+/cast [@mouseover,help] Mareas vivas;[harm] Ráfaga de lava
+END
+VER 3 0100000000000004 "Ola" "INV_MISC_QUESTIONMARK"
+/cast [@mouseover] Ola de sanación
+END
+VER 3 0100000000000001 "Oleada" "136044"
+/cast [@mouseover,help] Oleada de sanación;[harm] Choque de llamas
+END
